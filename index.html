@@ -1,0 +1,2240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDB-Bank</title>
+    <link rel="icon" type="image/x-icon" href="./assets/media/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" media="all">
+    <!-- <link rel="stylesheet" href="./assets/vendor/bootstrap-5.3.3/css/bootstrap.min.css" media="all"> -->
+    <link rel="stylesheet" href="./assets/vendor/bootstrap-5.3.3/css/bootstrap.rtl.min.css" media="all">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/all.min.css" media="all">
+    <link rel="stylesheet" href="./assets/vendor/slick/slick.css" media="all">
+    <link rel="stylesheet" href="./assets/vendor/intl-tel-input/css/intlTelInput.min.css" media="all">
+    <link rel="stylesheet" href="./assets/vendor/sumoselect/sumoselect.min.css" media="all">
+    <link rel="stylesheet" href="./assets/vendor/Fomantic-UI-develop/components/slider.min.css" media="all">
+    <link rel="stylesheet" href="./assets/vendor/Fomantic-UI-develop/components/popup.min.css" media="all">
+
+    <link rel="stylesheet" href="./assets/css/style.css" media="all">
+    <link rel="stylesheet" href="./assets/css/rtl.css" media="all">
+</head>
+
+<body>
+
+    <div id="LoadingSpinner" class="LoadingSpinner">
+        <div class="loader"></div>
+    </div>
+
+    <div class="top bg-light-color">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!--Website view-->
+                <div class="col-7 d-lg-block d-none">
+                    <div class="top-start d-flex gap-4 align-items-center">
+                        <a href="./about.html">عن البنك</a>
+                        <a href="#">الإستدامة</a>
+                        <a href="#">المركز الإعلامي</a>
+                        <a href="#">الفروع والصراف الآلي</a>
+                    </div>
+                </div>
+                <!--Mobile view-->
+                <div class="col-7 d-lg-none d-block">
+                    <div class="d-flex gap-4 align-items-center">
+                        <a href="#" class="text-secondary-color__hover flip-x-hover" data-bs-toggle="modal"
+                            data-bs-target="#searchModal">
+                            <svg class="hover-target" xmlns="http://www.w3.org/2000/svg" width="28.762" height="28.762"
+                                viewBox="0 0 31.707 31.707">
+                                <path id="Path_1976" data-name="Path 1976"
+                                    d="M49.461,46.764l-7.188-7.188a13.36,13.36,0,1,0-2.7,2.7l7.188,7.188a1.91,1.91,0,0,0,2.7-2.7ZM22.054,31.587a9.534,9.534,0,1,1,9.534,9.534A9.534,9.534,0,0,1,22.054,31.587Z"
+                                    transform="translate(-18.24 -18.24)" fill="#f7941d"></path>
+                            </svg>
+                            <span class="ms-2">البحث</span>
+                        </a>
+                        <a href="#">
+                            <span class="me-1 fw-bd">EN</span>
+                            <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" width="28.762" height="28.762"
+                                viewBox="0 0 27.311 27.247">
+                                <path
+                                    d="M13.655,1.32a13.159,13.159,0,0,1,9.658,4,13.121,13.121,0,0,1,4,9.626,13.121,13.121,0,0,1-4,9.626,13.159,13.159,0,0,1-9.658,4,13.159,13.159,0,0,1-9.658-4,13.121,13.121,0,0,1-4-9.626A13.121,13.121,0,0,1,4,5.317,13.159,13.159,0,0,1,13.655,1.32ZM12.28,25.753V23.13a2.73,2.73,0,0,1-2.75-2.75V19.037L3.006,12.513a12.407,12.407,0,0,0-.256,2.43,10.551,10.551,0,0,0,2.718,7.227A10.559,10.559,0,0,0,12.28,25.753Zm9.4-3.454a10.524,10.524,0,0,0,2.878-7.355A10.841,10.841,0,0,0,17.717,4.838v.576a2.58,2.58,0,0,1-.8,1.887,2.58,2.58,0,0,1-1.887.8H12.28v2.75a1.251,1.251,0,0,1-.416.959,1.335,1.335,0,0,1-.927.384H8.187v2.75h8.187a1.251,1.251,0,0,1,.959.416,1.335,1.335,0,0,1,.384.927V20.38h1.407a2.546,2.546,0,0,1,1.6.544A2.709,2.709,0,0,1,21.682,22.3Z"
+                                    transform="translate(0 -1.32)" fill="currentColor"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="top-end d-flex justify-content-end gap-4 align-items-center">
+                        <a href="#" class="d-lg-block d-none">
+                            <svg id="support" xmlns="http://www.w3.org/2000/svg" width="16.335" height="16.335"
+                                viewBox="0 0 16.335 16.335">
+                                <path id="Path_2159" data-name="Path 2159"
+                                    d="M8.168,0A7.984,7.984,0,0,1,11.34.647,8.025,8.025,0,0,1,15.688,5a8.1,8.1,0,0,1,0,6.345,8.025,8.025,0,0,1-4.348,4.348,8.1,8.1,0,0,1-6.345,0A8.025,8.025,0,0,1,.647,11.34,8.1,8.1,0,0,1,.647,5,8.025,8.025,0,0,1,5,.647,7.984,7.984,0,0,1,8.168,0Zm0,1.167a6.968,6.968,0,0,0-3.291.82L6.645,3.756a4.667,4.667,0,0,1,3.045,0l1.768-1.768A6.968,6.968,0,0,0,8.168,1.167ZM1.987,11.458,3.756,9.69a4.667,4.667,0,0,1,0-3.045L1.987,4.877a7.01,7.01,0,0,0,0,6.582Zm6.18,3.71a6.968,6.968,0,0,0,3.291-.82L9.69,12.58a4.667,4.667,0,0,1-3.045,0L4.877,14.348A6.968,6.968,0,0,0,8.168,15.169Zm0-3.5a3.5,3.5,0,0,0,3.5-3.5,3.5,3.5,0,0,0-3.5-3.5,3.5,3.5,0,0,0-3.5,3.5,3.5,3.5,0,0,0,3.5,3.5ZM12.58,9.69l1.768,1.768a7.01,7.01,0,0,0,0-6.582L12.58,6.645a4.667,4.667,0,0,1,0,3.045Z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span class="ms-1">دعم العملاء</span>
+                        </a>
+                        <a href="#" class="d-lg-block d-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18.06" height="16.335"
+                                viewBox="0 0 18.491 16.712">
+                                <g id="briefcase_1535944" transform="translate(0 -24.628)">
+                                    <path id="Path_2093" data-name="Path 2093"
+                                        d="M15.337,263.9H10.871v1.462H7.62V263.9H3.154A4.227,4.227,0,0,1,0,262.493v8.123H18.491v-8.123A4.227,4.227,0,0,1,15.337,263.9Z"
+                                        transform="translate(0 -229.275)" fill="currentColor"></path>
+                                    <path id="Path_2094" data-name="Path 2094"
+                                        d="M3.154,33.545H7.62V32.118h3.25v1.427h4.467a3.157,3.157,0,0,0,3.154-3.15v-2.8H13.366v-.38a2.588,2.588,0,0,0-2.585-2.585H7.71a2.588,2.588,0,0,0-2.585,2.585v.38H0v2.8A3.157,3.157,0,0,0,3.154,33.545Zm3.055-6.332a1.5,1.5,0,0,1,1.5-1.5h3.071a1.5,1.5,0,0,1,1.5,1.5v.38H6.208Z"
+                                        fill="currentColor"></path>
+                                    <rect id="Rectangle_375" data-name="Rectangle 375" width="1.083" height="1.806"
+                                        transform="translate(8.704 33.202)" fill="currentColor"></rect>
+                                </g>
+                            </svg>
+                            <span class="ms-1">الوظائف المتاحة</span>
+                        </a>
+                        <a class="d-block p-md fw-bd text-center bg-gray-color bg-dark-gray-color__hover text-white-color__hover"
+                            href="#">عميل جديد </a>
+                        <a href="#" class="d-lg-block d-none">
+                            <span class="me-1 fw-bd">EN</span>
+                            <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" width="28.762" height="28.762"
+                                viewBox="0 0 27.311 27.247">
+                                <path id="Path_1960" data-name="Path 1960"
+                                    d="M13.655,1.32a13.159,13.159,0,0,1,9.658,4,13.121,13.121,0,0,1,4,9.626,13.121,13.121,0,0,1-4,9.626,13.159,13.159,0,0,1-9.658,4,13.159,13.159,0,0,1-9.658-4,13.121,13.121,0,0,1-4-9.626A13.121,13.121,0,0,1,4,5.317,13.159,13.159,0,0,1,13.655,1.32ZM12.28,25.753V23.13a2.73,2.73,0,0,1-2.75-2.75V19.037L3.006,12.513a12.407,12.407,0,0,0-.256,2.43,10.551,10.551,0,0,0,2.718,7.227A10.559,10.559,0,0,0,12.28,25.753Zm9.4-3.454a10.524,10.524,0,0,0,2.878-7.355A10.841,10.841,0,0,0,17.717,4.838v.576a2.58,2.58,0,0,1-.8,1.887,2.58,2.58,0,0,1-1.887.8H12.28v2.75a1.251,1.251,0,0,1-.416.959,1.335,1.335,0,0,1-.927.384H8.187v2.75h8.187a1.251,1.251,0,0,1,.959.416,1.335,1.335,0,0,1,.384.927V20.38h1.407a2.546,2.546,0,0,1,1.6.544A2.709,2.709,0,0,1,21.682,22.3Z"
+                                    transform="translate(0 -1.32)" fill="#f7941d"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Top-->
+
+    <nav class="navbar navbar-expand-lg position-sticky top-0 z-3">
+        <div class="container-fluid">
+            <button class="navbar-toggler text-primary-color" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#menuOffcanvas">
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <a class="navbar-brand" href="./index.html"><img height="94" src="./assets/media/logo.png" alt="IDB Logo"
+                    loading="lazy"></a>
+            <div class="text-end d-lg-none dropdown">
+                <a href="#" class="btn btn-border-primary-color rounded-0 fw-bd py-3" data-bs-toggle="dropdown"
+                    aria-expanded="false">الأنترنت البنكي</a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-hover">
+                    <a class="dropdown-item" href="#">
+                        <svg id="users" xmlns="http://www.w3.org/2000/svg" width="22.406" height="13.444"
+                            viewBox="0 0 22.406 13.444">
+                            <path id="Path_2389" data-name="Path 2389"
+                                d="M22.722,62.722a3.361,3.361,0,1,1,3.361-3.361A3.361,3.361,0,0,1,22.722,62.722Zm8.962,0a3.361,3.361,0,1,1,3.361-3.361A3.361,3.361,0,0,1,31.684,62.722Zm-8.962,2.241A8.94,8.94,0,0,1,29.444,68v1.447H16V68a8.94,8.94,0,0,1,6.722-3.034Zm8.962,4.481V67.149l-.56-.635a11.267,11.267,0,0,0-1.4-1.337A8.979,8.979,0,0,1,38.406,68v1.447Z"
+                                transform="translate(-16 -56)" fill-rule="evenodd"></path>
+                        </svg>
+                        <span class="ms-2">الأفراد</span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <svg id="building" xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.328"
+                            viewBox="0 0 18.328 18.328">
+                            <path id="Path_2388" data-name="Path 2388"
+                                d="M17.755,18.328H.573a.55.55,0,0,1-.4-.17.562.562,0,0,1,0-.805.55.55,0,0,1,.4-.17h.573a1.092,1.092,0,0,0,.814-.34,1.116,1.116,0,0,0,.331-.805V1.146A1.1,1.1,0,0,1,2.631.34,1.1,1.1,0,0,1,3.437,0H14.892a1.092,1.092,0,0,1,.814.34,1.116,1.116,0,0,1,.331.805V16.037a1.092,1.092,0,0,0,.34.814,1.116,1.116,0,0,0,.805.331h.573a.573.573,0,0,1,0,1.146ZM6.873,2.864A.581.581,0,0,0,6.3,2.291H5.155a.581.581,0,0,0-.573.573V4.009a.581.581,0,0,0,.573.573H6.3a.581.581,0,0,0,.573-.573Zm0,3.437A.581.581,0,0,0,6.3,5.728H5.155a.581.581,0,0,0-.573.573V7.446a.581.581,0,0,0,.573.573H6.3a.581.581,0,0,0,.573-.573Zm0,3.437A.581.581,0,0,0,6.3,9.164H5.155a.581.581,0,0,0-.573.573v1.146a.581.581,0,0,0,.573.573H6.3a.581.581,0,0,0,.573-.573ZM10.31,2.864a.581.581,0,0,0-.573-.573H8.591a.581.581,0,0,0-.573.573V4.009a.581.581,0,0,0,.573.573H9.737a.581.581,0,0,0,.573-.573Zm0,3.437a.581.581,0,0,0-.573-.573H8.591a.581.581,0,0,0-.573.573V7.446a.581.581,0,0,0,.573.573H9.737a.581.581,0,0,0,.573-.573Zm0,3.437a.581.581,0,0,0-.573-.573H8.591a.581.581,0,0,0-.573.573v1.146a.581.581,0,0,0,.573.573H9.737a.581.581,0,0,0,.573-.573Zm.573,4.009H7.446a.581.581,0,0,0-.573.573V16.61a.581.581,0,0,0,.573.573h3.437a.581.581,0,0,0,.573-.573V14.319a.581.581,0,0,0-.573-.573ZM13.746,2.864a.581.581,0,0,0-.573-.573H12.028a.581.581,0,0,0-.573.573V4.009a.581.581,0,0,0,.573.573h1.146a.581.581,0,0,0,.573-.573Zm0,3.437a.581.581,0,0,0-.573-.573H12.028a.581.581,0,0,0-.573.573V7.446a.581.581,0,0,0,.573.573h1.146a.581.581,0,0,0,.573-.573Zm0,3.437a.581.581,0,0,0-.573-.573H12.028a.581.581,0,0,0-.573.573v1.146a.581.581,0,0,0,.573.573h1.146a.581.581,0,0,0,.573-.573Z"
+                                transform="translate(0 0)" fill="#0f3c66"></path>
+                        </svg>
+                        <span class="ms-2">الشـركات</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link rotate-y-hover" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40.134" height="34.045"
+                                viewBox="0 0 40.134 34.045">
+                                <g id="group_681494" transform="translate(0 -38.84)">
+                                    <g id="Group_423" data-name="Group 423" transform="translate(31.237 57.22)">
+                                        <g id="Group_422" data-name="Group 422" transform="translate(0 0)">
+                                            <path id="Path_2312" data-name="Path 2312"
+                                                d="M401.6,273.32h-3.1a8.074,8.074,0,0,1,.489,2.775v11.731a3.46,3.46,0,0,1-.2,1.159h5.131a3.48,3.48,0,0,0,3.476-3.476v-6.395A5.8,5.8,0,0,0,401.6,273.32Z"
+                                                transform="translate(-398.494 -273.32)" fill="CurrentColor"></path>
+                                        </g>
+                                    </g>
+                                    <g id="Group_425" data-name="Group 425" transform="translate(0 57.22)">
+                                        <g id="Group_424" data-name="Group 424" transform="translate(0 0)">
+                                            <path id="Path_2313" data-name="Path 2313"
+                                                d="M8.408,276.1a8.073,8.073,0,0,1,.489-2.775h-3.1A5.8,5.8,0,0,0,0,279.115v6.395a3.48,3.48,0,0,0,3.476,3.476H8.607a3.46,3.46,0,0,1-.2-1.159Z"
+                                                transform="translate(0 -273.321)" fill="CurrentColor"></path>
+                                        </g>
+                                    </g>
+                                    <g id="Group_427" data-name="Group 427" transform="translate(10.726 54.202)">
+                                        <g id="Group_426" data-name="Group 426" transform="translate(0 0)">
+                                            <path id="Path_2314" data-name="Path 2314"
+                                                d="M149.718,234.815h-7.1a5.8,5.8,0,0,0-5.794,5.794v11.731a1.159,1.159,0,0,0,1.159,1.159h16.365a1.159,1.159,0,0,0,1.159-1.159V240.609A5.8,5.8,0,0,0,149.718,234.815Z"
+                                                transform="translate(-136.829 -234.815)" fill="CurrentColor"></path>
+                                        </g>
+                                    </g>
+                                    <g id="Group_429" data-name="Group 429" transform="translate(13.099 38.84)">
+                                        <g id="Group_428" data-name="Group 428" transform="translate(0 0)">
+                                            <path id="Path_2315" data-name="Path 2315"
+                                                d="M174.081,38.84a6.966,6.966,0,1,0,6.967,6.968A6.975,6.975,0,0,0,174.081,38.84Z"
+                                                transform="translate(-167.114 -38.84)" fill="CurrentColor"></path>
+                                        </g>
+                                    </g>
+                                    <g id="Group_431" data-name="Group 431" transform="translate(2.621 45.334)">
+                                        <g id="Group_430" data-name="Group 430" transform="translate(0 0)">
+                                            <path id="Path_2316" data-name="Path 2316"
+                                                d="M38.654,121.689a5.208,5.208,0,1,0,5.211,5.211A5.217,5.217,0,0,0,38.654,121.689Z"
+                                                transform="translate(-33.443 -121.689)" fill="CurrentColor"></path>
+                                        </g>
+                                    </g>
+                                    <g id="Group_433" data-name="Group 433" transform="translate(27.091 45.334)">
+                                        <g id="Group_432" data-name="Group 432" transform="translate(0 0)">
+                                            <path id="Path_2317" data-name="Path 2317"
+                                                d="M350.818,121.689a5.211,5.211,0,1,0,5.211,5.211A5.217,5.217,0,0,0,350.818,121.689Z"
+                                                transform="translate(-345.607 -121.689)" fill="CurrentColor"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <span class="d-block mt-2">خدمات الأفراد <svg class="ms-1 hover-target"
+                                    xmlns="http://www.w3.org/2000/svg" width="13.225" height="6.966"
+                                    viewBox="0 0 13.225 6.966">
+                                    <path id="Path_2007" data-name="Path 2007"
+                                        d="M39.028,63.254l-5.7,5.552-5.7-5.552a.545.545,0,0,0-.761,0,.518.518,0,0,0,0,.741L32.935,69.9a.57.57,0,0,0,.8,0L39.789,64a.518.518,0,0,0,0-.743.545.545,0,0,0-.761,0Z"
+                                        transform="translate(-26.721 -63.098)" fill="CurrentColor" />
+                                </svg></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-hover w-100 py-0">
+                            <div class="submenu">
+                                <div class="row m-0">
+                                    <div class="col-lg-5 p-0">
+                                        <div class="submenu-card h-100">
+                                            <div class="content position-relative h-100">
+                                                <img class="h-100 w-100 object-fit-cover"
+                                                    src="./assets/media/--drops/visa-bg.webp" alt="visa" loading="lazy">
+                                                <a href="#"
+                                                    class="position-absolute end-0 bottom-0 bg-light-color bg-primary-color__hover text-white-color__hover p-5 z-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="44.032" height="35"
+                                                        viewBox="0 0 44.032 35">
+                                                        <g id="arrow-left" transform="translate(-18 -34)">
+                                                            <path id="Path_1995" data-name="Path 1995"
+                                                                d="M19.688,91.692A1.693,1.693,0,0,1,21.383,90l40.169.028a1.694,1.694,0,0,1,0,3.387L21.38,93.387A1.694,1.694,0,0,1,19.688,91.692Z"
+                                                                transform="translate(81.244 143.193) rotate(180)"
+                                                                fill="currentColor" fill-rule="evenodd"></path>
+                                                            <path id="Path_1996" data-name="Path 1996"
+                                                                d="M36.668,34.495a1.694,1.694,0,0,1,0,2.4L22.086,51.5,36.67,66.11a1.694,1.694,0,0,1-2.4,2.393L18.495,52.7a1.694,1.694,0,0,1,0-2.393L34.273,34.5A1.694,1.694,0,0,1,36.668,34.495Z"
+                                                                transform="translate(80.032 103) rotate(180)"
+                                                                fill="currentColor" fill-rule="evenodd"></path>
+                                                        </g>
+                                                    </svg>
+                                                    <span class="d-block">المزيد</span>
+                                                </a>
+
+                                                <h2
+                                                    class="position-absolute start-0 bottom-0 p-4 fs-xxl text-white-color z-2">
+                                                    خدمــــات <br> الأفــــراد </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="ps-lg-4">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <h6 class="text-primary-color submenu-title">
+                                                        <svg id="expenses_2171431" xmlns="http://www.w3.org/2000/svg"
+                                                            width="30.9" height="30.9" viewBox="0 0 30.9 30.9">
+                                                            <path id="Path_2121" data-name="Path 2121"
+                                                                d="M7,54.142v1.523H8.523A2.126,2.126,0,0,0,7,54.142Z"
+                                                                transform="translate(-4.869 -26.895)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2122" data-name="Path 2122"
+                                                                d="M12.328,43.795A5.855,5.855,0,0,1,14.829,39H9.616A3.2,3.2,0,0,1,7,41.616v4.359A3.2,3.2,0,0,1,9.616,48.59H14.83A5.856,5.856,0,0,1,12.328,43.795Z"
+                                                                transform="translate(-4.869 -19.82)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2123" data-name="Path 2123"
+                                                                d="M28.59,43.795a4.795,4.795,0,1,0-4.795,4.795A4.8,4.8,0,0,0,28.59,43.795Zm-3.2-1.6H23.262v1.066h2.131v3.2H24.328v1.066H23.262V46.459H22.2V45.393h2.131V44.328H22.2v-3.2h1.066V40.066h1.066v1.066h1.066Z"
+                                                                transform="translate(-10.476 -19.82)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2124" data-name="Path 2124"
+                                                                d="M46.142,55.665h1.523V54.142A2.126,2.126,0,0,0,46.142,55.665Z"
+                                                                transform="translate(-23.157 -26.895)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2125" data-name="Path 2125"
+                                                                d="M8.523,39H7v1.523A2.126,2.126,0,0,0,8.523,39Z"
+                                                                transform="translate(-4.869 -19.82)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2126" data-name="Path 2126"
+                                                                d="M41.6,5.976l1.066-1.066.533.533V3H40V5.443l.533-.533Z"
+                                                                transform="translate(-20.288 -3)" fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2127" data-name="Path 2127"
+                                                                d="M37.254,3V8.015l-1.6-1.6L34.59,7.483,33.524,6.417l-1.6,1.6V3H25V16.852H35.655V10.459H44.18V3Z"
+                                                                transform="translate(-13.279 -3)" fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2128" data-name="Path 2128"
+                                                                d="M10.066,27.131h1.066V25H10.066a1.066,1.066,0,1,0,0,2.131Z"
+                                                                transform="translate(-5.803 -13.279)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2129" data-name="Path 2129"
+                                                                d="M39.518,39H34.3a5.846,5.846,0,0,1,0,9.59h5.214a3.2,3.2,0,0,1,2.616-2.616V41.616A3.2,3.2,0,0,1,39.518,39Z"
+                                                                transform="translate(-17.626 -19.82)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2130" data-name="Path 2130"
+                                                                d="M9,30.444v1.362H33.507V44.592h1.066V30.74H10.066A2.109,2.109,0,0,1,9,30.444Z"
+                                                                transform="translate(-5.803 -15.823)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2131" data-name="Path 2131"
+                                                                d="M47,24.328h6.393v3.2h1.066V19H47Zm3.2-4.262h3.2v1.066H50.2Zm-2.131,0h1.066v1.066H48.066Zm0,2.131h5.328v1.066H48.066Z"
+                                                                transform="translate(-23.558 -10.476)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2132" data-name="Path 2132"
+                                                                d="M3,48.852H29.638V35H3ZM4.066,36.066H28.573V47.786H4.066Z"
+                                                                transform="translate(-3 -17.951)" fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2133" data-name="Path 2133"
+                                                                d="M47.665,40.523V39H46.142A2.126,2.126,0,0,0,47.665,40.523Z"
+                                                                transform="translate(-23.157 -19.82)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="ms-2">المنتجات والخدمات </span>
+                                                    </h6>
+                                                    <div
+                                                        class="submenu-list d-flex flex-wrap row-gap-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <a href="#">حسابات التوفير</a>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <a href="#">القروض الشخصية</a>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <a href="#">الحسابات الجارية</a>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <a href="#">القروض العقارية</a>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <a href="#">الودائع / الشهادات</a>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <a href="#">قروض السيارات</a>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <a href="#">البطاقات المصرفية</a>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <a href="#">التعريفة</a>
+                                                        </div>
+                                                        <div class="col-5">
+                                                            <a href="#">العروض والتخفيضات</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-5 offset-lg-1">
+                                                    <h6 class="text-primary-color submenu-title">
+                                                        <svg id="surface1" xmlns="http://www.w3.org/2000/svg"
+                                                            width="37.391" height="32.863" viewBox="0 0 37.391 32.863">
+                                                            <path id="Path_2372" data-name="Path 2372"
+                                                                d="M35.2,3.286A3.29,3.29,0,0,0,31.913,0H3.286A3.29,3.29,0,0,0,0,3.286v1.1H35.2Zm0,0"
+                                                                fill="CurrentColor"></path>
+                                                            <path id="Path_2373" data-name="Path 2373"
+                                                                d="M366.865,345h-4.3c.2,4.422,1.562,7.668,2.15,7.668S366.66,349.422,366.865,345Zm0,0"
+                                                                transform="translate(-336.088 -319.805)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2374" data-name="Path 2374"
+                                                                d="M431.8,217.285a21.09,21.09,0,0,1,1.448,7.136h4.409A8.838,8.838,0,0,0,431.8,217.285Zm0,0"
+                                                                transform="translate(-400.271 -201.417)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2375" data-name="Path 2375"
+                                                                d="M364.716,210c-.587,0-1.945,3.246-2.15,7.668h4.3C366.66,213.246,365.3,210,364.716,210Zm0,0"
+                                                                transform="translate(-336.088 -194.664)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2376" data-name="Path 2376"
+                                                                d="M431.8,352.136A8.837,8.837,0,0,0,437.662,345h-4.409A21.09,21.09,0,0,1,431.8,352.136Zm0,0"
+                                                                transform="translate(-400.271 -319.805)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2377" data-name="Path 2377"
+                                                                d="M279.258,217.285a8.716,8.716,0,0,0-5.746,7.136h4.3A21.093,21.093,0,0,1,279.258,217.285Zm0,0"
+                                                                transform="translate(-253.538 -201.417)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2378" data-name="Path 2378"
+                                                                d="M279.258,352.136A21.093,21.093,0,0,1,277.81,345h-4.3A8.716,8.716,0,0,0,279.258,352.136Zm0,0"
+                                                                transform="translate(-253.538 -319.805)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2379" data-name="Path 2379"
+                                                                d="M90,150h4.382v2.191H90Zm0,0"
+                                                                transform="translate(-83.427 -139.046)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2380" data-name="Path 2380"
+                                                                d="M3.286,109.718H17.894A10.954,10.954,0,0,1,28.627,96.573,10.848,10.848,0,0,1,35.2,98.819V90H0v16.431A3.29,3.29,0,0,0,3.286,109.718Zm10.954-5.477a1.1,1.1,0,0,1-1.1,1.1H10.954a1.1,1.1,0,0,1,0-2.191h2.191A1.1,1.1,0,0,1,14.241,104.241ZM4.382,93.286a1.1,1.1,0,0,1,1.1-1.1H12.05a1.1,1.1,0,0,1,1.1,1.1v4.382a1.1,1.1,0,0,1-1.1,1.1H5.477a1.1,1.1,0,0,1-1.1-1.1Zm0,9.859H6.573a1.1,1.1,0,1,1,0,2.191H4.382a1.1,1.1,0,1,1,0-2.191Zm0,0"
+                                                                transform="translate(0 -83.427)" fill="CurrentColor">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="ms-2">الخدمات البنكية الرقمية</span>
+                                                    </h6>
+                                                    <div
+                                                        class="submenu-list d-flex flex-wrap row-gap-4 align-items-center">
+                                                        <div class="col-12">
+                                                            <a href="#">الإنترنت البنكي</a>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <a href="#">الموبايل البنكي</a>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <a href="#">الإنستا باي</a>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="text-primary-color submenu-title">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="32.607"
+                                                            height="37.772" viewBox="0 0 32.607 37.772">
+                                                            <path id="profit-margin_18147886"
+                                                                d="M75.975,33.291l-5.384,7.426a5.315,5.315,0,0,1-4.4,2.316H56.406a2.815,2.815,0,0,0-2.122.918l-6.86-6.86L50.489,34.1a4.993,4.993,0,0,1,3.6-1.493h2.881a4.884,4.884,0,0,1,2.548.683l.884.511h6.381A2.048,2.048,0,0,1,68.474,37a2.1,2.1,0,0,1-1.7.892H60.807a.46.46,0,1,0,0,.921H66.77a2.974,2.974,0,0,0,2.962-3.14L73.7,31.389a1.494,1.494,0,0,1,2.279,1.9Zm-29.26,4.394a1.056,1.056,0,0,0-1.489,0l-1.273,1.273a1.056,1.056,0,0,0,0,1.489l7.027,7.027a1.056,1.056,0,0,0,1.489,0L53.742,46.2a1.059,1.059,0,0,0,0-1.491l-7.027-7.027Zm14.993-12.62a6.553,6.553,0,0,1-1.619,4.464A9.873,9.873,0,0,0,75.04,21.065H66.086l-4.527,2.614a6.485,6.485,0,0,1,.148,1.386Zm-2.229-9.358-1.221,2.179h.429a1.384,1.384,0,0,1,.964,2.372,7.1,7.1,0,0,1,1.641,2.516l3.878-2.239V11.193a9.848,9.848,0,0,0-7.421,3.362,2.966,2.966,0,0,1,1.73,1.151Zm7.5-5.7V19.25h9.243A9.241,9.241,0,0,0,66.983,10.009ZM48.236,25.065A5.913,5.913,0,0,1,50.3,20.649h8.424a5.906,5.906,0,0,1,2.063,4.416c0,7.826-12.551,7.826-12.551,0Zm8.964-7.18,1.138-2.03a2.031,2.031,0,0,0-2.551,0,2.034,2.034,0,0,0-2.553,0,2.031,2.031,0,0,0-2.551,0l1.138,2.03Zm-6.864,1.843h8.35a.46.46,0,1,0,0-.921h-8.35a.46.46,0,0,0,0,.921Z"
+                                                                transform="translate(-43.646 -10.009)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="ms-2">منتجات الشمول المالي</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link rotate-y-hover" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36.479" height="36.479"
+                                viewBox="0 0 36.479 36.479">
+                                <g id="_x39__x5F_advertise_building" transform="translate(0 -1)">
+                                    <g id="XMLID_133_" transform="translate(0 1)">
+                                        <path id="XMLID_134_" d="M187,60h9.78v1.927H187Z"
+                                            transform="translate(-173.651 -55.788)" fill="CurrentColor">
+                                        </path>
+                                        <path id="XMLID_168_" d="M136,1h17.061V4.07H136Z"
+                                            transform="translate(-126.291 -1)" fill="CurrentColor"></path>
+                                        <path id="XMLID_171_"
+                                            d="M136,132.2h3.427v-9.78a.587.587,0,0,1,.589-.571h9.1a.587.587,0,0,1,.589.571v9.78h3.355V103H136Zm11.98-25.485h2.275a.571.571,0,0,1,0,1.142H147.98a.571.571,0,1,1,0-1.142Zm0,3.641h2.275a.571.571,0,1,1,0,1.142H147.98a.571.571,0,0,1,0-1.142Zm0,3.641h2.275a.571.571,0,0,1,0,1.142H147.98a.571.571,0,1,1,0-1.142Zm0,3.641h2.275a.571.571,0,0,1,0,1.142H147.98a.571.571,0,1,1,0-1.142Zm-4.551-10.922H145.7a.571.571,0,0,1,0,1.142h-2.275a.571.571,0,1,1,0-1.142Zm0,3.641H145.7a.571.571,0,0,1,0,1.142h-2.275a.571.571,0,1,1,0-1.142Zm0,3.641H145.7a.571.571,0,0,1,0,1.142h-2.275a.571.571,0,1,1,0-1.142Zm0,3.641H145.7a.571.571,0,1,1,0,1.142h-2.275a.571.571,0,1,1,0-1.142Zm-4.551-10.922h2.275a.571.571,0,0,1,0,1.142h-2.275a.571.571,0,1,1,0-1.142Zm0,3.641h2.275a.571.571,0,1,1,0,1.142h-2.275a.571.571,0,1,1,0-1.142Zm0,3.641h2.275a.571.571,0,0,1,0,1.142h-2.275a.571.571,0,1,1,0-1.142Zm0,3.641h2.275a.571.571,0,1,1,0,1.142h-2.275a.571.571,0,1,1,0-1.142Z"
+                                            transform="translate(-126.291 -95.719)" fill="CurrentColor"></path>
+                                        <path id="XMLID_722_"
+                                            d="M0,198.17H8.566V174.044L0,177.256Zm3.105-17.632H5.532a.571.571,0,1,1,0,1.142H3.105a.571.571,0,1,1,0-1.142Zm0,4.283H5.532a.571.571,0,0,1,0,1.142H3.105a.571.571,0,0,1,0-1.142Zm0,4.212H5.532a.571.571,0,0,1,0,1.142H3.105a.571.571,0,0,1,0-1.142Zm0,4.283H5.532a.571.571,0,1,1,0,1.142H3.105a.571.571,0,1,1,0-1.142Z"
+                                            transform="translate(0 -161.691)" fill="CurrentColor"></path>
+                                        <path id="XMLID_1838_"
+                                            d="M391,174.044V198.17h8.566V177.256Zm5.532,20.413h-2.427a.571.571,0,0,1,0-1.142h2.427a.571.571,0,0,1,0,1.142Zm0-4.283h-2.427a.571.571,0,0,1,0-1.142h2.427a.571.571,0,0,1,0,1.142Zm0-4.212h-2.427a.571.571,0,0,1,0-1.142h2.427a.571.571,0,0,1,0,1.142Zm0-4.283h-2.427a.571.571,0,0,1,0-1.142h2.427a.571.571,0,0,1,0,1.142Z"
+                                            transform="translate(-363.088 -161.691)" fill="CurrentColor"></path>
+                                        <path id="XMLID_1842_" d="M200,383h3.427v9.209H200Z"
+                                            transform="translate(-185.723 -355.73)" fill="CurrentColor">
+                                        </path>
+                                        <path id="XMLID_1843_" d="M264,383h3.427v9.209H264Z"
+                                            transform="translate(-245.154 -355.73)" fill="CurrentColor">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <span class="d-block mt-2">الخدمات المصرفية للشركات <svg class="ms-1 hover-target"
+                                    xmlns="http://www.w3.org/2000/svg" width="13.225" height="6.966"
+                                    viewBox="0 0 13.225 6.966">
+                                    <path id="Path_2007" data-name="Path 2007"
+                                        d="M39.028,63.254l-5.7,5.552-5.7-5.552a.545.545,0,0,0-.761,0,.518.518,0,0,0,0,.741L32.935,69.9a.57.57,0,0,0,.8,0L39.789,64a.518.518,0,0,0,0-.743.545.545,0,0,0-.761,0Z"
+                                        transform="translate(-26.721 -63.098)" fill="CurrentColor" />
+                                </svg></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-hover w-100 py-0">
+                            <div class="submenu">
+                                <div class="row m-0">
+                                    <div class="col-lg-5 p-0">
+                                        <div class="submenu-card h-100">
+                                            <div class="content h-100 position-relative">
+                                                <img class="w-100 h-100 object-fit-cover"
+                                                    src="./assets/media/--drops/companies.webp" alt="companies"
+                                                    loading="lazy">
+                                                <a href="#"
+                                                    class="position-absolute end-0 bottom-0 bg-light-color bg-primary-color__hover text-white-color__hover p-5 z-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="44.032" height="35"
+                                                        viewBox="0 0 44.032 35">
+                                                        <g id="arrow-left" transform="translate(-18 -34)">
+                                                            <path id="Path_1995" data-name="Path 1995"
+                                                                d="M19.688,91.692A1.693,1.693,0,0,1,21.383,90l40.169.028a1.694,1.694,0,0,1,0,3.387L21.38,93.387A1.694,1.694,0,0,1,19.688,91.692Z"
+                                                                transform="translate(81.244 143.193) rotate(180)"
+                                                                fill="currentColor" fill-rule="evenodd"></path>
+                                                            <path id="Path_1996" data-name="Path 1996"
+                                                                d="M36.668,34.495a1.694,1.694,0,0,1,0,2.4L22.086,51.5,36.67,66.11a1.694,1.694,0,0,1-2.4,2.393L18.495,52.7a1.694,1.694,0,0,1,0-2.393L34.273,34.5A1.694,1.694,0,0,1,36.668,34.495Z"
+                                                                transform="translate(80.032 103) rotate(180)"
+                                                                fill="currentColor" fill-rule="evenodd"></path>
+                                                        </g>
+                                                    </svg>
+                                                    <span class="d-block">المزيد</span>
+                                                </a>
+
+                                                <h2
+                                                    class="position-absolute start-0 bottom-0 p-4 fs-xxl text-white-color z-2">
+                                                    خدمــــات <br> الشركــات </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="ps-lg-4">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <h6 class="text-primary-color submenu-title">
+                                                        <svg id="surface1" xmlns="http://www.w3.org/2000/svg"
+                                                            width="37.391" height="32.863" viewBox="0 0 37.391 32.863">
+                                                            <path id="Path_2372" data-name="Path 2372"
+                                                                d="M35.2,3.286A3.29,3.29,0,0,0,31.913,0H3.286A3.29,3.29,0,0,0,0,3.286v1.1H35.2Zm0,0"
+                                                                fill="CurrentColor"></path>
+                                                            <path id="Path_2373" data-name="Path 2373"
+                                                                d="M366.865,345h-4.3c.2,4.422,1.562,7.668,2.15,7.668S366.66,349.422,366.865,345Zm0,0"
+                                                                transform="translate(-336.088 -319.805)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2374" data-name="Path 2374"
+                                                                d="M431.8,217.285a21.09,21.09,0,0,1,1.448,7.136h4.409A8.838,8.838,0,0,0,431.8,217.285Zm0,0"
+                                                                transform="translate(-400.271 -201.417)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2375" data-name="Path 2375"
+                                                                d="M364.716,210c-.587,0-1.945,3.246-2.15,7.668h4.3C366.66,213.246,365.3,210,364.716,210Zm0,0"
+                                                                transform="translate(-336.088 -194.664)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2376" data-name="Path 2376"
+                                                                d="M431.8,352.136A8.837,8.837,0,0,0,437.662,345h-4.409A21.09,21.09,0,0,1,431.8,352.136Zm0,0"
+                                                                transform="translate(-400.271 -319.805)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2377" data-name="Path 2377"
+                                                                d="M279.258,217.285a8.716,8.716,0,0,0-5.746,7.136h4.3A21.093,21.093,0,0,1,279.258,217.285Zm0,0"
+                                                                transform="translate(-253.538 -201.417)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2378" data-name="Path 2378"
+                                                                d="M279.258,352.136A21.093,21.093,0,0,1,277.81,345h-4.3A8.716,8.716,0,0,0,279.258,352.136Zm0,0"
+                                                                transform="translate(-253.538 -319.805)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2379" data-name="Path 2379"
+                                                                d="M90,150h4.382v2.191H90Zm0,0"
+                                                                transform="translate(-83.427 -139.046)"
+                                                                fill="CurrentColor">
+                                                            </path>
+                                                            <path id="Path_2380" data-name="Path 2380"
+                                                                d="M3.286,109.718H17.894A10.954,10.954,0,0,1,28.627,96.573,10.848,10.848,0,0,1,35.2,98.819V90H0v16.431A3.29,3.29,0,0,0,3.286,109.718Zm10.954-5.477a1.1,1.1,0,0,1-1.1,1.1H10.954a1.1,1.1,0,0,1,0-2.191h2.191A1.1,1.1,0,0,1,14.241,104.241ZM4.382,93.286a1.1,1.1,0,0,1,1.1-1.1H12.05a1.1,1.1,0,0,1,1.1,1.1v4.382a1.1,1.1,0,0,1-1.1,1.1H5.477a1.1,1.1,0,0,1-1.1-1.1Zm0,9.859H6.573a1.1,1.1,0,1,1,0,2.191H4.382a1.1,1.1,0,1,1,0-2.191Zm0,0"
+                                                                transform="translate(0 -83.427)" fill="CurrentColor">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="ms-2">الشركات</span>
+                                                    </h6>
+                                                    <div
+                                                        class="submenu-list d-flex flex-wrap row-gap-4 align-items-center">
+                                                        <div class="col-12">
+                                                            <a href="#">الشركات المتوسطة</a>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <a href="#">الشركات الكبرى</a>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="text-primary-color submenu-title">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="34.532"
+                                                            height="33.868" viewBox="0 0 34.532 33.868">
+                                                            <path id="money_18686358_1_" data-name="money_18686358 (1)"
+                                                                d="M18.139,19.617H8.178l1.1-3.32h8.049l.624,1.879.332,1,.332-1,.624-1.879H27.29l.624,1.879.332,1,.332-1L29.2,16.3h8.049l1.1,3.32Zm4.463-6.09-.624-1.879H13.929l-1.1,3.32H23.08Zm5.313-4.649L27.29,7H19.242l-1.1,3.32H28.393ZM23.93,13.528l-.478,1.441H33.705l-1.1-3.32H24.554ZM11.977,31.637V27.52a3.327,3.327,0,0,0,2.59-2.59h17.4a3.327,3.327,0,0,0,2.59,2.59v4.117a3.327,3.327,0,0,0-2.59,2.59h-17.4A3.327,3.327,0,0,0,11.977,31.637Zm16.934-2.059a1,1,0,1,0,1-1A.995.995,0,0,0,28.911,29.579Zm-13.282,0a1,1,0,1,0,1-1A.995.995,0,0,0,15.629,29.579Zm24.9,7.969V40.2a.666.666,0,0,1-.664.664H6.664A.666.666,0,0,1,6,40.2V37.547a.666.666,0,0,1,.664-.664h.784a2,2,0,0,1-.12-.664V22.938A2,2,0,0,1,9.32,20.946H37.212A2,2,0,0,1,39.2,22.938V36.219a2,2,0,0,1-.12.664h.784A.666.666,0,0,1,40.532,37.547ZM10.649,32.235a.666.666,0,0,0,.664.664A2,2,0,0,1,13.3,34.891a.666.666,0,0,0,.664.664H32.563a.666.666,0,0,0,.664-.664A2,2,0,0,1,35.219,32.9a.666.666,0,0,0,.664-.664V26.922a.666.666,0,0,0-.664-.664,2,2,0,0,1-1.992-1.992.666.666,0,0,0-.664-.664H13.969a.666.666,0,0,0-.664.664,2,2,0,0,1-1.992,1.992.666.666,0,0,0-.664.664Z"
+                                                                transform="translate(-6 -7)" fill="CurrentColor"></path>
+                                                        </svg>
+                                                        <span class="ms-2">الخزانة </span>
+                                                    </h6>
+                                                </div>
+                                                <div class="col-lg-5 offset-lg-1">
+                                                    <h6 class="text-primary-color submenu-title">
+                                                        <svg id="economy_1003009" xmlns="http://www.w3.org/2000/svg"
+                                                            width="34.699" height="34.793" viewBox="0 0 34.699 34.793">
+                                                            <g id="Group_221" data-name="Group 221"
+                                                                transform="translate(20.549 4.164)">
+                                                                <g id="Group_220" data-name="Group 220">
+                                                                    <path id="Path_2015" data-name="Path 2015"
+                                                                        d="M309.492,65.4l-2.348,2.348V61H301v2.048h4.1v4.7L302.748,65.4,301.3,66.844l4.82,4.82,4.82-4.82Z"
+                                                                        transform="translate(-301 -61)"
+                                                                        fill="CurrentColor">
+                                                                    </path>
+                                                                </g>
+                                                            </g>
+                                                            <g id="Group_223" data-name="Group 223"
+                                                                transform="translate(4.464 20.125)">
+                                                                <g id="Group_222" data-name="Group 222">
+                                                                    <path id="Path_2016" data-name="Path 2016"
+                                                                        d="M71.239,303.405v-4.7l2.348,2.348,1.448-1.448-4.82-4.82-4.82,4.82,1.448,1.448,2.348-2.348v6.744h6.144v-2.048Z"
+                                                                        transform="translate(-65.395 -294.789)"
+                                                                        fill="CurrentColor"></path>
+                                                                </g>
+                                                            </g>
+                                                            <g id="Group_225" data-name="Group 225"
+                                                                transform="translate(7.274 10.308)">
+                                                                <g id="Group_224" data-name="Group 224">
+                                                                    <path id="Path_2017" data-name="Path 2017"
+                                                                        d="M106.551,151c.187,4.276,1.46,8.192,2.01,8.192s1.823-3.916,2.01-8.192Z"
+                                                                        transform="translate(-106.551 -151)"
+                                                                        fill="CurrentColor">
+                                                                    </path>
+                                                                </g>
+                                                            </g>
+                                                            <g id="Group_227" data-name="Group 227"
+                                                                transform="translate(7.274)">
+                                                                <g id="Group_226" data-name="Group 226">
+                                                                    <path id="Path_2018" data-name="Path 2018"
+                                                                        d="M108.561,0c-.55,0-1.823,3.984-2.01,8.26h4.021C110.385,3.984,109.112,0,108.561,0Z"
+                                                                        transform="translate(-106.551)"
+                                                                        fill="CurrentColor">
+                                                                    </path>
+                                                                </g>
+                                                            </g>
+                                                            <g id="Group_229" data-name="Group 229"
+                                                                transform="translate(11.796 0.392)">
+                                                                <g id="Group_228" data-name="Group 228">
+                                                                    <path id="Path_2019" data-name="Path 2019"
+                                                                        d="M172.795,5.74a23.848,23.848,0,0,1,1.56,7.869H179.4A9.264,9.264,0,0,0,172.795,5.74Z"
+                                                                        transform="translate(-172.795 -5.74)"
+                                                                        fill="CurrentColor"></path>
+                                                                </g>
+                                                            </g>
+                                                            <g id="Group_231" data-name="Group 231"
+                                                                transform="translate(11.796 10.308)">
+                                                                <g id="Group_230" data-name="Group 230">
+                                                                    <path id="Path_2020" data-name="Path 2020"
+                                                                        d="M174.355,151a23.436,23.436,0,0,1-1.56,7.8,9.177,9.177,0,0,0,6.6-7.8Z"
+                                                                        transform="translate(-172.795 -151)"
+                                                                        fill="CurrentColor">
+                                                                    </path>
+                                                                </g>
+                                                            </g>
+                                                            <g id="Group_233" data-name="Group 233"
+                                                                transform="translate(0 0.392)">
+                                                                <g id="Group_232" data-name="Group 232">
+                                                                    <path id="Path_2021" data-name="Path 2021"
+                                                                        d="M0,13.609H5.212A23.846,23.846,0,0,1,6.773,5.74,9.447,9.447,0,0,0,0,13.609Z"
+                                                                        transform="translate(0 -5.74)"
+                                                                        fill="CurrentColor">
+                                                                    </path>
+                                                                </g>
+                                                            </g>
+                                                            <g id="Group_235" data-name="Group 235"
+                                                                transform="translate(0 10.308)">
+                                                                <g id="Group_234" data-name="Group 234">
+                                                                    <path id="Path_2022" data-name="Path 2022"
+                                                                        d="M5.212,151H0a9.361,9.361,0,0,0,6.773,7.8A23.438,23.438,0,0,1,5.212,151Z"
+                                                                        transform="translate(0 -151)"
+                                                                        fill="CurrentColor">
+                                                                    </path>
+                                                                </g>
+                                                            </g>
+                                                            <circle id="Ellipse_77" data-name="Ellipse 77" cx="9" cy="9"
+                                                                r="9" transform="translate(16.699 16.793)"
+                                                                fill="CurrentColor">
+                                                            </circle>
+                                                        </svg>
+                                                        <span class="ms-2">الخدمات المصرفية الدولية </span>
+                                                    </h6>
+                                                    <div
+                                                        class="submenu-list d-flex flex-wrap row-gap-4 align-items-center">
+                                                        <div class="col-12">
+                                                            <a href="#">إدارة النقد</a>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <a href="#">إدارة التمويل التجاري</a>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="text-primary-color submenu-title">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="36.944"
+                                                            height="36.859" viewBox="0 0 36.944 36.859">
+                                                            <g id="bank_6383839" transform="translate(-3 -3.134)">
+                                                                <path id="Path_2299" data-name="Path 2299"
+                                                                    d="M43,40h4.459V50.829H43Z"
+                                                                    transform="translate(-14.521 -13.383)"
+                                                                    fill="CurrentColor">
+                                                                </path>
+                                                                <path id="Path_2300" data-name="Path 2300"
+                                                                    d="M33,35V49.013h5.1V35.637A.637.637,0,0,0,37.459,35Zm2.548,7.644H34.274V40.1h1.274Z"
+                                                                    transform="translate(-10.891 -11.568)"
+                                                                    fill="CurrentColor">
+                                                                </path>
+                                                                <path id="Path_2301" data-name="Path 2301"
+                                                                    d="M23,35.637V49.013h5.1V35H23.637A.637.637,0,0,0,23,35.637ZM25.548,40.1h1.274v2.548H25.548Z"
+                                                                    transform="translate(-7.261 -11.568)"
+                                                                    fill="CurrentColor">
+                                                                </path>
+                                                                <path id="Path_2302" data-name="Path 2302"
+                                                                    d="M22.561,4.96a7.649,7.649,0,0,1,7.611,7.007h8.95L22.561,3.134,6,11.966h8.95A7.649,7.649,0,0,1,22.561,4.96Z"
+                                                                    transform="translate(-1.089)" fill="CurrentColor">
+                                                                </path>
+                                                                <path id="Path_2303" data-name="Path 2303"
+                                                                    d="M31.661,25A7.619,7.619,0,0,1,19.27,25H17.185v1.911a.637.637,0,0,1-.637.637H14v5.733h4.459V32.007A1.911,1.911,0,0,1,20.37,30.1H30.561a1.911,1.911,0,0,1,1.911,1.911v1.274h4.459v-5.1H34.383a.637.637,0,0,1-.637-.637V25Z"
+                                                                    transform="translate(-3.993 -7.938)"
+                                                                    fill="CurrentColor">
+                                                                </path>
+                                                                <path id="Path_2304" data-name="Path 2304"
+                                                                    d="M54.007,45.383V25H47v1.911h2.548a.637.637,0,0,1,.637.637V45.383Z"
+                                                                    transform="translate(-15.973 -7.938)"
+                                                                    fill="CurrentColor">
+                                                                </path>
+                                                                <path id="Path_2305" data-name="Path 2305"
+                                                                    d="M28.37,8a6.37,6.37,0,1,0,6.37,6.37A6.37,6.37,0,0,0,28.37,8Z"
+                                                                    transform="translate(-6.898 -1.766)"
+                                                                    fill="CurrentColor">
+                                                                </path>
+                                                                <path id="Path_2306" data-name="Path 2306"
+                                                                    d="M39.307,59H3.637a.637.637,0,1,0,0,1.274h35.67a.637.637,0,0,0,0-1.274Z"
+                                                                    transform="translate(0 -20.281)"
+                                                                    fill="CurrentColor">
+                                                                </path>
+                                                                <path id="Path_2307" data-name="Path 2307"
+                                                                    d="M14.532,21.548A7.586,7.586,0,0,1,13.861,19H3v2.548Z"
+                                                                    transform="translate(0 -5.76)" fill="CurrentColor">
+                                                                </path>
+                                                                <path id="Path_2308" data-name="Path 2308"
+                                                                    d="M43.568,19a7.586,7.586,0,0,1-.668,2.548H54.429V19Z"
+                                                                    transform="translate(-14.485 -5.76)"
+                                                                    fill="CurrentColor">
+                                                                </path>
+                                                                <path id="Path_2309" data-name="Path 2309"
+                                                                    d="M14,40h4.459V50.829H14Z"
+                                                                    transform="translate(-3.993 -13.383)"
+                                                                    fill="CurrentColor">
+                                                                </path>
+                                                                <path id="Path_2310" data-name="Path 2310"
+                                                                    d="M13.007,25H6V45.383H9.822V26.911a.637.637,0,0,1,.637-.637h2.548Z"
+                                                                    transform="translate(-1.089 -7.938)"
+                                                                    fill="CurrentColor">
+                                                                </path>
+                                                            </g>
+                                                        </svg>
+                                                        <span class="ms-2">إدارة المؤسسات المالية </span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31.298" height="36.39"
+                                viewBox="0 0 31.298 36.39">
+                                <path id="sme_17320649"
+                                    d="M54.209,12.681l1.9,4.92H51.995v-4.92Zm8.343,4.92h4.126l-3.261-4.92H59.695ZM51.995,19.826c0,.015,0,.029,0,.046h0a2.176,2.176,0,1,0,4.351,0V18.64H51.995ZM61.354,17.6,58.5,12.681H55.316l1.9,4.92Zm-1.8,4.446a2.181,2.181,0,0,0,2.177-2.175V18.64H57.384v1.233A2.181,2.181,0,0,0,59.558,22.047ZM47.633,12.681H44.455L41.6,17.6h4.135Zm-6.448,18.56H51.2V27.165H41.185Zm0,2.116H51.2V32.279H41.185ZM39.538,21.409a2.17,2.17,0,0,0,.641-1.536V18.64H35.826v1.233a2.17,2.17,0,0,0,.641,1.536,2.2,2.2,0,0,0,.96.561l.021.006a2.194,2.194,0,0,0,.554.071,2.165,2.165,0,0,0,1.536-.638ZM56.1,27.165h5.788V36.39H56.1ZM59.976,32.4a.519.519,0,1,0,1.038,0V31.159a.519.519,0,1,0-1.038,0Zm2.8-13.759v1.233a2.176,2.176,0,0,0,2.729,2.1l.023-.006a2.2,2.2,0,0,0,.96-.561,2.168,2.168,0,0,0,.639-1.536V18.64Zm2.177,4.446q.091,0,.183-.006v13.1a.212.212,0,0,1-.21.208h-2V26.646a.52.52,0,0,0-.519-.519H55.581a.519.519,0,0,0-.519.519V36.39H38.03a.208.208,0,0,1-.147-.061.2.2,0,0,1-.063-.147v-13.1q.091.006.183.006a3.2,3.2,0,0,0,2.269-.943,3.289,3.289,0,0,0,.427-.524,3.163,3.163,0,0,0,.424.523,3.2,3.2,0,0,0,4.54,0,3.4,3.4,0,0,0,.424-.523,3.164,3.164,0,0,0,.424.523,3.2,3.2,0,0,0,4.54,0,3.4,3.4,0,0,0,.424-.523,3.278,3.278,0,0,0,.424.523,3.2,3.2,0,0,0,4.54,0,3.28,3.28,0,0,0,.424-.523,3.275,3.275,0,0,0,.424.523A3.207,3.207,0,0,0,64.949,23.085ZM52.236,26.646a.519.519,0,0,0-.519-.519H40.667a.52.52,0,0,0-.519.519v7.23a.52.52,0,0,0,.519.519H51.717a.519.519,0,0,0,.519-.519v-7.23Zm-4.992-5.238a2.177,2.177,0,0,0,3.712-1.536h0a.362.362,0,0,1,0-.046V18.639H46.606v1.2c0,.011,0,.021,0,.034h0a2.168,2.168,0,0,0,.638,1.536Zm3.712-8.727H48.743l-1.9,4.921h4.116Zm-7.7,0H39.534L36.273,17.6H40.4Zm-2.04,7.175s0,.011,0,.017h0a2.176,2.176,0,1,0,4.351,0V18.64H41.217ZM40.129,7.982V.553A.554.554,0,0,1,40.681,0H62.268a.553.553,0,0,1,.553.553V7.982a.554.554,0,0,1-.553.553H52.646l-.248.426-.922,1.6-.924-1.6L50.3,8.534H40.681a.556.556,0,0,1-.553-.553Zm15.1-1.343a.52.52,0,0,0,.519.519h3.17a.519.519,0,1,0,0-1.038H56.266V4.786h2.651a.519.519,0,1,0,0-1.038H56.266V2.414h2.651a.519.519,0,1,0,0-1.038h-3.17a.52.52,0,0,0-.519.519Zm-5.855,0a.517.517,0,1,0,1.034,0V3.712l.628,1.017a.52.52,0,0,0,.712.168.511.511,0,0,0,.172-.176l.626-1.008,0,2.927a.517.517,0,1,0,1.034,0l0-4.734a.517.517,0,0,0-.956-.282L51.476,3.475,50.329,1.624a.516.516,0,0,0-.956.271ZM46.686,5.452a.675.675,0,0,1-.668.668h-.8a.674.674,0,0,1-.668-.668.519.519,0,1,0-1.038,0,1.711,1.711,0,0,0,1.706,1.706h.8a1.7,1.7,0,1,0,0-3.41h-.8a.667.667,0,0,1,0-1.334h.8a.671.671,0,0,1,.668.666.519.519,0,0,0,1.038,0,1.711,1.711,0,0,0-1.706-1.7h-.8a1.7,1.7,0,1,0,0,3.41h.8a.669.669,0,0,1,.668.666Z"
+                                    transform="translate(-35.826 0)" fill="CurrentColor" fill-rule="evenodd"></path>
+                            </svg>
+                            <span class="d-block mt-2">المشروعات الصغيرة</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-4">
+                    <div class="dropdown">
+                        <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            class="btn btn-md btn-border-primary-color rounded-0 fw-bd">الأنترنت البنكي</a>
+                        <div class="dropdown-menu dropdown-menu-hover">
+                            <a class="dropdown-item" href="#">
+                                <svg id="users" xmlns="http://www.w3.org/2000/svg" width="22.406" height="13.444"
+                                    viewBox="0 0 22.406 13.444">
+                                    <path id="Path_2389" data-name="Path 2389"
+                                        d="M22.722,62.722a3.361,3.361,0,1,1,3.361-3.361A3.361,3.361,0,0,1,22.722,62.722Zm8.962,0a3.361,3.361,0,1,1,3.361-3.361A3.361,3.361,0,0,1,31.684,62.722Zm-8.962,2.241A8.94,8.94,0,0,1,29.444,68v1.447H16V68a8.94,8.94,0,0,1,6.722-3.034Zm8.962,4.481V67.149l-.56-.635a11.267,11.267,0,0,0-1.4-1.337A8.979,8.979,0,0,1,38.406,68v1.447Z"
+                                        transform="translate(-16 -56)" fill-rule="evenodd" fill="#0f3c66"></path>
+                                </svg>
+                                <span class="ms-2">الأفراد</span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <svg id="building" xmlns="http://www.w3.org/2000/svg" width="18.328" height="18.328"
+                                    viewBox="0 0 18.328 18.328">
+                                    <path id="Path_2388" data-name="Path 2388"
+                                        d="M17.755,18.328H.573a.55.55,0,0,1-.4-.17.562.562,0,0,1,0-.805.55.55,0,0,1,.4-.17h.573a1.092,1.092,0,0,0,.814-.34,1.116,1.116,0,0,0,.331-.805V1.146A1.1,1.1,0,0,1,2.631.34,1.1,1.1,0,0,1,3.437,0H14.892a1.092,1.092,0,0,1,.814.34,1.116,1.116,0,0,1,.331.805V16.037a1.092,1.092,0,0,0,.34.814,1.116,1.116,0,0,0,.805.331h.573a.573.573,0,0,1,0,1.146ZM6.873,2.864A.581.581,0,0,0,6.3,2.291H5.155a.581.581,0,0,0-.573.573V4.009a.581.581,0,0,0,.573.573H6.3a.581.581,0,0,0,.573-.573Zm0,3.437A.581.581,0,0,0,6.3,5.728H5.155a.581.581,0,0,0-.573.573V7.446a.581.581,0,0,0,.573.573H6.3a.581.581,0,0,0,.573-.573Zm0,3.437A.581.581,0,0,0,6.3,9.164H5.155a.581.581,0,0,0-.573.573v1.146a.581.581,0,0,0,.573.573H6.3a.581.581,0,0,0,.573-.573ZM10.31,2.864a.581.581,0,0,0-.573-.573H8.591a.581.581,0,0,0-.573.573V4.009a.581.581,0,0,0,.573.573H9.737a.581.581,0,0,0,.573-.573Zm0,3.437a.581.581,0,0,0-.573-.573H8.591a.581.581,0,0,0-.573.573V7.446a.581.581,0,0,0,.573.573H9.737a.581.581,0,0,0,.573-.573Zm0,3.437a.581.581,0,0,0-.573-.573H8.591a.581.581,0,0,0-.573.573v1.146a.581.581,0,0,0,.573.573H9.737a.581.581,0,0,0,.573-.573Zm.573,4.009H7.446a.581.581,0,0,0-.573.573V16.61a.581.581,0,0,0,.573.573h3.437a.581.581,0,0,0,.573-.573V14.319a.581.581,0,0,0-.573-.573ZM13.746,2.864a.581.581,0,0,0-.573-.573H12.028a.581.581,0,0,0-.573.573V4.009a.581.581,0,0,0,.573.573h1.146a.581.581,0,0,0,.573-.573Zm0,3.437a.581.581,0,0,0-.573-.573H12.028a.581.581,0,0,0-.573.573V7.446a.581.581,0,0,0,.573.573h1.146a.581.581,0,0,0,.573-.573Zm0,3.437a.581.581,0,0,0-.573-.573H12.028a.581.581,0,0,0-.573.573v1.146a.581.581,0,0,0,.573.573h1.146a.581.581,0,0,0,.573-.573Z"
+                                        transform="translate(0 0)" fill="#0f3c66"></path>
+                                </svg>
+                                <span class="ms-2">الشـركات</span>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-secondary-color__hover flip-x-hover" data-bs-toggle="modal"
+                        data-bs-target="#searchModal">
+                        <svg class="hover-target" xmlns="http://www.w3.org/2000/svg" width="31.707" height="31.707"
+                            viewBox="0 0 31.707 31.707">
+                            <path id="Path_1976" data-name="Path 1976"
+                                d="M49.461,46.764l-7.188-7.188a13.36,13.36,0,1,0-2.7,2.7l7.188,7.188a1.91,1.91,0,0,0,2.7-2.7ZM22.054,31.587a9.534,9.534,0,1,1,9.534,9.534A9.534,9.534,0,0,1,22.054,31.587Z"
+                                transform="translate(-18.24 -18.24)" fill="#f7941d"></path>
+                        </svg>
+                        <span class="ms-2 fs-lg">البحث</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--End Navbar-->
+
+    <div class="modal fade search-modal" id="searchModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="d-flex w-100 justify-content-between align-items-center mb-xl">
+                        <h1 class="modal-title" id="exampleModalToggleLabel">كيف يمكننا مساعدتك ؟</h1>
+                        <button type="button" class="btn-close flip-x-hover" data-bs-dismiss="modal" aria-label="Close">
+                            <svg class="hover-target" xmlns="http://www.w3.org/2000/svg" width="35.946" height="36.042"
+                                viewBox="0 0 35.946 36.042">
+                                <path
+                                    d="M62.936,60.6l14.9-14.9A1.8,1.8,0,0,0,75.3,43.165l-14.9,14.9L45.5,43.147A1.8,1.8,0,0,0,42.951,45.7L57.868,60.6,42.951,75.5a1.8,1.8,0,1,0,2.534,2.534L60.4,63.132l14.9,14.9A1.8,1.8,0,0,0,77.836,75.5Z"
+                                    transform="translate(-42.322 -42.618)" fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="position-relative w-100 mb-md">
+                        <span
+                            class="position-absolute top-0 start-0 h-100 d-flex align-items-center justify-content-center">
+                            <svg class="hover-target" xmlns="http://www.w3.org/2000/svg" width="31.707" height="31.707"
+                                viewBox="0 0 31.707 31.707">
+                                <path id="Path_1976" data-name="Path 1976"
+                                    d="M49.461,46.764l-7.188-7.188a13.36,13.36,0,1,0-2.7,2.7l7.188,7.188a1.91,1.91,0,0,0,2.7-2.7ZM22.054,31.587a9.534,9.534,0,1,1,9.534,9.534A9.534,9.534,0,0,1,22.054,31.587Z"
+                                    transform="translate(-18.24 -18.24)" fill="#f7941d"></path>
+                            </svg>
+                        </span>
+                        <input type="text"
+                            class="form-control form-control-lg form-control-white border-top-0 border-start-0 border-end-0 rounded-0 ps-5 bg-transparent border-color"
+                            placeholder="بحث في الموقع">
+                    </div>
+                    <div class="text-end">
+                        <button class="btn btn-md btn-secondary-color text-dark-color rounded-0"
+                            type="submit">بحــــث</button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <h2 class="text-primary-color mb-lg">راوبط بحث سريعة</h2>
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="#" class="main-btn main-btn--gray">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>أوعية ادخارية</span>
+                                </a>
+                                <a href="#" class="main-btn main-btn--gray">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>برامج التجزئة المصرفية</span>
+                                </a>
+                                <a href="#" class="main-btn main-btn--gray">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>التمويــل العقـاري</span>
+                                </a>
+                                <a href="#" class="main-btn main-btn--gray">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>المشروعات الصغيرة والمتوسطة</span>
+                                </a>
+                                <a href="#" class="main-btn main-btn--gray">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>فروعنــــــا</span>
+                                </a>
+                                <a href="#" class="main-btn main-btn--gray">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>الانترنت البنكي</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <img src="./assets/media/--modal/path.svg" alt="path layer" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Search Modal-->
+
+    <div class="offcanvas offcanvas-start menu-offcanvas" tabindex="-1" id="menuOffcanvas"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title mx-auto" id="offcanvasExampleLabel">
+                <img src="./assets/media/logo.png" alt="IDB" loading="lazy">
+            </h5>
+            <button type="button" class="btn-close flip-x-hover" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg class="hover-target" xmlns="http://www.w3.org/2000/svg" width="35.946" height="36.042"
+                    viewBox="0 0 35.946 36.042">
+                    <path
+                        d="M62.936,60.6l14.9-14.9A1.8,1.8,0,0,0,75.3,43.165l-14.9,14.9L45.5,43.147A1.8,1.8,0,0,0,42.951,45.7L57.868,60.6,42.951,75.5a1.8,1.8,0,1,0,2.534,2.534L60.4,63.132l14.9,14.9A1.8,1.8,0,0,0,77.836,75.5Z"
+                        transform="translate(-42.322 -42.618)" fill="currentColor" />
+                </svg>
+            </button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <div class="dropdown">
+                <a href="#" class="rotate-y-hover offcanvas-link" type="button" data-bs-toggle="dropdown">
+                    القائمة الرئيسية
+                    <svg class="ms-1 hover-target" xmlns="http://www.w3.org/2000/svg" width="13.225" height="6.966"
+                        viewBox="0 0 13.225 6.966">
+                        <path id="Path_2007" data-name="Path 2007"
+                            d="M39.028,63.254l-5.7,5.552-5.7-5.552a.545.545,0,0,0-.761,0,.518.518,0,0,0,0,.741L32.935,69.9a.57.57,0,0,0,.8,0L39.789,64a.518.518,0,0,0,0-.743.545.545,0,0,0-.761,0Z"
+                            transform="translate(-26.721 -63.098)" fill="CurrentColor"></path>
+                    </svg>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./about.html">عن البنك</a></li>
+                    <li><a class="dropdown-item" href="#">الإستدامة</a></li>
+                    <li><a class="dropdown-item" href="#">المركز الإعلامي</a></li>
+                    <li><a class="dropdown-item" href="#">الفروع والصراف الآلي</a></li>
+                    <li><a class="dropdown-item" href="#">الوظائف المتاحة</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="rotate-y-hover offcanvas-link" type="button" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside">
+                    قائمة الخدمات
+                    <svg class="ms-1 hover-target" xmlns="http://www.w3.org/2000/svg" width="13.225" height="6.966"
+                        viewBox="0 0 13.225 6.966">
+                        <path id="Path_2007" data-name="Path 2007"
+                            d="M39.028,63.254l-5.7,5.552-5.7-5.552a.545.545,0,0,0-.761,0,.518.518,0,0,0,0,.741L32.935,69.9a.57.57,0,0,0,.8,0L39.789,64a.518.518,0,0,0,0-.743.545.545,0,0,0-.761,0Z"
+                            transform="translate(-26.721 -63.098)" fill="CurrentColor"></path>
+                    </svg>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown">
+                        <a class="dropdown-item" href="#" type="button" data-bs-toggle="dropdown">
+                            <img width="25" src="./assets/media/--icons/service-1.svg" alt="icon 1">
+                            <span class="ms-2">خدمات الأفــــراد</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">حسابات التوفير</a>
+                            <a class="dropdown-item" href="#">القروض الشخصية</a>
+                            <a class="dropdown-item" href="#">القروض العقارية</a>
+                            <a class="dropdown-item" href="#">القروض الشخصية</a>
+                            <a class="dropdown-item" href="#">الودائع / الشهادات</a>
+                            <a class="dropdown-item" href="#">قروض السيارات</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-item" href="#" type="button" data-bs-toggle="dropdown">
+                            <img width="25" src="./assets/media/--icons/service-2.svg" alt="icon 1">
+                            <span class="ms-2">الخدمات المصرفية للشركات</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">الشركات المتوسطة</a>
+                            <a class="dropdown-item" href="#">الشركات الكبرى</a>
+                            <a class="dropdown-item" href="#">إدارة النقد</a>
+                            <a class="dropdown-item" href="#">إدارة التمويل التجاري</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <img width="25" src="./assets/media/--icons/service-3.svg" alt="icon 1">
+                            <span class="ms-2">المشروعات الصغيرة</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Menu Offcanvas-->
+
+    <div class="hero--section">
+        <div class="slick--hero">
+            <div class="item" style="background-image: url('./assets/media/--hero/1.webp');">
+                <div class="container-fluid">
+                    <div class="hero--item">
+                        <h2 class="h1 hero-item--title">استخدم موبايلك اكتر هتستفاد اكتر IDB بيقدملك كريديت كارد</h2>
+                        <p class="hero-item--desc">
+                            ولأول مرة في مصر تأمين على الموبايل
+                        </p>
+                        <a href="#" class="btn main-btn main-btn--white rounded-0">
+                            <svg class="w-100 h-100" viewBox="0 0 212.269 62.038" xmlns="http://www.w3.org/2000/svg"
+                                preserveAspectRatio="none">
+                                <g transform="translate(-1594.403 -842.303)">
+                                    <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109" transform="translate(0 90)">
+                                    </path>
+                                    <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                    </path>
+                                </g>
+                            </svg>
+                            <span>قــراءة المزيـد</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url('./assets/media/--hero/2.webp');">
+                <div class="container-fluid">
+                    <div class="hero--item">
+                        <h2 class="h1 hero-item--title">انسى مشوار البنك نزل الأبلكيشن وخلي البنك في جيبك</h2>
+                        <p class="hero-item--desc">
+                            يهدف البنك من خلال باقاته المميزة من المنتجات والخدمات المصرفية المتطورة في المقام الاول إلى
+                            تلبية الإحتياجات المتنوعة للمواطنين
+                        </p>
+                        <a href="#" class="btn main-btn main-btn--white rounded-0">
+                            <svg class="w-100 h-100" viewBox="0 0 212.269 62.038" xmlns="http://www.w3.org/2000/svg"
+                                preserveAspectRatio="none">
+                                <g transform="translate(-1594.403 -842.303)">
+                                    <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109" transform="translate(0 90)">
+                                    </path>
+                                    <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                    </path>
+                                </g>
+                            </svg>
+                            <span>قــراءة المزيـد</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url('./assets/media/--hero/3.webp');">
+                <div class="container-fluid">
+                    <div class="hero--item">
+                        <h2 class="h1 hero-item--title">قربنالك في كل مكان <br> تحقق حلمك بتمويل إئتماني </h2>
+                        <p class="hero-item--desc">
+                            كلمنا دلوقتي على 19320 وأعرف أكتر
+                        </p>
+                        <a href="#" class="btn main-btn main-btn--white rounded-0">
+                            <svg class="w-100 h-100" viewBox="0 0 212.269 62.038" xmlns="http://www.w3.org/2000/svg"
+                                preserveAspectRatio="none">
+                                <g transform="translate(-1594.403 -842.303)">
+                                    <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109" transform="translate(0 90)">
+                                    </path>
+                                    <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                    </path>
+                                </g>
+                            </svg>
+                            <span>قــراءة المزيـد</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slick--controls">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="slick-arrows">
+                        <button class="slick-arrow slickPrev" data-target=".hero-carousel">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11.969" height="20.732"
+                                viewBox="0 0 11.969 20.732">
+                                <path id="Path_1973" data-name="Path 1973" d="M1043.032,666.668l9.839,9.59-9.839,9.714"
+                                    transform="translate(-1042.329 -665.952)" fill="none" stroke="#0f3c66"
+                                    stroke-width="2" />
+                            </svg>
+                        </button>
+                        <button class="slick-arrow slickNext" data-target=".hero-carousel">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11.969" height="20.732"
+                                viewBox="0 0 11.969 20.732">
+                                <path id="Path_1974" data-name="Path 1974" d="M1043.032,666.668l9.839,9.59-9.839,9.714"
+                                    transform="translate(1054.298 686.684) rotate(180)" fill="none" stroke="#0f3c66"
+                                    stroke-width="2" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="slick-dots slick-dots--white mx-auto" data-target=".hero-carousel"></ul>
+
+                    <a class="hero--hotline" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21.6" height="26.438" viewBox="0 0 21.6 26.438">
+                            <g id="headset-mic" transform="translate(0 -2)">
+                                <path id="Path_2096" data-name="Path 2096"
+                                    d="M10.8,2a10.369,10.369,0,0,1,7.65,3.178A10.443,10.443,0,0,1,21.6,12.8V24.838a3.506,3.506,0,0,1-1.041,2.531A3.432,3.432,0,0,1,18,28.438H10.8V26.019h8.381V24.838H14.4V15.219h4.781V12.8a8.081,8.081,0,0,0-2.447-5.934A8.081,8.081,0,0,0,10.8,4.419,8.081,8.081,0,0,0,4.866,6.866,8.081,8.081,0,0,0,2.419,12.8v2.419H7.2v9.619H3.6a3.432,3.432,0,0,1-2.559-1.069A3.506,3.506,0,0,1,0,21.238V12.8A10.443,10.443,0,0,1,3.15,5.178,10.369,10.369,0,0,1,10.8,2Z"
+                                    fill="#0f3c66" />
+                            </g>
+                        </svg>
+                        <span>الخط الساخن</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Hero-->
+
+    <div class="service--section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="section-title pt-xl">
+                        <div class="d-inline-flex gap-4 position-relative">
+                            <div class="icon">
+                                <svg class="shape-icon opacity-25" xmlns="http://www.w3.org/2000/svg" width="157.469"
+                                    height="67.557" viewBox="0 0 157.469 67.557">
+                                    <path id="Path_1980" data-name="Path 1980"
+                                        d="M157.468.256H0L67.526,67.814l37.937-37.935,52.005.256Z"
+                                        transform="translate(157.468 67.813) rotate(180)" fill="#d2e4f5"
+                                        style="mix-blend-mode: multiply; isolation: isolate"></path>
+                                </svg>
+                            </div>
+                            <img src="./assets/media/--icons/banking-service.svg" alt="service" loading="lazy">
+                            <h2 class="h1 text-white-color mb-0">خدمــــــات <br> البنــــــــــك</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 px-lg-0">
+                    <div class="pt-xl service--block">
+                        <div class="px-md mb-lg">
+                            <h2 class="lh-30 mb-md">أفضل خدمات تمويلية وإستشارية مقدمة من قبل بنك التنمية الصناعية</h2>
+                            <p class="fs-xl">,اكثر من 75 عام نصنع الفرق أفضل خدمات تمويلية وإستشارية 26 فرع في أكثر من
+                                20
+                                محافظة
+                            </p>
+                        </div>
+
+                        <div class="service--block-img mt-auto"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="row h-100">
+                        <div class="col-4">
+                            <a class="service--link text-white-color text-secondary-color__hover d-flex flex-column gap-4 text-center justify-content-center align-items-center h-100 pt-lg-xl"
+                                href="#" data-background="url('./assets/media/--services/service-1.webp')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="62.508" height="53.025"
+                                    viewBox="0 0 62.508 53.025">
+                                    <g id="group_681494" transform="translate(0 -38.84)">
+                                        <g id="Group_423" data-name="Group 423" transform="translate(48.651 67.467)">
+                                            <g id="Group_422" data-name="Group 422" transform="translate(0 0)">
+                                                <path id="Path_2312" data-name="Path 2312"
+                                                    d="M403.328,273.32h-4.834a12.576,12.576,0,0,1,.762,4.322v18.27a5.388,5.388,0,0,1-.31,1.8h7.992a5.42,5.42,0,0,0,5.414-5.414v-9.96A9.033,9.033,0,0,0,403.328,273.32Z"
+                                                    transform="translate(-398.494 -273.32)" fill="currentColor" />
+                                            </g>
+                                        </g>
+                                        <g id="Group_425" data-name="Group 425" transform="translate(0 67.467)">
+                                            <g id="Group_424" data-name="Group 424" transform="translate(0 0)">
+                                                <path id="Path_2313" data-name="Path 2313"
+                                                    d="M13.1,277.643a12.574,12.574,0,0,1,.762-4.322H9.023A9.034,9.034,0,0,0,0,282.344v9.96a5.42,5.42,0,0,0,5.414,5.414h7.992a5.39,5.39,0,0,1-.31-1.8Z"
+                                                    transform="translate(0 -273.321)" fill="currentColor" />
+                                            </g>
+                                        </g>
+                                        <g id="Group_427" data-name="Group 427" transform="translate(16.705 62.766)">
+                                            <g id="Group_426" data-name="Group 426" transform="translate(0 0)">
+                                                <path id="Path_2314" data-name="Path 2314"
+                                                    d="M156.9,234.815H145.852a9.034,9.034,0,0,0-9.023,9.023v18.27a1.8,1.8,0,0,0,1.8,1.8h25.489a1.8,1.8,0,0,0,1.8-1.8v-18.27A9.034,9.034,0,0,0,156.9,234.815Z"
+                                                    transform="translate(-136.829 -234.815)" fill="currentColor" />
+                                            </g>
+                                        </g>
+                                        <g id="Group_429" data-name="Group 429" transform="translate(20.402 38.84)">
+                                            <g id="Group_428" data-name="Group 428" transform="translate(0 0)">
+                                                <path id="Path_2315" data-name="Path 2315"
+                                                    d="M177.966,38.84a10.85,10.85,0,1,0,10.852,10.852A10.864,10.864,0,0,0,177.966,38.84Z"
+                                                    transform="translate(-167.114 -38.84)" fill="currentColor" />
+                                            </g>
+                                        </g>
+                                        <g id="Group_431" data-name="Group 431" transform="translate(4.083 48.955)">
+                                            <g id="Group_430" data-name="Group 430" transform="translate(0 0)">
+                                                <path id="Path_2316" data-name="Path 2316"
+                                                    d="M41.559,121.689a8.112,8.112,0,1,0,8.116,8.116A8.125,8.125,0,0,0,41.559,121.689Z"
+                                                    transform="translate(-33.443 -121.689)" fill="currentColor" />
+                                            </g>
+                                        </g>
+                                        <g id="Group_433" data-name="Group 433" transform="translate(42.194 48.955)">
+                                            <g id="Group_432" data-name="Group 432" transform="translate(0 0)">
+                                                <path id="Path_2317" data-name="Path 2317"
+                                                    d="M353.723,121.689a8.116,8.116,0,1,0,8.116,8.116A8.125,8.125,0,0,0,353.723,121.689Z"
+                                                    transform="translate(-345.607 -121.689)" fill="currentColor" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <span class="d-block h5">خدمــــات الأفـــــراد</span>
+
+                                <div class="arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="44.032" height="35"
+                                        viewBox="0 0 44.032 35">
+                                        <g id="arrow-left" transform="translate(-18 -34)">
+                                            <path id="Path_1995" data-name="Path 1995"
+                                                d="M19.688,91.692A1.693,1.693,0,0,1,21.383,90l40.169.028a1.694,1.694,0,0,1,0,3.387L21.38,93.387A1.694,1.694,0,0,1,19.688,91.692Z"
+                                                transform="translate(81.244 143.193) rotate(180)" fill="currentColor"
+                                                fill-rule="evenodd"></path>
+                                            <path id="Path_1996" data-name="Path 1996"
+                                                d="M36.668,34.495a1.694,1.694,0,0,1,0,2.4L22.086,51.5,36.67,66.11a1.694,1.694,0,0,1-2.4,2.393L18.495,52.7a1.694,1.694,0,0,1,0-2.393L34.273,34.5A1.694,1.694,0,0,1,36.668,34.495Z"
+                                                transform="translate(80.032 103) rotate(180)" fill="currentColor"
+                                                fill-rule="evenodd">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a class="service--link text-white-color text-secondary-color__hover d-flex flex-column gap-4 text-center justify-content-center align-items-center h-100 pt-lg-xl"
+                                href="#" data-background="url('./assets/media/--services/service-2.webp')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="57.312" height="57.312"
+                                    viewBox="0 0 57.312 57.312">
+                                    <g id="_x39__x5F_advertise_building" transform="translate(0 -1)">
+                                        <g id="XMLID_133_" transform="translate(0 1)">
+                                            <path id="XMLID_134_" d="M187,60h15.366v3.028H187Z"
+                                                transform="translate(-166.027 -53.383)" fill="currentColor" />
+                                            <path id="XMLID_168_" d="M136,1h26.806V5.823H136Z"
+                                                transform="translate(-120.747 -1)" fill="currentColor" />
+                                            <path id="XMLID_171_"
+                                                d="M136,148.872h5.384V133.507a.922.922,0,0,1,.925-.9h14.3a.922.922,0,0,1,.925.9v15.366h5.271V103H136Zm18.821-40.04H158.4a.9.9,0,0,1,0,1.795h-3.575a.9.9,0,1,1,0-1.795Zm0,5.72H158.4a.9.9,0,0,1,0,1.795h-3.575a.9.9,0,1,1,0-1.795Zm0,5.72H158.4a.9.9,0,0,1,0,1.795h-3.575a.9.9,0,1,1,0-1.795Zm0,5.72H158.4a.9.9,0,0,1,0,1.795h-3.575a.9.9,0,1,1,0-1.795Zm-7.15-17.16h3.575a.9.9,0,0,1,0,1.795h-3.575a.9.9,0,1,1,0-1.795Zm0,5.72h3.575a.9.9,0,0,1,0,1.795h-3.575a.9.9,0,1,1,0-1.795Zm0,5.72h3.575a.9.9,0,0,1,0,1.795h-3.575a.9.9,0,1,1,0-1.795Zm0,5.72h3.575a.9.9,0,0,1,0,1.795h-3.575a.9.9,0,1,1,0-1.795Zm-7.15-17.16H144.1a.9.9,0,0,1,0,1.795h-3.575a.9.9,0,1,1,0-1.795Zm0,5.72H144.1a.9.9,0,0,1,0,1.795h-3.575a.9.9,0,1,1,0-1.795Zm0,5.72H144.1a.9.9,0,0,1,0,1.795h-3.575a.9.9,0,1,1,0-1.795Zm0,5.72H144.1a.9.9,0,0,1,0,1.795h-3.575a.9.9,0,1,1,0-1.795Z"
+                                                transform="translate(-120.747 -91.56)" fill="currentColor" />
+                                            <path id="XMLID_722_"
+                                                d="M0,211.948H13.459v-37.9L0,179.091Zm4.879-27.7H8.692a.9.9,0,1,1,0,1.794H4.879a.9.9,0,1,1,0-1.794Zm0,6.729H8.692a.9.9,0,0,1,0,1.795H4.879a.9.9,0,0,1,0-1.795Zm0,6.617H8.692a.9.9,0,0,1,0,1.795H4.879a.9.9,0,0,1,0-1.795Zm0,6.729H8.692a.9.9,0,0,1,0,1.795H4.879a.9.9,0,0,1,0-1.795Z"
+                                                transform="translate(0 -154.636)" fill="currentColor" />
+                                            <path id="XMLID_1838_"
+                                                d="M391,174.044v37.9h13.459V179.091Zm8.692,32.072h-3.813a.9.9,0,0,1,0-1.795h3.813a.9.9,0,0,1,0,1.795Zm0-6.729h-3.813a.9.9,0,0,1,0-1.795h3.813a.9.9,0,0,1,0,1.795Zm0-6.617h-3.813a.9.9,0,0,1,0-1.795h3.813a.9.9,0,0,1,0,1.795Zm0-6.729h-3.813a.9.9,0,0,1,0-1.794h3.813a.9.9,0,0,1,0,1.794Z"
+                                                transform="translate(-347.147 -154.636)" fill="currentColor" />
+                                            <path id="XMLID_1842_" d="M200,383h5.384v14.468H200Z"
+                                                transform="translate(-177.569 -340.156)" fill="currentColor" />
+                                            <path id="XMLID_1843_" d="M264,383h5.384v14.468H264Z"
+                                                transform="translate(-234.391 -340.156)" fill="currentColor" />
+                                        </g>
+                                    </g>
+                                </svg>
+                                <span class="d-block h5">الخدمـــات المصرفية للشركــات</span>
+                                <div class="arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="44.032" height="35"
+                                        viewBox="0 0 44.032 35">
+                                        <g id="arrow-left" transform="translate(-18 -34)">
+                                            <path id="Path_1995" data-name="Path 1995"
+                                                d="M19.688,91.692A1.693,1.693,0,0,1,21.383,90l40.169.028a1.694,1.694,0,0,1,0,3.387L21.38,93.387A1.694,1.694,0,0,1,19.688,91.692Z"
+                                                transform="translate(81.244 143.193) rotate(180)" fill="currentColor"
+                                                fill-rule="evenodd"></path>
+                                            <path id="Path_1996" data-name="Path 1996"
+                                                d="M36.668,34.495a1.694,1.694,0,0,1,0,2.4L22.086,51.5,36.67,66.11a1.694,1.694,0,0,1-2.4,2.393L18.495,52.7a1.694,1.694,0,0,1,0-2.393L34.273,34.5A1.694,1.694,0,0,1,36.668,34.495Z"
+                                                transform="translate(80.032 103) rotate(180)" fill="currentColor"
+                                                fill-rule="evenodd">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a class="service--link text-white-color text-secondary-color__hover d-flex flex-column gap-4 text-center justify-content-center align-items-center h-100 pt-lg-xl"
+                                href="#" data-background="url('./assets/media/--services/service-3.webp')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48.879" height="56.832"
+                                    viewBox="0 0 48.879 56.832">
+                                    <path id="sme_17320649"
+                                        d="M64.536,19.8l2.969,7.684H61.078V19.8Zm13.029,7.684h6.444L78.917,19.8H73.1ZM61.078,30.964c0,.023,0,.046,0,.072h0a3.4,3.4,0,1,0,6.8,0V29.11h-6.8Zm14.617-3.474L71.232,19.8H66.265l2.969,7.684Zm-2.8,6.943a3.406,3.406,0,0,0,3.4-3.4V29.11h-6.8v1.926A3.406,3.406,0,0,0,72.89,34.432ZM54.266,19.8H49.3l-4.462,7.684H51.3ZM44.2,48.79H59.834V42.424H44.2Zm0,3.3H59.834V50.411H44.2ZM41.624,33.435a3.389,3.389,0,0,0,1-2.4V29.11h-6.8v1.926a3.389,3.389,0,0,0,1,2.4,3.43,3.43,0,0,0,1.5.876l.033.01a3.427,3.427,0,0,0,.866.111,3.381,3.381,0,0,0,2.4-1Zm25.862,8.989h9.039V56.832H67.486ZM73.543,50.6a.81.81,0,1,0,1.621,0V48.663a.81.81,0,0,0-1.621,0ZM77.91,29.11v1.926a3.4,3.4,0,0,0,4.262,3.284l.036-.01a3.429,3.429,0,0,0,1.5-.876,3.386,3.386,0,0,0,1-2.4V29.11Zm3.4,6.943q.143,0,.286-.01V56.507a.331.331,0,0,1-.328.325H78.146V41.614a.812.812,0,0,0-.81-.81H66.678a.81.81,0,0,0-.81.81V56.832h-26.6a.325.325,0,0,1-.23-.1.315.315,0,0,1-.1-.23V36.043q.143.01.285.01a5,5,0,0,0,3.543-1.473,5.137,5.137,0,0,0,.667-.818,4.94,4.94,0,0,0,.663.817,5,5,0,0,0,7.091,0,5.3,5.3,0,0,0,.663-.817,4.941,4.941,0,0,0,.663.817,5,5,0,0,0,7.09,0,5.3,5.3,0,0,0,.663-.817,4.94,4.94,0,0,0,.663.817,5,5,0,0,0,7.09,0,5.3,5.3,0,0,0,.663-.817,5.119,5.119,0,0,0,.663.817,5,5,0,0,0,7.091,0,5.122,5.122,0,0,0,.663-.817,5.116,5.116,0,0,0,.663.817A5.008,5.008,0,0,0,81.309,36.053ZM61.455,41.614a.81.81,0,0,0-.81-.81H43.386a.812.812,0,0,0-.81.81V52.9a.812.812,0,0,0,.81.81H60.644a.81.81,0,0,0,.81-.81V41.614Zm-7.8-8.18a3.4,3.4,0,0,0,5.8-2.4h0a.565.565,0,0,1,0-.072V29.11H52.662v1.874c0,.016,0,.033,0,.053h0a3.386,3.386,0,0,0,1,2.4Zm5.8-13.63H56l-2.969,7.685h6.428Zm-12.025,0H41.617l-5.092,7.685h6.444ZM44.246,31.01c0,.007,0,.016,0,.026h0a3.4,3.4,0,1,0,6.8,0V29.11h-6.8Zm-1.7-18.544V.863A.866.866,0,0,1,43.409,0H77.122a.864.864,0,0,1,.863.863v11.6a.866.866,0,0,1-.863.863H62.095l-.387.666-1.44,2.5-1.444-2.5-.387-.666H43.409a.868.868,0,0,1-.863-.863Zm23.581-2.1a.812.812,0,0,0,.81.81h4.951a.81.81,0,1,0,0-1.621h-4.14V7.474h4.14a.81.81,0,1,0,0-1.621h-4.14V3.77h4.14a.81.81,0,1,0,0-1.621H66.938a.812.812,0,0,0-.81.81Zm-9.144,0a.807.807,0,1,0,1.614,0V5.8l.981,1.588a.812.812,0,0,0,1.112.262.8.8,0,0,0,.269-.276L61.937,5.8l0,4.571a.807.807,0,1,0,1.614,0l0-7.393a.807.807,0,0,0-1.493-.44L60.267,5.427,58.476,2.536a.806.806,0,0,0-1.493.423Zm-4.2-1.854a1.053,1.053,0,0,1-1.043,1.043H50.5a1.053,1.053,0,0,1-1.043-1.043.81.81,0,1,0-1.621,0A2.672,2.672,0,0,0,50.5,11.179h1.247a2.663,2.663,0,1,0,0-5.325H50.5a1.042,1.042,0,0,1,0-2.083h1.247a1.048,1.048,0,0,1,1.043,1.04.81.81,0,0,0,1.621,0,2.672,2.672,0,0,0-2.664-2.661H50.5a2.663,2.663,0,0,0,0,5.325h1.247a1.045,1.045,0,0,1,1.043,1.04Z"
+                                        transform="translate(-35.826 0)" fill="currentColor" fill-rule="evenodd" />
+                                </svg>
+
+                                <span class="d-block h5">المشروعــات الصغيــرة</span>
+
+                                <div class="arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="44.032" height="35"
+                                        viewBox="0 0 44.032 35">
+                                        <g id="arrow-left" transform="translate(-18 -34)">
+                                            <path id="Path_1995" data-name="Path 1995"
+                                                d="M19.688,91.692A1.693,1.693,0,0,1,21.383,90l40.169.028a1.694,1.694,0,0,1,0,3.387L21.38,93.387A1.694,1.694,0,0,1,19.688,91.692Z"
+                                                transform="translate(81.244 143.193) rotate(180)" fill="currentColor"
+                                                fill-rule="evenodd"></path>
+                                            <path id="Path_1996" data-name="Path 1996"
+                                                d="M36.668,34.495a1.694,1.694,0,0,1,0,2.4L22.086,51.5,36.67,66.11a1.694,1.694,0,0,1-2.4,2.393L18.495,52.7a1.694,1.694,0,0,1,0-2.393L34.273,34.5A1.694,1.694,0,0,1,36.668,34.495Z"
+                                                transform="translate(80.032 103) rotate(180)" fill="currentColor"
+                                                fill-rule="evenodd">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-12 mt-auto">
+                            <div class="d-flex justify-content-center pt-lg-xl pt-4 mb-xl">
+                                <a href="#" class="btn main-btn main-btn--white rounded-0">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>المزيـد من الأخبــار</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--End Services-->
+
+    <div class="mb-xl">
+        <div class="row m-0">
+            <div class="col-lg-6 px-0 bg-white-color pt-lg">
+                <div class="container-fluid">
+                    <div class="pt-xl calculator--section mb-lg-0 mb-xl">
+                        <div class="section-title mb-lg">
+                            <div
+                                class="d-inline-flex gap-4 position-relative mx-md px-md bg-white-color position-relative">
+                                <img src="./assets/media/--icons/calculator-1.svg" alt="calculator" loading="lazy">
+                                <h2 class="h1 text-primary-color">حاسبـــــة <br> القـــــروض</h2>
+                            </div>
+                        </div>
+
+                        <div class="px-5">
+                            <div class="d-flex flex-column gap-4 mb-lg">
+                                <div class="main-form-control">
+                                    <svg class="w-100 h-100" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 681.741 88.118" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.903 -752.803)">
+                                            <path d="M1594.9,769.3V752.8h680.741v87.118h-55.128" />
+                                        </g>
+                                        <g transform="translate(-1595.775 -816.722)">
+                                            <path d="M2208.025,903.527l-612.251.313V845.214" />
+                                        </g>
+                                    </svg>
+
+                                    <select class="form-control form-control-lg sumo-select">
+                                        <option value=""> قرض تمويل عقاري </option>
+                                    </select>
+                                </div>
+
+                                <div class="main-form-control">
+                                    <svg class="w-100 h-100" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 681.741 88.118" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.903 -752.803)">
+                                            <path d="M1594.9,769.3V752.8h680.741v87.118h-55.128" />
+                                        </g>
+                                        <g transform="translate(-1595.775 -816.722)">
+                                            <path d="M2208.025,903.527l-612.251.313V845.214" />
+                                        </g>
+                                    </svg>
+
+                                    <select class="form-control form-control-lg sumo-select">
+                                        <option value=""> مبادرة البنك المركزي لمتوسطي الدخل 8% فائدة </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-column mb-lg">
+
+                                <div class="d-flex align-items-center gap-4">
+                                    <span class="fw-bd fs-lg col-2">جنيه مصري </span>
+                                    <div class="ui slider" min="500000" max="1500000" start="1500000"></div>
+                                </div>
+
+                                <div class="d-flex align-items-center gap-4">
+                                    <span class="fw-bd fs-lg col-2">شهور </span>
+                                    <div class="ui slider" min="100000" max="300000" start="150000"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row m-0">
+                            <div class="col-xl-9 px-0">
+                                <div class="d-lg-flex">
+                                    <div
+                                        class="d-flex flex-column justify-content-center align-items-center p-3 text-primary-color bg-light-color">
+                                        <span class="fs-lg">قيمة القرض الكلي</span>
+                                        <span class="h1">110952</span>
+                                        <span>جنيه مصري</span>
+                                    </div>
+                                    <div class="table-responsive w-100">
+                                        <table class="table table-bordered mb-0 table-light-color">
+                                            <tbody class="text-center">
+                                                <tr>
+
+                                                    <td>
+                                                        <span class="h2">% 4.21</span><br><span>معدل الفائدة
+                                                            المتناقصة</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="h2">% 2.39</span><br><span>معدل الفائدة
+                                                            المتناقصة</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="h2">1460 <sup
+                                                                class="fs-sm">ج.م</sup></span><br><span>القسط
+                                                            الشهري</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="h2">12827 <sup
+                                                                class="fs-sm">ج.م</sup></span><br><span>اجمالي
+                                                            الفوائد</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-xl-3 px-0">
+                                <a href="#"
+                                    class="btn bg-gray-color bg-primary-color__hover text-white-color__hover rounded-0 fs-lg fw-bd w-100 h-100 d-flex flex-column justify-content-center align-items-center py-3 px-5"
+                                    tabindex="0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="44.032" height="35"
+                                        viewBox="0 0 44.032 35">
+                                        <g id="arrow-left" transform="translate(-18 -34)">
+                                            <path id="Path_1995" data-name="Path 1995"
+                                                d="M19.688,91.692A1.693,1.693,0,0,1,21.383,90l40.169.028a1.694,1.694,0,0,1,0,3.387L21.38,93.387A1.694,1.694,0,0,1,19.688,91.692Z"
+                                                transform="translate(-1.212 -40.193)" fill="#0f3c66"
+                                                fill-rule="evenodd" />
+                                            <path id="Path_1996" data-name="Path 1996"
+                                                d="M36.668,34.495a1.694,1.694,0,0,1,0,2.4L22.086,51.5,36.67,66.11a1.694,1.694,0,0,1-2.4,2.393L18.495,52.7a1.694,1.694,0,0,1,0-2.393L34.273,34.5A1.694,1.694,0,0,1,36.668,34.495Z"
+                                                fill="currentColor" fill-rule="evenodd" />
+                                        </g>
+                                    </svg>
+                                    <span>المزيـد من <br> التفاصيـــل</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 px-0 bg-light-color">
+                <div class="pt-xl pb-lg">
+                    <div class="container-fluid">
+                        <div class="section-title mb-lg">
+                            <div class="d-inline-flex gap-4 position-relative">
+                                <div class="icon">
+                                    <svg class="shape-icon opacity-25" xmlns="http://www.w3.org/2000/svg"
+                                        width="157.469" height="67.557" viewBox="0 0 157.469 67.557">
+                                        <path id="Path_1980" data-name="Path 1980"
+                                            d="M157.468.256H0L67.526,67.814l37.937-37.935,52.005.256Z"
+                                            transform="translate(157.468 67.813) rotate(180)" fill="#0F3C66"
+                                            style="mix-blend-mode: multiply; isolation: isolate"></path>
+                                    </svg>
+                                </div>
+                                <img src="./assets/media/--icons/calculator-2.svg" alt="calculator" loading="lazy">
+                                <h2 class="h1 text-primary-color">حاسبة رقم الحساب <br> المصرفي الدولي (IBAN)</h2>
+                            </div>
+                        </div>
+
+                        <form class="mb-xl">
+                            <div class="d-flex flex-column gap-4">
+                                <div class="main-form-control">
+                                    <svg class="w-100 h-100" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 681.741 88.118" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.903 -752.803)">
+                                            <path d="M1594.9,769.3V752.8h680.741v87.118h-55.128" />
+                                        </g>
+                                        <g transform="translate(-1595.775 -816.722)">
+                                            <path d="M2208.025,903.527l-612.251.313V845.214" />
+                                        </g>
+                                    </svg>
+
+                                    <select class="form-control form-control-lg sumo-select">
+                                        <option value="">
+                                            <img class="object-fit-cover rounded-circle me-1" width="30" height="30"
+                                                src="./assets/media/--flags/egypt_323324.png" alt="Egypt"> جمهورية مصر
+                                            العربية
+                                        </option>
+                                        <option value="">
+                                            <img class="object-fit-cover rounded-circle me-1" width="30" height="30"
+                                                src="./assets/media/--flags/2.png" alt="SAR"> المملكة العربية السعودية
+                                        </option>
+                                        <option value="">
+                                            <img class="object-fit-cover rounded-circle me-1" width="30" height="30"
+                                                src="./assets/media/--flags/1.png" alt="AED"> الامارات العربية المتحدة
+                                        </option>
+                                        <option value="">
+                                            <img class="object-fit-cover rounded-circle me-1" width="30" height="30"
+                                                src="./assets/media/--flags/3.png" alt="Qatar">
+                                            قطر
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="main-form-control">
+                                    <svg class="w-100 h-100" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 681.741 88.118" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.903 -752.803)">
+                                            <path d="M1594.9,769.3V752.8h680.741v87.118h-55.128" />
+                                        </g>
+                                        <g transform="translate(-1595.775 -816.722)">
+                                            <path d="M2208.025,903.527l-612.251.313V845.214" />
+                                        </g>
+                                    </svg>
+                                    <input class="form-control form-control-lg" placeholder="0007422015133368811">
+                                </div>
+
+                                <div class="text-start mt-lg">
+                                    <button class="btn btn-secondary-color btn-md rounded-0">حســاب</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="mt-auto text-dark-color">
+                            <span><strong class="d-block">ملحوظة</strong>
+                                رقم الحساب المصرفي الدولي (IBAN - International Bank Account Number) هو معيار دولي
+                                لتحديد
+                                الحسابات المصرفية عبر الحدود،
+                                مما يسهل عمليات التحويل المالي بين البنوك المختلفة حول العالم بدقة وأمان.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Calculator-->
+
+    <div class="position-relative overflow-hidden">
+        <div class="mb-xl pb-lg">
+            <div class="container-fluid">
+                <div class="section-title text-center mb-lg">
+                    <div class="d-inline-flex gap-4 position-relative mb-lg">
+                        <div class="icon">
+                            <svg class="shape-icon" xmlns="http://www.w3.org/2000/svg" width="157.469" height="67.557"
+                                viewBox="0 0 157.469 67.557">
+                                <path id="Path_1980" data-name="Path 1980"
+                                    d="M157.468.256H0L67.526,67.814l37.937-37.935,52.005.256Z"
+                                    transform="translate(157.468 67.813) rotate(180)" fill="#d2e4f5"
+                                    style="mix-blend-mode: multiply; isolation: isolate"></path>
+                            </svg>
+                        </div>
+                        <img src="./assets/media/--icons/coins.svg" alt="coins" loading="lazy">
+                        <h2 class="h1 text-primary-color">العمــــــلات <br> الأجنبيــــــة</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-7 mx-auto">
+                            <p class="text-dark-color fs-lg lh-30 mb-0">استبدل عملاتك الأجنبية بسرعة وسهولة مع خدمات
+                                تحويل العملات من بنك التنمية الصناعية، واستمتع بمعاملات مرنة تلبي احتياجاتك داخل مصر
+                                وخارجها.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slick--coins slick--flex slick--center mb-lg">
+                <div class="item">
+                    <div class="bg-light-color py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="coins--content d-flex flex-column gap-2">
+                                <div class="d-flex flex-column px-4">
+                                    <span class="text-primary-color">شراء</span>
+                                    <h5 class="mb-0">50.55321</h5>
+                                </div>
+                                <div class="bg-gray-color" style="height: 1px;"></div>
+                                <div class="d-flex flex-column  px-4">
+                                    <span class="text-primary-color">بيع</span>
+                                    <h5 class="mb-0">50.38321</h5>
+                                </div>
+                            </div>
+                            <div class="coins--img d-flex flex-column align-items-center gap-2 px-4">
+                                <img width="47" height="47" class="object-fit-cover rounded-circle"
+                                    src="./assets/media/--flags/1.png" alt="country name" loading="lazy"
+                                    style="min-width: 47px;">
+                                <span class="fw-bold text-primary-color">AED</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End-->
+                <div class="item">
+                    <div class="bg-light-color py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="coins--content d-flex flex-column gap-2">
+                                <div class="d-flex flex-column px-4">
+                                    <span class="text-primary-color">شراء</span>
+                                    <h5 class="mb-0">50.55321</h5>
+                                </div>
+                                <div class="bg-gray-color" style="height: 1px;"></div>
+                                <div class="d-flex flex-column  px-4">
+                                    <span class="text-primary-color">بيع</span>
+                                    <h5 class="mb-0">50.38321</h5>
+                                </div>
+                            </div>
+                            <div class="coins--img d-flex flex-column align-items-center gap-2 px-4">
+                                <img width="47" height="47" class="object-fit-cover rounded-circle"
+                                    src="./assets/media/--flags/2.png" alt="country name" loading="lazy"
+                                    style="min-width: 47px;">
+                                <span class="fw-bold text-primary-color">SAR</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End-->
+                <div class="item">
+                    <div class="bg-light-color border-gray-color py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="coins--content d-flex flex-column gap-2">
+                                <div class="d-flex flex-column px-4">
+                                    <span class="text-primary-color">شراء</span>
+                                    <h5 class="mb-0">50.55321</h5>
+                                </div>
+                                <div class="bg-gray-color" style="height: 1px;"></div>
+                                <div class="d-flex flex-column  px-4">
+                                    <span class="text-primary-color">بيع</span>
+                                    <h5 class="mb-0">50.38321</h5>
+                                </div>
+                            </div>
+                            <div class="coins--img d-flex flex-column align-items-center gap-2 px-4">
+                                <img width="47" height="47" class="object-fit-cover rounded-circle"
+                                    src="./assets/media/--flags/3.png" alt="country name" loading="lazy"
+                                    style="min-width: 47px;">
+                                <span class="fw-bold text-primary-color">QAT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End-->
+                <div class="item">
+                    <div class="bg-light-color border-gray-color py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="coins--content d-flex flex-column gap-2">
+                                <div class="d-flex flex-column px-4">
+                                    <span class="text-primary-color">شراء</span>
+                                    <h5 class="mb-0">50.55321</h5>
+                                </div>
+                                <div class="bg-gray-color" style="height: 1px;"></div>
+                                <div class="d-flex flex-column  px-4">
+                                    <span class="text-primary-color">بيع</span>
+                                    <h5 class="mb-0">50.38321</h5>
+                                </div>
+                            </div>
+                            <div class="coins--img d-flex flex-column align-items-center gap-2 px-4">
+                                <img width="47" height="47" class="object-fit-cover rounded-circle"
+                                    src="./assets/media/--flags/4.png" alt="country name" loading="lazy"
+                                    style="min-width: 47px;">
+                                <span class="fw-bold text-primary-color">QAT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End-->
+                <div class="item">
+                    <div class="bg-light-color border-gray-color py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="coins--content d-flex flex-column gap-2">
+                                <div class="d-flex flex-column px-4">
+                                    <span class="text-primary-color">شراء</span>
+                                    <h5 class="mb-0">50.55321</h5>
+                                </div>
+                                <div class="bg-gray-color" style="height: 1px;"></div>
+                                <div class="d-flex flex-column  px-4">
+                                    <span class="text-primary-color">بيع</span>
+                                    <h5 class="mb-0">50.38321</h5>
+                                </div>
+                            </div>
+                            <div class="coins--img d-flex flex-column align-items-center gap-2 px-4">
+                                <img width="47" height="47" class="object-fit-cover rounded-circle"
+                                    src="./assets/media/--flags/5.png" alt="country name" loading="lazy"
+                                    style="min-width: 47px;">
+                                <span class="fw-bold text-primary-color">EUR</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End-->
+                <div class="item">
+                    <div class="bg-light-color border-gray-color py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="coins--content d-flex flex-column gap-2">
+                                <div class="d-flex flex-column px-4">
+                                    <span class="text-primary-color">شراء</span>
+                                    <h5 class="mb-0">50.55321</h5>
+                                </div>
+                                <div class="bg-gray-color" style="height: 1px;"></div>
+                                <div class="d-flex flex-column  px-4">
+                                    <span class="text-primary-color">بيع</span>
+                                    <h5 class="mb-0">50.38321</h5>
+                                </div>
+                            </div>
+                            <div class="coins--img d-flex flex-column align-items-center gap-2 px-4">
+                                <img width="47" height="47" class="object-fit-cover rounded-circle"
+                                    src="./assets/media/--flags/6.png" alt="country name" loading="lazy"
+                                    style="min-width: 47px;">
+                                <span class="fw-bold text-primary-color">KWD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End-->
+            </div>
+
+            <div class="container-fluid">
+                <div class="text-center">
+                    <a href="#" class="btn main-btn main-btn--primary rounded-0">
+                        <svg class="w-100 h-100" viewBox="0 0 212.269 62.038" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="none">
+                            <g transform="translate(-1594.403 -842.303)">
+                                <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109" transform="translate(0 90)">
+                                </path>
+                                <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)"></path>
+                            </g>
+                        </svg>
+                        <span>تحويــل العمــلات</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End Coins -->
+
+        <div class="position-absolute end-0 z-n1">
+            <img src="./assets/media/--news/news-bg.png" alt="" style="transform: translateX(-30%) translateY(-30%)"
+                loading="lazy">
+        </div>
+
+        <div class="position-relative news--section">
+            <div class="row m-lg-0">
+                <div class="col-lg-6 px-lg-0 pb-xl news--section-start">
+                    <div class="slick--events">
+                        <div class="item">
+                            <div class="news--item news-item--large position-relative">
+                                <div class="news--img position-relative zoom-in-hover overflow-hidden">
+                                    <img class="w-100 object-fit-cover" src="./assets/media/--news/3.png"
+                                        alt="event title" loading="lazy" style="aspect-ratio: 12/9;">
+                                    <div class="news--label bg-secondary-color position-absolute top-0 end-0 mt-4">
+                                        <span>Event</span>
+                                    </div>
+                                </div>
+                                <div class="news--content">
+                                    <div class="row">
+                                        <div class="col-lg-4 d-lg-block d-none">
+                                            <a href="#"
+                                                class="btn bg-gray-color bg-white-color__hover rounded-0 fs-lg fw-bd w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="44.032" height="35"
+                                                    viewBox="0 0 44.032 35">
+                                                    <g id="arrow-left" transform="translate(-18 -34)">
+                                                        <path id="Path_1995" data-name="Path 1995"
+                                                            d="M19.688,91.692A1.693,1.693,0,0,1,21.383,90l40.169.028a1.694,1.694,0,0,1,0,3.387L21.38,93.387A1.694,1.694,0,0,1,19.688,91.692Z"
+                                                            transform="translate(81.244 143.193) rotate(180)"
+                                                            fill="currentColor" fill-rule="evenodd"></path>
+                                                        <path id="Path_1996" data-name="Path 1996"
+                                                            d="M36.668,34.495a1.694,1.694,0,0,1,0,2.4L22.086,51.5,36.67,66.11a1.694,1.694,0,0,1-2.4,2.393L18.495,52.7a1.694,1.694,0,0,1,0-2.393L34.273,34.5A1.694,1.694,0,0,1,36.668,34.495Z"
+                                                            transform="translate(80.032 103) rotate(180)"
+                                                            fill="currentColor" fill-rule="evenodd">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                                <span>المزيـد من <br> التفاصيـــل</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="px-lg-5 px-3 mb-lg-5">
+                                                <div class="d-flex gap-5 justify-content-between mb-md">
+                                                    <h2 class="mb-0 news--title"><a href="#">المشاركة
+                                                            الفعالة في استراتيجية مصر للتنمية المستدامة</a></h2>
+                                                    <a class="news--share" href="#">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="27"
+                                                            viewBox="0 0 18.404 19.822">
+                                                            <g id="share" transform="translate(-11.849 -11.809)">
+                                                                <path id="Path_2043" data-name="Path 2043"
+                                                                    d="M26.717,24.559A3.536,3.536,0,0,0,23.966,25.9L18.8,22.664a3.154,3.154,0,0,0,0-1.867l5.169-3.232a3.536,3.536,0,1,0-.785-2.2,3.387,3.387,0,0,0,.141.933l-5.169,3.232a3.536,3.536,0,1,0,0,4.4l5.169,3.232a3.387,3.387,0,0,0-.141.933,3.536,3.536,0,1,0,3.536-3.536Zm0-11.314A2.121,2.121,0,1,1,24.6,15.367,2.121,2.121,0,0,1,26.717,13.245ZM15.4,23.852a2.121,2.121,0,1,1,2.121-2.121A2.121,2.121,0,0,1,15.4,23.852Zm11.314,6.364A2.121,2.121,0,1,1,28.839,28.1a2.121,2.121,0,0,1-2.121,2.121Z"
+                                                                    fill="currentColor" />
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                                <p class="news--desc fs-lg lh-30">المشاركة الفعالة في استراتيجية مصر
+                                                    للتنمية المستدامة وتقديم منتجات مصرفية مبتكرة تناسب كافة شرائح
+                                                    العملاء وتوفر لهم تجربة مصرفية فعالة تتسم بالسرعة واليسر</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="news--item news-item--large position-relative">
+                                <div class="news--img position-relative zoom-in-hover overflow-hidden">
+                                    <img class="w-100 object-fit-cover" src="./assets/media/--news/3.png"
+                                        alt="event title" loading="lazy" style="aspect-ratio: 12/9;">
+                                    <div class="news--label bg-secondary-color position-absolute top-0 end-0 mt-4">
+                                        <span>Event</span>
+                                    </div>
+                                </div>
+                                <div class="news--content">
+                                    <div class="row">
+                                        <div class="col-lg-4 d-lg-block d-none">
+                                            <a href="#"
+                                                class="btn bg-gray-color bg-white-color__hover rounded-0 fs-lg fw-bd w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="44.032" height="35"
+                                                    viewBox="0 0 44.032 35">
+                                                    <g id="arrow-left" transform="translate(-18 -34)">
+                                                        <path id="Path_1995" data-name="Path 1995"
+                                                            d="M19.688,91.692A1.693,1.693,0,0,1,21.383,90l40.169.028a1.694,1.694,0,0,1,0,3.387L21.38,93.387A1.694,1.694,0,0,1,19.688,91.692Z"
+                                                            transform="translate(81.244 143.193) rotate(180)"
+                                                            fill="currentColor" fill-rule="evenodd"></path>
+                                                        <path id="Path_1996" data-name="Path 1996"
+                                                            d="M36.668,34.495a1.694,1.694,0,0,1,0,2.4L22.086,51.5,36.67,66.11a1.694,1.694,0,0,1-2.4,2.393L18.495,52.7a1.694,1.694,0,0,1,0-2.393L34.273,34.5A1.694,1.694,0,0,1,36.668,34.495Z"
+                                                            transform="translate(80.032 103) rotate(180)"
+                                                            fill="currentColor" fill-rule="evenodd">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                                <span>المزيـد من <br> التفاصيـــل</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="px-lg-5 px-3 mb-lg-5">
+                                                <div class="d-flex gap-5 justify-content-between mb-md">
+                                                    <h2 class="mb-0 news--title"><a href="#">المشاركة
+                                                            الفعالة في استراتيجية مصر للتنمية المستدامة</a></h2>
+                                                    <a class="text-white-color text-secondary-color__hover" href="#">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="27"
+                                                            viewBox="0 0 18.404 19.822">
+                                                            <g id="share" transform="translate(-11.849 -11.809)">
+                                                                <path id="Path_2043" data-name="Path 2043"
+                                                                    d="M26.717,24.559A3.536,3.536,0,0,0,23.966,25.9L18.8,22.664a3.154,3.154,0,0,0,0-1.867l5.169-3.232a3.536,3.536,0,1,0-.785-2.2,3.387,3.387,0,0,0,.141.933l-5.169,3.232a3.536,3.536,0,1,0,0,4.4l5.169,3.232a3.387,3.387,0,0,0-.141.933,3.536,3.536,0,1,0,3.536-3.536Zm0-11.314A2.121,2.121,0,1,1,24.6,15.367,2.121,2.121,0,0,1,26.717,13.245ZM15.4,23.852a2.121,2.121,0,1,1,2.121-2.121A2.121,2.121,0,0,1,15.4,23.852Zm11.314,6.364A2.121,2.121,0,1,1,28.839,28.1a2.121,2.121,0,0,1-2.121,2.121Z"
+                                                                    fill="currentColor" />
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                                <p class="news--desc fs-lg lh-30">المشاركة الفعالة في استراتيجية مصر
+                                                    للتنمية المستدامة وتقديم منتجات مصرفية مبتكرة تناسب كافة شرائح
+                                                    العملاء وتوفر لهم تجربة مصرفية فعالة تتسم بالسرعة واليسر</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-end d-lg-block d-none">
+                        <div class="slick-arrows slick-arrows--events">
+                            <button class="slick-arrow slickPrev" data-target=".slick--events">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11.969" height="20.732"
+                                    viewBox="0 0 11.969 20.732">
+                                    <path id="Path_1973" data-name="Path 1973"
+                                        d="M1043.032,666.668l9.839,9.59-9.839,9.714"
+                                        transform="translate(-1042.329 -665.952)" fill="none" stroke="currentColor"
+                                        stroke-width="2" />
+                                </svg>
+                            </button>
+                            <button class="slick-arrow slickNext" data-target=".slick--events">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11.969" height="20.732"
+                                    viewBox="0 0 11.969 20.732">
+                                    <path id="Path_1974" data-name="Path 1974"
+                                        d="M1043.032,666.668l9.839,9.59-9.839,9.714"
+                                        transform="translate(1054.298 686.684) rotate(180)" fill="none"
+                                        stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-lg-0 pb-xl news--section-end">
+                    <div class="container-fluid">
+                        <div class="d-flex gap-4 justify-content-between align-items-center mb-lg">
+                            <div class="section-title">
+                                <div class="d-inline-flex gap-4 position-relative">
+                                    <img src="./assets/media/--icons/newspaper.svg" alt="newspaper" loading="lazy">
+                                    <h2 class="h1 text-primary-color">الأخبـــار</h2>
+                                </div>
+                            </div>
+                            <a href="#" class="btn main-btn main-btn--primary rounded-0">
+                                <svg class="w-100 h-100" viewBox="0 0 212.269 62.038" xmlns="http://www.w3.org/2000/svg"
+                                    preserveAspectRatio="none">
+                                    <g transform="translate(-1594.403 -842.303)">
+                                        <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                            transform="translate(0 90)">
+                                        </path>
+                                        <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)"></path>
+                                    </g>
+                                </svg>
+                                <span>المزيـد من الأخبــار</span>
+                            </a>
+                        </div>
+
+                        <div class="slick--news slick--flex">
+                            <div class="item">
+                                <div class="news--item bg-white-color d-flex flex-column gap-2">
+                                    <div class="news--img position-relative zoom-in-hover overflow-hidden">
+                                        <a href="#">
+                                            <img class="object-fit-cover w-100 hover-target"
+                                                src="./assets/media/--news/1.png" alt="news title" loading="lazy"
+                                                style="aspect-ratio: 12/8;">
+                                        </a>
+                                        <div class="news--label bg-primary-color position-absolute top-0 end-0 mt-4">
+                                            <span>Press</span>
+                                        </div>
+                                    </div>
+                                    <div class="news--content d-flex flex-column gap-1 pt-2 pb-4 px-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fs-sm">08 Feb, 2025</span>
+                                            <a class="text-dark-color text-secondary-color__hover" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18.404" height="19.822"
+                                                    viewBox="0 0 18.404 19.822">
+                                                    <g id="share" transform="translate(-11.849 -11.809)">
+                                                        <path id="Path_2043" data-name="Path 2043"
+                                                            d="M26.717,24.559A3.536,3.536,0,0,0,23.966,25.9L18.8,22.664a3.154,3.154,0,0,0,0-1.867l5.169-3.232a3.536,3.536,0,1,0-.785-2.2,3.387,3.387,0,0,0,.141.933l-5.169,3.232a3.536,3.536,0,1,0,0,4.4l5.169,3.232a3.387,3.387,0,0,0-.141.933,3.536,3.536,0,1,0,3.536-3.536Zm0-11.314A2.121,2.121,0,1,1,24.6,15.367,2.121,2.121,0,0,1,26.717,13.245ZM15.4,23.852a2.121,2.121,0,1,1,2.121-2.121A2.121,2.121,0,0,1,15.4,23.852Zm11.314,6.364A2.121,2.121,0,1,1,28.839,28.1a2.121,2.121,0,0,1-2.121,2.121Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <h5><a class="text-dark-color text-secondary-color__hover" href="#">المشاركة
+                                                الفعالة في استراتيجية مصر للتنمية المستدامة</a></h5>
+                                        <div class="news--desc text-truncate text-dark-color">المشاركة الفعالة في
+                                            استراتيجية مصر للتنمية المستدامة وتقديم منتجات مصرفية مبتكرة تناسب كافة
+                                            شرائح العملاء وتوفر لهم تجربة مصرفية فعالة تتسم بالسرعة واليسر</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="news--item bg-white-color d-flex flex-column gap-2">
+                                    <div class="news--img position-relative zoom-in-hover overflow-hidden">
+                                        <a href="#">
+                                            <img class="object-fit-cover w-100 hover-target"
+                                                src="./assets/media/--news/2.png" alt="news title" loading="lazy"
+                                                style="aspect-ratio: 12/8;">
+                                        </a>
+                                        <div class="news--label bg-secondary-color position-absolute top-0 end-0 mt-4">
+                                            <span>Event</span>
+                                        </div>
+                                    </div>
+                                    <div class="news--content d-flex flex-column gap-1 pt-2 pb-4 px-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fs-sm">08 Feb, 2025</span>
+                                            <a class="text-dark-color text-secondary-color__hover" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18.404" height="19.822"
+                                                    viewBox="0 0 18.404 19.822">
+                                                    <g id="share" transform="translate(-11.849 -11.809)">
+                                                        <path id="Path_2043" data-name="Path 2043"
+                                                            d="M26.717,24.559A3.536,3.536,0,0,0,23.966,25.9L18.8,22.664a3.154,3.154,0,0,0,0-1.867l5.169-3.232a3.536,3.536,0,1,0-.785-2.2,3.387,3.387,0,0,0,.141.933l-5.169,3.232a3.536,3.536,0,1,0,0,4.4l5.169,3.232a3.387,3.387,0,0,0-.141.933,3.536,3.536,0,1,0,3.536-3.536Zm0-11.314A2.121,2.121,0,1,1,24.6,15.367,2.121,2.121,0,0,1,26.717,13.245ZM15.4,23.852a2.121,2.121,0,1,1,2.121-2.121A2.121,2.121,0,0,1,15.4,23.852Zm11.314,6.364A2.121,2.121,0,1,1,28.839,28.1a2.121,2.121,0,0,1-2.121,2.121Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <h5><a class="text-dark-color text-secondary-color__hover" href="#">المشاركة
+                                                الفعالة في استراتيجية مصر للتنمية المستدامة</a></h5>
+                                        <div class="news--desc text-truncate text-dark-color">المشاركة الفعالة في
+                                            استراتيجية مصر للتنمية المستدامة وتقديم منتجات مصرفية مبتكرة تناسب كافة
+                                            شرائح العملاء وتوفر لهم تجربة مصرفية فعالة تتسم بالسرعة واليسر</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="news--item bg-white-color d-flex flex-column gap-2">
+                                    <div class="news--img position-relative zoom-in-hover overflow-hidden">
+                                        <a href="#">
+                                            <img class="object-fit-cover w-100 hover-target"
+                                                src="./assets/media/--news/1.png" alt="news title" loading="lazy"
+                                                style="aspect-ratio: 12/8;">
+                                        </a>
+                                        <div class="news--label bg-primary-color position-absolute top-0 end-0 mt-4">
+                                            <span>Press</span>
+                                        </div>
+                                    </div>
+                                    <div class="news--content d-flex flex-column gap-1 pt-2 pb-4 px-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fs-sm">08 Feb, 2025</span>
+                                            <a class="text-dark-color text-secondary-color__hover" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18.404" height="19.822"
+                                                    viewBox="0 0 18.404 19.822">
+                                                    <g id="share" transform="translate(-11.849 -11.809)">
+                                                        <path id="Path_2043" data-name="Path 2043"
+                                                            d="M26.717,24.559A3.536,3.536,0,0,0,23.966,25.9L18.8,22.664a3.154,3.154,0,0,0,0-1.867l5.169-3.232a3.536,3.536,0,1,0-.785-2.2,3.387,3.387,0,0,0,.141.933l-5.169,3.232a3.536,3.536,0,1,0,0,4.4l5.169,3.232a3.387,3.387,0,0,0-.141.933,3.536,3.536,0,1,0,3.536-3.536Zm0-11.314A2.121,2.121,0,1,1,24.6,15.367,2.121,2.121,0,0,1,26.717,13.245ZM15.4,23.852a2.121,2.121,0,1,1,2.121-2.121A2.121,2.121,0,0,1,15.4,23.852Zm11.314,6.364A2.121,2.121,0,1,1,28.839,28.1a2.121,2.121,0,0,1-2.121,2.121Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <h5><a class="text-dark-color text-secondary-color__hover" href="#">المشاركة
+                                                الفعالة في استراتيجية مصر للتنمية المستدامة</a></h5>
+                                        <div class="news--desc text-truncate text-dark-color">المشاركة الفعالة في
+                                            استراتيجية مصر للتنمية المستدامة وتقديم منتجات مصرفية مبتكرة تناسب كافة
+                                            شرائح العملاء وتوفر لهم تجربة مصرفية فعالة تتسم بالسرعة واليسر</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="news--item bg-white-color d-flex flex-column gap-2">
+                                    <div class="news--img position-relative zoom-in-hover overflow-hidden">
+                                        <a href="#">
+                                            <img class="object-fit-cover w-100 hover-target"
+                                                src="./assets/media/--news/2.png" alt="news title" loading="lazy"
+                                                style="aspect-ratio: 12/8;">
+                                        </a>
+                                        <div class="news--label bg-secondary-color position-absolute top-0 end-0 mt-4">
+                                            <span>Event</span>
+                                        </div>
+                                    </div>
+                                    <div class="news--content d-flex flex-column gap-1 pt-2 pb-4 px-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="fs-sm">08 Feb, 2025</span>
+                                            <a class="text-dark-color text-secondary-color__hover" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18.404" height="19.822"
+                                                    viewBox="0 0 18.404 19.822">
+                                                    <g id="share" transform="translate(-11.849 -11.809)">
+                                                        <path id="Path_2043" data-name="Path 2043"
+                                                            d="M26.717,24.559A3.536,3.536,0,0,0,23.966,25.9L18.8,22.664a3.154,3.154,0,0,0,0-1.867l5.169-3.232a3.536,3.536,0,1,0-.785-2.2,3.387,3.387,0,0,0,.141.933l-5.169,3.232a3.536,3.536,0,1,0,0,4.4l5.169,3.232a3.387,3.387,0,0,0-.141.933,3.536,3.536,0,1,0,3.536-3.536Zm0-11.314A2.121,2.121,0,1,1,24.6,15.367,2.121,2.121,0,0,1,26.717,13.245ZM15.4,23.852a2.121,2.121,0,1,1,2.121-2.121A2.121,2.121,0,0,1,15.4,23.852Zm11.314,6.364A2.121,2.121,0,1,1,28.839,28.1a2.121,2.121,0,0,1-2.121,2.121Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <h5><a class="text-dark-color text-secondary-color__hover" href="#">المشاركة
+                                                الفعالة في استراتيجية مصر للتنمية المستدامة</a></h5>
+                                        <div class="news--desc text-truncate text-dark-color">المشاركة الفعالة في
+                                            استراتيجية مصر للتنمية المستدامة وتقديم منتجات مصرفية مبتكرة تناسب كافة
+                                            شرائح العملاء وتوفر لهم تجربة مصرفية فعالة تتسم بالسرعة واليسر</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End News -->
+    </div>
+
+
+    <footer>
+        <div class="container-fluid">
+            <button class="backtotop  position-relative z-2" style="transform: translateY(-80px);">
+                <span>الرجوع لأعلى</span>
+                <span class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29.609" height="37.251" viewBox="0 0 29.609 37.251">
+                        <g id="arrow-top" transform="translate(29.609) rotate(90)">
+                            <path
+                                d="M0,1.432A1.433,1.433,0,0,1,1.434,0L35.416.024a1.433,1.433,0,0,1,0,2.865L1.432,2.865A1.433,1.433,0,0,1,0,1.432Z"
+                                transform="translate(0.403 13.372)" fill="currentColor" fill-rule="evenodd" />
+                            <path
+                                d="M15.793.419a1.433,1.433,0,0,1,0,2.026L3.457,14.8l12.338,12.36a1.433,1.433,0,0,1-2.028,2.025L.419,15.817a1.433,1.433,0,0,1,0-2.025L13.767.421A1.433,1.433,0,0,1,15.793.419Z"
+                                transform="translate(0 0)" fill="currentColor" fill-rule="evenodd" />
+                        </g>
+                    </svg>
+                </span>
+            </button>
+        </div>
+        <!--Back to top-->
+        <div class="container-fluid">
+            <div class="row row-gap-5">
+                <div class="col-lg-12 d-lg-none d-block">
+                    <div class="text-lg-end text-center"><img src="./assets/media/logo-2.png" alt="IDB logo"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h2 class="footer--title">كيف يمكننا مساعدتك</h2>
+                    <p>املأ النموذج وسيقوم أحد ممثلي خدمة العملاء بالاتصال بك.</p>
+                    <form action="">
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <input class="form-control form-control-white" type="text" placeholder="الاسم">
+                            <input class="form-control form-control-white" type="text" placeholder="100  527 1489"
+                                id="phone">
+                            <textarea class="form-control form-control-white" placeholder="رسالتك" rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-md btn-border-white-color rounded-0">إرســـال</button>
+                    </form>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row row-gap-4 justify-content-between mb-xl">
+                        <div class="col-4 footer--section d-flex justify-content-center">
+                            <div class="d-flex flex-column">
+                                <h2 class="footer--title">خريطة الموقع</h2>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="#">الوظائف</a>
+                                    <a href="#">حاسبة القروض</a>
+                                    <a href="#">الشروط والأحكام</a>
+                                    <a href="#">عن البنك</a>
+                                    <a href="#">المركز الإعلامي</a>
+                                    <a href="#">أمن المعلومات</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 footer--section d-flex justify-content-center">
+                            <div class="d-flex flex-column">
+                                <h2 class="footer--title">المنتجات والخدمات</h2>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="#">خدمات الأفراد</a>
+                                    <a href="#">خدمات الشركات</a>
+                                    <a href="#">المشروعات الصغيرة</a>
+                                    <a href="#">العروض والترويجيات</a>
+                                    <a href="#">البطاقات المصرفية</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-4 footer--section d-flex justify-content-center">
+                            <div class="d-flex flex-column">
+                                <h2 class="footer--title">الروابط السريعة</h2>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="#">الوظائف</a>
+                                    <a href="#">حاسبة القروض</a>
+                                    <a href="#">الشروط والأحكام</a>
+                                    <a href="#">عن البنك</a>
+                                    <a href="#">المركز الإعلامي</a>
+                                    <a href="#">أمن المعلومات</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-gap-5 align-items-end">
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h2 class="footer--title">تحميل التطبيق</h2>
+                                    <div class="d-flex flex-column gap-2">
+                                        <a href="#"><img src="./assets/media/--app/app-store-png-logo-33123.webp" alt=""
+                                                loading="lazy"></a>
+                                        <a href="#"><img src="./assets/media/--app/app-store-png-logo-33124.webp" alt=""
+                                                loading="lazy"></a>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h2 class="footer--title">الخط الساخن</h2>
+                                    <div class="d-flex flex-column gap-2">
+                                        <a class="hotline" href="tel:19320">
+                                            <div class="icon me-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="21.6" height="26.438"
+                                                    viewBox="0 0 21.6 26.438">
+                                                    <g id="headset-mic" transform="translate(0 -2)">
+                                                        <path id="Path_2096" data-name="Path 2096"
+                                                            d="M10.8,2a10.369,10.369,0,0,1,7.65,3.178A10.443,10.443,0,0,1,21.6,12.8V24.838a3.506,3.506,0,0,1-1.041,2.531A3.432,3.432,0,0,1,18,28.438H10.8V26.019h8.381V24.838H14.4V15.219h4.781V12.8a8.081,8.081,0,0,0-2.447-5.934A8.081,8.081,0,0,0,10.8,4.419,8.081,8.081,0,0,0,4.866,6.866,8.081,8.081,0,0,0,2.419,12.8v2.419H7.2v9.619H3.6a3.432,3.432,0,0,1-2.559-1.069A3.506,3.506,0,0,1,0,21.238V12.8A10.443,10.443,0,0,1,3.15,5.178,10.369,10.369,0,0,1,10.8,2Z"
+                                                            fill="#0f3c66"></path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span>19320</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-lg-block d-none">
+                            <div class="text-lg-end text-center"><img src="./assets/media/logo-2.png" alt="IDB logo"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyrights">
+                <div class="row row-gap-4">
+                    <div class="col-lg-6 order-lg-first order-last">
+                        <span class="text-lg-start text-center d-block">Copyright © idb all rights reserved. Developed
+                            by <a href="#" class="text-light-primary-color">Netwave</a></span>
+                    </div>
+                    <div class="col-lg-6 order-lg-last order-first">
+                        <div class="d-flex align-items-end justify-content-lg-end justify-content-center gap-4">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="20"
+                                    viewBox="0 0 29.128 20.028">
+                                    <path id="Path_42" data-name="Path 42"
+                                        d="M1008.545,1887.237l-.046-9.176,6.376,4.627Zm11.977-14.655h-19.4c-2.481,0-5.25,1.659-5.25,4.078v12.054c0,2.42,2.769,3.9,5.25,3.9h19.4c2.465,0,4.474-1.476,4.474-3.9v-12.054a4.188,4.188,0,0,0-4.474-4.078Z"
+                                        transform="translate(-995.868 -1872.582)" fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26"
+                                    viewBox="0 0 25.521 26.467">
+                                    <path id="Path_43" data-name="Path 43"
+                                        d="M970.327,1883.21v9.436h-5.471v-8.807c0-2.213-.8-3.718-2.774-3.718a3.008,3.008,0,0,0-2.808,2,3.72,3.72,0,0,0-.18,1.337v9.189h-5.47s.078-14.918,0-16.457h5.47v2.325a5.456,5.456,0,0,1,4.931-2.707C967.631,1875.807,970.327,1878.154,970.327,1883.21Z"
+                                        transform="translate(-944.806 -1866.178)" fill="currentColor" />
+                                    <path id="Path_44" data-name="Path 44"
+                                        d="M952.319,1872.264a2.86,2.86,0,0,1-3.1,2.842h-.034a2.858,2.858,0,1,1,3.134-2.842Z"
+                                        transform="translate(-946.163 -1869.411)" fill="currentColor" />
+                                    <rect id="Rectangle_76" data-name="Rectangle 76" width="5.47" height="16.456"
+                                        transform="translate(0.325 10.01)" fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12.53" height="28.804"
+                                    viewBox="0 0 12.53 28.804">
+                                    <path id="Path_41" data-name="Path 41"
+                                        d="M860.774,1866.739v4.628s-3.168-.338-3.96.988c-.438.7-.188,2.807-.209,4.313H860.8c-.355,1.751-.605,2.942-.876,4.47h-3.357v14.4h-5.818v-14.354h-2.481v-4.514h2.46c.125-3.325.167-6.6,1.688-8.266,1.731-1.887,3.358-1.662,8.36-1.662Z"
+                                        transform="translate(-848.265 -1866.73)" fill="currentColor"
+                                        fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25.01" height="27.079"
+                                    viewBox="0 0 25.01 27.079">
+                                    <path id="Path_46" data-name="Path 46"
+                                        d="M25.935,8.958a10.665,10.665,0,0,0-.581-3.287,6.713,6.713,0,0,0-1.444-2.4A6.108,6.108,0,0,0,21.7,1.71a8.564,8.564,0,0,0-3.034-.629C17.326,1.015,16.9,1,13.5,1s-3.821.015-5.155.081a8.564,8.564,0,0,0-3.036.629A6.107,6.107,0,0,0,3.1,3.273a6.713,6.713,0,0,0-1.444,2.4,10.666,10.666,0,0,0-.581,3.286C1.014,10.4,1,10.863,1,14.539s.014,4.137.075,5.581a10.666,10.666,0,0,0,.581,3.287,6.713,6.713,0,0,0,1.444,2.4,6.106,6.106,0,0,0,2.215,1.563A8.564,8.564,0,0,0,8.349,28c1.335.066,1.76.081,5.156.081s3.821-.015,5.155-.081a8.564,8.564,0,0,0,3.036-.629,6.681,6.681,0,0,0,3.658-3.961,10.665,10.665,0,0,0,.581-3.286c.061-1.446.075-1.906.075-5.583S26,10.4,25.935,8.958ZM23.684,20.011a8.04,8.04,0,0,1-.431,2.512,4.327,4.327,0,0,1-2.373,2.571,6.452,6.452,0,0,1-2.322.466c-1.32.065-1.715.078-5.053.078s-3.735-.014-5.053-.078a6.452,6.452,0,0,1-2.32-.466,3.858,3.858,0,0,1-1.439-1.012,4.243,4.243,0,0,1-.935-1.557,8.041,8.041,0,0,1-.431-2.514c-.06-1.429-.072-1.856-.072-5.471s.013-4.044.072-5.471a8.042,8.042,0,0,1,.431-2.512A4.243,4.243,0,0,1,4.692,5,3.859,3.859,0,0,1,6.13,3.985a6.452,6.452,0,0,1,2.322-.466c1.32-.065,1.715-.078,5.053-.078s3.735.014,5.053.078a6.452,6.452,0,0,1,2.32.466A3.858,3.858,0,0,1,22.318,5a4.243,4.243,0,0,1,.935,1.557,8.042,8.042,0,0,1,.431,2.514c.06,1.429.072,1.856.072,5.471S23.743,18.583,23.684,20.011ZM13.5,7.586a6.7,6.7,0,0,0-6.422,6.953A6.7,6.7,0,0,0,13.5,21.492a6.7,6.7,0,0,0,6.422-6.953A6.7,6.7,0,0,0,13.5,7.586Zm0,11.466a4.351,4.351,0,0,1-4.168-4.513A4.351,4.351,0,0,1,13.5,10.026a4.351,4.351,0,0,1,4.168,4.513A4.351,4.351,0,0,1,13.5,19.052ZM21.68,7.312a1.505,1.505,0,1,1-3,0,1.505,1.505,0,1,1,3,0Z"
+                                        transform="translate(-1 -1)" fill="currentColor" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer-->
+
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./assets/vendor/bootstrap-5.3.3/js/bootstrap.bundle.min.js" defer></script>
+    <script src="./assets/vendor/slick/slick.min.js" defer></script>
+    <script src="./assets/vendor/intl-tel-input/js/intlTelInput.min.js" defer></script>
+    <script src="./assets/vendor/sumoselect/jquery.sumoselect.min.js" defer></script>
+    <script src="./assets/vendor/Fomantic-UI-develop/components/slider.min.js" defer></script>
+    <script src="./assets/vendor/jquery-match-height-master/jquery.matchHeight-min.js" defer></script>
+
+    <!-- <script src="./assets/js/scripts.js" defer></script> -->
+    <script src="./assets/js/scripts.rtl.js" defer></script>
+</body>
+
+</html>
