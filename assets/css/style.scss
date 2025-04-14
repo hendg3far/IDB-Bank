@@ -21,42 +21,55 @@ $lh-30: 30px;
 
 // Font Sizes
 :root {
-    @each $size, $value in (xs: 10px, sm: 12px, rg: 14px, md: 16px, lg: 18px, xl: 24px, xxl: 48px) {
+    @each $size,
+    $value in (xs: 10px, sm: 12px, rg: 14px, md: 16px, lg: 18px, xl: 24px, xxl: 48px) {
         --fs-#{$size}: #{$value};
     }
 }
 
 // Spacing
 :root {
-    @each $size, $value in (md: 25px, lg: 50px, xl: 100px) {
+    @each $size,
+    $value in (md: 25px, lg: 50px, xl: 100px) {
         --space-#{$size}: #{$value};
     }
 }
 
+
 /* ====== ✅ Typography Utilities ====== */
 
-$font-weights: (
-    rg: 400,
-    md: 500,
-    sb: 600,
-    bd: 700
-);
-@each $name, $weight in $font-weights {
+$font-weights: ( rg: 400, md: 500, sb: 600, bd: 700);
+@each $name,
+$weight in $font-weights {
     .fw-#{$name} {
         font-family: var(--font);
         font-weight: #{$weight};
     }
 }
 
-@each $size in xs, sm, rg, md, lg, xl, xxl {
+@each $size in xs,
+sm,
+rg,
+md,
+lg,
+xl,
+xxl {
     .fs-#{$size} {
         font-size: var(--fs-#{$size});
     }
 }
 
+
 /* ====== ✅ Color Utilities ====== */
 
-@each $name in white, light, gray, dark-gray, dark, primary, secondary, light-primary {
+@each $name in white,
+light,
+gray,
+dark-gray,
+dark,
+primary,
+secondary,
+light-primary {
     .text-#{$name}-color {
         color: var(--#{$name});
         &__hover:hover {
@@ -71,9 +84,12 @@ $font-weights: (
     }
 }
 
+
 /* ====== ✅ Spacing Utilities ====== */
 
-@each $size in md, lg, xl {
+@each $size in md,
+lg,
+xl {
     .m-#{$size} {
         margin: var(--space-#{$size});
     }
@@ -122,6 +138,7 @@ $font-weights: (
     }
 }
 
+
 /* ====== ✅ Buttons ====== */
 
 button,
@@ -139,14 +156,9 @@ button,
     padding: 1.25rem 1.45rem;
 }
 
-$button-colors: (
-    white: var(--white),
-    primary: var(--primary),
-    secondary: var(--secondary),
-    gray: var(--gray),
-    dark: var(--dark)
-);
-@each $name, $color in $button-colors {
+$button-colors: ( white: var(--white), primary: var(--primary), secondary: var(--secondary), gray: var(--gray), dark: var(--dark));
+@each $name,
+$color in $button-colors {
     .btn-border-#{$name}-color {
         border: 1px solid #{$color};
         color: #{$color};
@@ -169,6 +181,7 @@ $button-colors: (
         color: var(--white);
     }
 }
+
 
 /* ====== ✅ Main Button Animation Styles ====== */
 
@@ -214,9 +227,7 @@ $button-colors: (
         height: 500%;
         background-color: transparent;
         transform: rotate(45deg) scale(0);
-        transition:
-            transform 0.3s ease-in-out,
-            background-color 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
         z-index: 1;
     }
     &:hover::before {
@@ -276,6 +287,7 @@ $button-colors: (
     }
 }
 
+
 /* ====== ✅ Forms ====== */
 
 .form-control {
@@ -317,7 +329,6 @@ $button-colors: (
         width: 100%;
         height: 100%;
         pointer-events: none;
-        z-index: 1;
         path {
             stroke: #bfbfbf;
             fill: none;
@@ -326,7 +337,6 @@ $button-colors: (
     }
     .form-control {
         position: relative;
-        z-index: 2;
         background-color: transparent;
         box-shadow: none;
         border: 0;
@@ -334,14 +344,16 @@ $button-colors: (
     }
 }
 
+
 /* ====== ✅ Tables ====== */
 
-.table-light-color > tbody > tr > td {
+.table-light-color>tbody>tr>td {
     background-color: var(--light);
     border-color: rgba($color: #0f3c66, $alpha: 0.2);
     color: var(--primary);
     padding: 15px 25px;
 }
+
 
 /* ====== ✅ Hover Animations ====== */
 
@@ -368,6 +380,7 @@ $button-colors: (
 .rotate-y-hover:focus .hover-target {
     transform: rotate(180deg);
 }
+
 
 /* ====== ✅ Base Styles ====== */
 
@@ -431,6 +444,11 @@ h6,
     padding-right: 20px;
 }
 
+.fs-36 {
+    font-size: 36px;
+}
+
+
 /* ====== ✅ Borders ====== */
 
 .border-color {
@@ -452,6 +470,7 @@ h6,
 border-gray-color {
     border-color: var(--gray);
 }
+
 
 /* ====== ✅ Dropdowns ====== */
 
@@ -506,21 +525,23 @@ border-gray-color {
     }
 }
 
+
 /* ====== ✅ Bredcrumbs ====== */
 
 .breadcrumb-item.active,
-.breadcrumb-item > a {
+.breadcrumb-item>a {
     color: var(--secondary);
 }
 
-.breadcrumb-item > a:hover {
+.breadcrumb-item>a:hover {
     color: var(--primary);
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--secondary);
     content: ">";
 }
+
 
 /* ====== ✅ Modals ====== */
 
@@ -556,6 +577,20 @@ border-gray-color {
         padding-bottom: 0;
     }
 }
+
+.modal-backdrop.show {
+    opacity: 0.9;
+}
+
+.employee-modal {
+    .modal-content {
+        background-color: transparent;
+    }
+    .modal-body {
+        background-color: var(--white);
+    }
+}
+
 
 /* ====== ✅ Offcanvas ====== */
 
@@ -608,6 +643,7 @@ border-gray-color {
         color: #fff9d1;
     }
 }
+
 
 /* ====== ✅ Header ====== */
 
@@ -684,6 +720,7 @@ border-gray-color {
     }
 }
 
+
 /* ====== ✅ Footer ====== */
 
 footer {
@@ -748,6 +785,7 @@ footer {
         border-top: 1px solid rgba($color: #bfbfbf, $alpha: 0.5);
     }
 }
+
 
 /* ====== ✅ Plugins ====== */
 
@@ -851,27 +889,27 @@ footer {
     position: absolute !important;
 }
 
-.SumoSelect.open > .CaptionCont,
-.SumoSelect:focus > .CaptionCont,
-.SumoSelect:hover > .CaptionCont {
+.SumoSelect.open>.CaptionCont,
+.SumoSelect:focus>.CaptionCont,
+.SumoSelect:hover>.CaptionCont {
     border: 0;
     box-shadow: none;
 }
 
-.SumoSelect > .optWrapper > .options {
+.SumoSelect>.optWrapper>.options {
     color: var(--dark);
 }
 
-.SumoSelect.open > .optWrapper {
+.SumoSelect.open>.optWrapper {
     top: 100%;
 }
 
-.SumoSelect > .optWrapper > .options li.opt:hover {
+.SumoSelect>.optWrapper>.options li.opt:hover {
     background-color: var(--primary);
     color: var(--white);
 }
 
-.SumoSelect > .CaptionCont > label > i {
+.SumoSelect>.CaptionCont>label>i {
     background-image: none;
     font-style: normal;
     &::before {
@@ -883,10 +921,11 @@ footer {
     }
 }
 
-.SumoSelect > .optWrapper > .options li.opt {
+.SumoSelect>.optWrapper>.options li.opt {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 
 /* ====== ✅ Slick Carousel ====== */
 
@@ -980,6 +1019,7 @@ footer {
         background-color: var(--gray);
     }
 }
+
 
 /* ====== ✅ Custom Utilities ====== */
 
@@ -1138,7 +1178,6 @@ footer {
     .news--section-start {
         background-color: var(--white);
     }
-
     .news--section-end {
         position: relative;
         padding-bottom: 100px;
@@ -1240,28 +1279,38 @@ footer {
 
 @keyframes l46 {
     0% {
-        background-position:
-            0 0,
-            100% 0,
-            100% 100%,
-            0 100%;
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
     }
     40%,
     50% {
-        background-position:
-            100% 100%,
-            100% 0,
-            0 0,
-            0 100%;
+        background-position: 100% 100%, 100% 0, 0 0, 0 100%;
     }
     90%,
     100% {
-        background-position:
-            100% 100%,
-            0 100%,
-            0 0,
-            100% 0;
+        background-position: 100% 100%, 0 100%, 0 0, 100% 0;
     }
+}
+
+.masked-image {
+    position: relative;
+    max-width: 422px;
+    max-height: 422px;
+    img:not(.path) {
+        aspect-ratio: 1/1;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 25%, 0% 118%);
+        clip-path: polygon(0 0, 100% 0, 100% 25%, 0% 118%)
+    }
+    img,
+    svg {
+        transform: scaleX(-1);
+    }
+}
+
+.page-bg {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 .sidebar--list {
@@ -1276,6 +1325,7 @@ footer {
         padding-left: 20px;
         padding-right: 20px;
         font-size: var(--fs-lg);
+        white-space: nowrap;
         &.active {
             color: var(--secondary);
             font-weight: 700;
@@ -1289,6 +1339,13 @@ footer {
         }
     }
 }
+
+.employee--item {
+    .employee--img img {
+        aspect-ratio: 12 / 9.63;
+    }
+}
+
 
 /* ====== ✅ Responsive Utilities ====== */
 
@@ -1341,7 +1398,6 @@ footer {
             color: var(--primary);
             display: flex;
             flex-direction: column;
-
             &::before {
                 background-image: linear-gradient(to bottom, #eceef3 50%, rgba(236, 238, 243, 0.6));
                 position: absolute;
@@ -1352,7 +1408,6 @@ footer {
                 content: "";
                 z-index: -1;
             }
-
             .service--block-img {
                 height: 50%;
                 background-size: cover;
@@ -1388,6 +1443,9 @@ footer {
             }
         }
     }
+    .sidebar--wrapper {
+        max-width: 380px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -1418,23 +1476,47 @@ footer {
     }
 }
 
+@media(max-width:991.99px) {
+    .sidebar--wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        .sidebar--list {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    .sidebar--wrapper::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 @media (max-width: 767.99px) {
-    :root {
-        @each $size, $value in (xs: 11px, sm: 12px, rg: 13px, md: 14px, lg: 16px, xl: 22px, xxl: 36px) {
+     :root {
+        @each $size,
+        $value in (xs: 11px, sm: 12px, rg: 13px, md: 14px, lg: 16px, xl: 22px, xxl: 36px) {
             --fs-#{$size}: #{$value};
         }
+    }
+    .fs-36 {
+        font-size: 24px;
     }
 }
 
 @media (max-width: 575.99px) {
-    :root {
-        @each $size, $value in (xs: 10px, sm: 12px, rg: 12px, md: 14px, lg: 16px, xl: 20px, xxl: 24px) {
+     :root {
+        @each $size,
+        $value in (xs: 10px, sm: 12px, rg: 12px, md: 14px, lg: 16px, xl: 20px, xxl: 24px) {
             --fs-#{$size}: #{$value};
         }
     }
+    .fs-36 {
+        font-size: 22px;
+    }
     // Spacing
-    :root {
-        @each $size, $value in (md: 25px, lg: 35px, xl: 50px) {
+     :root {
+        @each $size,
+        $value in (md: 25px, lg: 35px, xl: 50px) {
             --space-#{$size}: #{$value};
         }
     }
@@ -1461,12 +1543,11 @@ footer {
     .hero--section .slick--controls .slick-arrows {
         transform: scale(0.5);
     }
-    .service--link > svg {
+    .service--link>svg {
         width: 50px;
         height: 50px;
         object-fit: contain;
     }
-
     .slick--flex .slick-slide:not(:last-child) {
         margin: 0;
     }

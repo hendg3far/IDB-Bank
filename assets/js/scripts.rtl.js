@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var sumoSelect = $('.sumo-select');
 
     if (sumoSelect) {
-        sumoSelect.SumoSelect();
+        sumoSelect.SumoSelect({ triggerChangeCombined: true });
     }
 
     $('.ui.slider').each(function () {

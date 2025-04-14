@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.966" height="56.966" viewBox="0 0 56.966 56.966">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="path812" d="M0-682.665H56.966V-625.7H0Z" transform="translate(0 682.665)" fill="none" stroke="#707070" stroke-width="3"/>
+    </clipPath>
+  </defs>
+  <g id="care" transform="translate(0 682.665)">
+    <path id="path794" d="M188.009-447.981h-6.676v-13.352h6.676Z" transform="translate(-166.201 -202.863)" fill="none" stroke="#0f3c66" stroke-miterlimit="10" stroke-width="3"/>
+    <g id="g796" transform="translate(21.807 -657.52)">
+      <path id="path798" d="M0-73.324H6.676V-80" transform="translate(0 80)" fill="none" stroke="#0f3c66" stroke-miterlimit="10" stroke-width="3"/>
+    </g>
+    <g id="g800" transform="translate(21.807 -664.195)">
+      <path id="path802" d="M-146.648-73.324V-80h-6.676v0H-160" transform="translate(160 80)" fill="none" stroke="#0f3c66" stroke-miterlimit="10" stroke-width="3"/>
+    </g>
+    <g id="g804" transform="translate(35.159 -664.195)">
+      <path id="path806" d="M0,0H6.676V13.351" fill="none" stroke="#0f3c66" stroke-miterlimit="10" stroke-width="3"/>
+    </g>
+    <g id="g808" transform="translate(0 -682.665)">
+      <g id="g810" clip-path="url(#clip-path)">
+        <g id="g816" transform="translate(28.483 25.145)">
+          <path id="path818" d="M0-201.641v-1.669a6.676,6.676,0,0,1,6.676-6.676v-3.338H0V-220H10.014a3.338,3.338,0,0,1,3.338,3.338v10.014a6.673,6.673,0,0,1-3.338,5.783v9.735" transform="translate(0 219.999)" fill="none" stroke="#0f3c66" stroke-miterlimit="10" stroke-width="3"/>
+        </g>
+        <g id="g820" transform="translate(15.132 31.821)">
+          <path id="path822" d="M-36.662-243.769V-253.5A6.673,6.673,0,0,1-40-259.288v-6.676" transform="translate(40 265.963)" fill="none" stroke="#0f3c66" stroke-miterlimit="10" stroke-width="3"/>
+        </g>
+        <g id="g824" transform="translate(1.669)">
+          <path id="path826" d="M-294.518,0A11.778,11.778,0,0,1-306.2,11.794h-1.669V5.585c-7,10.5-13.463,13.595-13.463,25.061A24.73,24.73,0,0,0-296.682,55.3h4.327A24.73,24.73,0,0,0-267.7,30.646c0-11.4-6.326-14.356-13.463-25.061v6.208h-1.669A11.778,11.778,0,0,1-294.518,0" transform="translate(321.333)" fill="none" stroke="#0f3c66" stroke-miterlimit="10" stroke-width="3"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

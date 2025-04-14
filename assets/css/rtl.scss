@@ -85,14 +85,21 @@ footer::before {
     }
 }
 
-.SumoSelect > .CaptionCont > label {
+.SumoSelect>.CaptionCont>label {
     right: auto;
     left: 0;
 }
 
-.SumoSelect > .CaptionCont > span {
+.SumoSelect>.CaptionCont>span {
     padding-right: 0;
     padding-left: 30px;
+}
+
+.masked-image img,
+.masked-image svg,
+.page-bg {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 @media (max-width: 575.99px) {
