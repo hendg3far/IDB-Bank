@@ -21,55 +21,42 @@ $lh-30: 30px;
 
 // Font Sizes
 :root {
-    @each $size,
-    $value in (xs: 10px, sm: 12px, rg: 14px, md: 16px, lg: 18px, xl: 24px, xxl: 48px) {
+    @each $size, $value in (xs: 10px, sm: 12px, rg: 14px, md: 16px, lg: 18px, xl: 24px, xxl: 48px) {
         --fs-#{$size}: #{$value};
     }
 }
 
 // Spacing
 :root {
-    @each $size,
-    $value in (md: 25px, lg: 50px, xl: 100px) {
+    @each $size, $value in (md: 25px, lg: 50px, xl: 100px) {
         --space-#{$size}: #{$value};
     }
 }
 
-
 /* ====== ✅ Typography Utilities ====== */
 
-$font-weights: ( rg: 400, md: 500, sb: 600, bd: 700);
-@each $name,
-$weight in $font-weights {
+$font-weights: (
+    rg: 400,
+    md: 500,
+    sb: 600,
+    bd: 700
+);
+@each $name, $weight in $font-weights {
     .fw-#{$name} {
         font-family: var(--font);
         font-weight: #{$weight};
     }
 }
 
-@each $size in xs,
-sm,
-rg,
-md,
-lg,
-xl,
-xxl {
+@each $size in xs, sm, rg, md, lg, xl, xxl {
     .fs-#{$size} {
         font-size: var(--fs-#{$size});
     }
 }
 
-
 /* ====== ✅ Color Utilities ====== */
 
-@each $name in white,
-light,
-gray,
-dark-gray,
-dark,
-primary,
-secondary,
-light-primary {
+@each $name in white, light, gray, dark-gray, dark, primary, secondary, light-primary {
     .text-#{$name}-color {
         color: var(--#{$name});
         &__hover:hover {
@@ -84,12 +71,9 @@ light-primary {
     }
 }
 
-
 /* ====== ✅ Spacing Utilities ====== */
 
-@each $size in md,
-lg,
-xl {
+@each $size in md, lg, xl {
     .m-#{$size} {
         margin: var(--space-#{$size});
     }
@@ -138,7 +122,6 @@ xl {
     }
 }
 
-
 /* ====== ✅ Buttons ====== */
 
 button,
@@ -156,9 +139,14 @@ button,
     padding: 1.25rem 1.45rem;
 }
 
-$button-colors: ( white: var(--white), primary: var(--primary), secondary: var(--secondary), gray: var(--gray), dark: var(--dark));
-@each $name,
-$color in $button-colors {
+$button-colors: (
+    white: var(--white),
+    primary: var(--primary),
+    secondary: var(--secondary),
+    gray: var(--gray),
+    dark: var(--dark)
+);
+@each $name, $color in $button-colors {
     .btn-border-#{$name}-color {
         border: 1px solid #{$color};
         color: #{$color};
@@ -181,7 +169,6 @@ $color in $button-colors {
         color: var(--white);
     }
 }
-
 
 /* ====== ✅ Main Button Animation Styles ====== */
 
@@ -227,7 +214,9 @@ $color in $button-colors {
         height: 500%;
         background-color: transparent;
         transform: rotate(45deg) scale(0);
-        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        transition:
+            transform 0.3s ease-in-out,
+            background-color 0.3s ease-in-out;
         z-index: 1;
     }
     &:hover::before {
@@ -287,7 +276,6 @@ $color in $button-colors {
     }
 }
 
-
 /* ====== ✅ Forms ====== */
 
 .form-control {
@@ -344,22 +332,63 @@ $color in $button-colors {
     }
 }
 
-
 /* ====== ✅ Tables ====== */
 
-.table-light-color>tbody>tr>td {
+.table-light-color > tbody > tr > td {
     background-color: var(--light);
     border-color: rgba($color: #0f3c66, $alpha: 0.2);
     color: var(--primary);
     padding: 15px 25px;
 }
 
+/* ====== ✅ Nav Tabs ====== */
+
+.nav-tabs.nav-tabs-1 {
+    border-color: var(--gray);
+    .nav-item {
+        flex: 1;
+    }
+    .nav-link {
+        color: var(--gray);
+        border: 0;
+        border-radius: 0;
+        font-size: var(--fs-xl);
+        width: 100%;
+        padding-top: var(--space-md);
+        padding-bottom: var(--space-md);
+        font-weight: 700;
+        &.active,
+        &:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+    }
+}
+
+.nav-tabs-2 {
+    padding-bottom: var(--space-lg);
+    border-color: var(--gray);
+    .nav-link {
+        border: 0;
+        color: var(--dark);
+        min-width: 150px;
+        &.active,
+        &:hover {
+            color: var(--white);
+            &::before {
+                background-color: var(--gray);
+                transform: rotate(45deg) scale(1);
+            }
+        }
+    }
+}
 
 /* ====== ✅ Hover Animations ====== */
 
 .flip-x-hover,
 .zoom-in-hover,
-.rotate-y-hover {
+.rotate-y-hover,
+.brightness-invert-hover {
     .hover-target {
         -webkit-transition: $transition;
         transition: $transition;
@@ -381,6 +410,10 @@ $color in $button-colors {
     transform: rotate(180deg);
 }
 
+.brightness-invert-hover:hover .hover-target,
+.brightness-invert-hover:focus .hover-target {
+    filter: brightness(0) invert(1);
+}
 
 /* ====== ✅ Base Styles ====== */
 
@@ -448,7 +481,6 @@ h6,
     font-size: 36px;
 }
 
-
 /* ====== ✅ Borders ====== */
 
 .border-color {
@@ -467,10 +499,9 @@ h6,
     border-color: var(--secondary) !important;
 }
 
-border-gray-color {
+.border-gray-color {
     border-color: var(--gray);
 }
-
 
 /* ====== ✅ Dropdowns ====== */
 
@@ -525,23 +556,21 @@ border-gray-color {
     }
 }
 
-
 /* ====== ✅ Bredcrumbs ====== */
 
 .breadcrumb-item.active,
-.breadcrumb-item>a {
+.breadcrumb-item > a {
     color: var(--secondary);
 }
 
-.breadcrumb-item>a:hover {
+.breadcrumb-item > a:hover {
     color: var(--primary);
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
+.breadcrumb-item + .breadcrumb-item::before {
     color: var(--secondary);
     content: ">";
 }
-
 
 /* ====== ✅ Modals ====== */
 
@@ -578,6 +607,11 @@ border-gray-color {
     }
 }
 
+.modal-backdrop {
+    min-width: 100%;
+    min-height: 100%;
+}
+
 .modal-backdrop.show {
     opacity: 0.9;
 }
@@ -590,7 +624,6 @@ border-gray-color {
         background-color: var(--white);
     }
 }
-
 
 /* ====== ✅ Offcanvas ====== */
 
@@ -643,7 +676,6 @@ border-gray-color {
         color: #fff9d1;
     }
 }
-
 
 /* ====== ✅ Header ====== */
 
@@ -720,7 +752,6 @@ border-gray-color {
     }
 }
 
-
 /* ====== ✅ Footer ====== */
 
 footer {
@@ -785,7 +816,6 @@ footer {
         border-top: 1px solid rgba($color: #bfbfbf, $alpha: 0.5);
     }
 }
-
 
 /* ====== ✅ Plugins ====== */
 
@@ -889,27 +919,27 @@ footer {
     position: absolute !important;
 }
 
-.SumoSelect.open>.CaptionCont,
-.SumoSelect:focus>.CaptionCont,
-.SumoSelect:hover>.CaptionCont {
+.SumoSelect.open > .CaptionCont,
+.SumoSelect:focus > .CaptionCont,
+.SumoSelect:hover > .CaptionCont {
     border: 0;
     box-shadow: none;
 }
 
-.SumoSelect>.optWrapper>.options {
+.SumoSelect > .optWrapper > .options {
     color: var(--dark);
 }
 
-.SumoSelect.open>.optWrapper {
+.SumoSelect.open > .optWrapper {
     top: 100%;
 }
 
-.SumoSelect>.optWrapper>.options li.opt:hover {
+.SumoSelect > .optWrapper > .options li.opt:hover {
     background-color: var(--primary);
     color: var(--white);
 }
 
-.SumoSelect>.CaptionCont>label>i {
+.SumoSelect > .CaptionCont > label > i {
     background-image: none;
     font-style: normal;
     &::before {
@@ -921,11 +951,10 @@ footer {
     }
 }
 
-.SumoSelect>.optWrapper>.options li.opt {
+.SumoSelect > .optWrapper > .options li.opt {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
 
 /* ====== ✅ Slick Carousel ====== */
 
@@ -1019,7 +1048,6 @@ footer {
         background-color: var(--gray);
     }
 }
-
 
 /* ====== ✅ Custom Utilities ====== */
 
@@ -1279,15 +1307,27 @@ footer {
 
 @keyframes l46 {
     0% {
-        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+        background-position:
+            0 0,
+            100% 0,
+            100% 100%,
+            0 100%;
     }
     40%,
     50% {
-        background-position: 100% 100%, 100% 0, 0 0, 0 100%;
+        background-position:
+            100% 100%,
+            100% 0,
+            0 0,
+            0 100%;
     }
     90%,
     100% {
-        background-position: 100% 100%, 0 100%, 0 0, 100% 0;
+        background-position:
+            100% 100%,
+            0 100%,
+            0 0,
+            100% 0;
     }
 }
 
@@ -1300,7 +1340,7 @@ footer {
         -o-object-fit: cover;
         object-fit: cover;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 25%, 0% 118%);
-        clip-path: polygon(0 0, 100% 0, 100% 25%, 0% 118%)
+        clip-path: polygon(0 0, 100% 0, 100% 25%, 0% 118%);
     }
     img,
     svg {
@@ -1346,6 +1386,13 @@ footer {
     }
 }
 
+.icon-lg {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* ====== ✅ Responsive Utilities ====== */
 
@@ -1476,7 +1523,7 @@ footer {
     }
 }
 
-@media(max-width:991.99px) {
+@media (max-width: 991.99px) {
     .sidebar--wrapper {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
@@ -1492,9 +1539,8 @@ footer {
 }
 
 @media (max-width: 767.99px) {
-     :root {
-        @each $size,
-        $value in (xs: 11px, sm: 12px, rg: 13px, md: 14px, lg: 16px, xl: 22px, xxl: 36px) {
+    :root {
+        @each $size, $value in (xs: 11px, sm: 12px, rg: 13px, md: 14px, lg: 16px, xl: 22px, xxl: 36px) {
             --fs-#{$size}: #{$value};
         }
     }
@@ -1504,9 +1550,8 @@ footer {
 }
 
 @media (max-width: 575.99px) {
-     :root {
-        @each $size,
-        $value in (xs: 10px, sm: 12px, rg: 12px, md: 14px, lg: 16px, xl: 20px, xxl: 24px) {
+    :root {
+        @each $size, $value in (xs: 10px, sm: 12px, rg: 12px, md: 14px, lg: 16px, xl: 20px, xxl: 24px) {
             --fs-#{$size}: #{$value};
         }
     }
@@ -1514,9 +1559,8 @@ footer {
         font-size: 22px;
     }
     // Spacing
-     :root {
-        @each $size,
-        $value in (md: 25px, lg: 35px, xl: 50px) {
+    :root {
+        @each $size, $value in (md: 25px, lg: 35px, xl: 50px) {
             --space-#{$size}: #{$value};
         }
     }
@@ -1543,7 +1587,7 @@ footer {
     .hero--section .slick--controls .slick-arrows {
         transform: scale(0.5);
     }
-    .service--link>svg {
+    .service--link > svg {
         width: 50px;
         height: 50px;
         object-fit: contain;
