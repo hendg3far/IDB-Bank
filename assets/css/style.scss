@@ -357,6 +357,7 @@ $button-colors: (
         padding-top: var(--space-md);
         padding-bottom: var(--space-md);
         font-weight: 700;
+        height: 100%;
         &.active,
         &:hover {
             background-color: var(--primary);
