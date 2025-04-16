@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39.551" height="45" viewBox="0 0 39.551 45">
+  <g id="money-bag" transform="translate(-31)">
+    <g id="Group_345" data-name="Group 345" transform="translate(52.094 29.18)">
+      <g id="Group_344" data-name="Group 344">
+        <path id="Path_2279" data-name="Path 2279" d="M271,332v5.273A2.637,2.637,0,0,0,271,332Z" transform="translate(-271 -332)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_347" data-name="Group 347" transform="translate(43.369)">
+      <g id="Group_346" data-name="Group 346">
+        <path id="Path_2280" data-name="Path 2280" d="M171.728,0l2.637,5.361h9.54L186.541,0Z" transform="translate(-171.728)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_349" data-name="Group 349" transform="translate(46.82 21.27)">
+      <g id="Group_348" data-name="Group 348">
+        <path id="Path_2281" data-name="Path 2281" d="M211,244.637a2.64,2.64,0,0,0,2.637,2.637V242A2.64,2.64,0,0,0,211,244.637Z" transform="translate(-211 -242)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_351" data-name="Group 351" transform="translate(31 7.998)">
+      <g id="Group_350" data-name="Group 350">
+        <path id="Path_2282" data-name="Path 2282" d="M58.088,91H52.909l1.683,3.365-2.359,1.179L50.775,92.63l-1.457,2.915-2.359-1.179L48.642,91H43.463C36.777,96.477,31,107.849,31,114.687,31,127.958,45.884,128,50.775,128s19.775-.044,19.775-13.315C70.551,107.849,64.774,96.477,58.088,91Zm-.721,23.818a5.279,5.279,0,0,1-5.273,5.273v2.637H49.457v-2.637a5.279,5.279,0,0,1-5.273-5.273H46.82a2.64,2.64,0,0,0,2.637,2.637v-5.273a5.273,5.273,0,0,1,0-10.547V99h2.637v2.637a5.279,5.279,0,0,1,5.273,5.273H54.73a2.64,2.64,0,0,0-2.637-2.637v5.273A5.279,5.279,0,0,1,57.367,114.818Z" transform="translate(-31 -91)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

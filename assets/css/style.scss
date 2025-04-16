@@ -170,6 +170,15 @@ $button-colors: (
     }
 }
 
+.btn-primary-color {
+    background-color: var(--primary);
+    color: var(--white);
+    &:hover {
+        background-color: var(--secondary);
+        color: var(--white);
+    }
+}
+
 /* ====== ✅ Main Button Animation Styles ====== */
 
 .main-btn {
@@ -339,6 +348,36 @@ $button-colors: (
     border-color: rgba($color: #0f3c66, $alpha: 0.2);
     color: var(--primary);
     padding: 15px 25px;
+}
+
+.table-dark-color {
+    thead tr td,
+    thead tr th {
+        background-color: var(--primary);
+        color: var(--white);
+        font-size: var(--fs-xl);
+        padding: 1rem 1.75rem;
+        border-color: transparent;
+    }
+    tbody tr td,
+    tbody tr th {
+        background-color: var(--light);
+        color: var(--primary);
+        font-size: var(--fs-lg);
+        padding: 1rem 1.75rem;
+        border-color: var(--gray);
+    }
+}
+
+.table-striped > tbody > tr > td,
+.table-striped > tbody > tr > th {
+    padding: 1rem 1.75rem;
+    color: var(--primary);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: var(--light);
+    --bs-table-bg-type: var(--light);
 }
 
 /* ====== ✅ Nav Tabs ====== */
@@ -808,7 +847,7 @@ footer {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #eceef3;
+            background-color: var(--light);
         }
     }
     .copyrights {
@@ -818,17 +857,28 @@ footer {
     }
 }
 
+footer .iti__country-list {
+    background-color: #3a6185;
+}
+
+footer .iti__country-name,
+footer .iti__dial-code,
+footer .iti__flag-box {
+    color: var(--white);
+}
+
+footer .iti__selected-flag::before {
+    background-color: #fff9d1;
+}
+
+footer .iti__arrow {
+    background-image: url("../media/--icons/arrow-down.svg");
+}
+
 /* ====== ✅ Plugins ====== */
 
 .iti__country-list {
-    background-color: #3a6185;
     border: 0;
-}
-
-.iti__country-name,
-.iti__dial-code,
-.iti__flag-box {
-    color: var(--white);
 }
 
 .iti--allow-dropdown input,
@@ -859,12 +909,12 @@ footer {
         position: absolute;
         width: 1px;
         height: 25px;
-        background-color: #fff9d1;
+        background-color: var(--gray);
     }
 }
 
 .iti__arrow {
-    background-image: url("../media/--icons/arrow-down.svg");
+    background-image: url("../media/--icons/arrow-down-dark.svg");
     background-repeat: no-repeat;
     background-size: 10px 14px;
     border: 0;
@@ -1381,6 +1431,15 @@ footer {
     }
 }
 
+.sidebar--list-1 {
+    a {
+        &.active,
+        &:hover {
+            color: var(--secondary);
+        }
+    }
+}
+
 .employee--item {
     .employee--img img {
         aspect-ratio: 12 / 9.63;
@@ -1393,6 +1452,42 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.skew--item {
+    position: relative;
+    padding: 4rem 2rem 2rem;
+    margin: 4rem;
+    transition: $transition;
+    &:hover {
+        img {
+            filter: brightness(0) invert(1);
+        }
+        color: var(--white);
+        &::before {
+            background-color: var(--primary);
+        }
+    }
+    img {
+        transition: $transition;
+    }
+    span {
+        line-height: 60px;
+        transition: $transition;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120%; // A bit extra width to cover slant
+        height: 100%;
+        background-color: var(--light);
+        transform: skew(-8deg);
+        transform-origin: top left;
+        z-index: -1;
+        transition: $transition;
+    }
 }
 
 /* ====== ✅ Responsive Utilities ====== */

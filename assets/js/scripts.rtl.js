@@ -106,6 +106,15 @@ document.addEventListener('DOMContentLoaded', function () {
         initialCountry: "eg",
     });
 
+    var phones = document.querySelectorAll(".phone");
+
+    phones.forEach(function (input) {
+        window.intlTelInput(input, {
+            separateDialCode: true,
+            initialCountry: "eg",
+        });
+    });
+
 
     var sumoSelect = $('.sumo-select');
 
