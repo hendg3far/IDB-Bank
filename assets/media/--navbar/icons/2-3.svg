@@ -1,0 +1,67 @@
+<svg id="economy_1003009" xmlns="http://www.w3.org/2000/svg" width="34.699" height="34.793" viewBox="0 0 34.699 34.793">
+    <g id="Group_221" data-name="Group 221" transform="translate(20.549 4.164)">
+        <g id="Group_220" data-name="Group 220">
+            <path id="Path_2015" data-name="Path 2015"
+                d="M309.492,65.4l-2.348,2.348V61H301v2.048h4.1v4.7L302.748,65.4,301.3,66.844l4.82,4.82,4.82-4.82Z"
+                transform="translate(-301 -61)" fill="#0f3c66">
+            </path>
+        </g>
+    </g>
+    <g id="Group_223" data-name="Group 223" transform="translate(4.464 20.125)">
+        <g id="Group_222" data-name="Group 222">
+            <path id="Path_2016" data-name="Path 2016"
+                d="M71.239,303.405v-4.7l2.348,2.348,1.448-1.448-4.82-4.82-4.82,4.82,1.448,1.448,2.348-2.348v6.744h6.144v-2.048Z"
+                transform="translate(-65.395 -294.789)" fill="#0f3c66"></path>
+        </g>
+    </g>
+    <g id="Group_225" data-name="Group 225" transform="translate(7.274 10.308)">
+        <g id="Group_224" data-name="Group 224">
+            <path id="Path_2017" data-name="Path 2017"
+                d="M106.551,151c.187,4.276,1.46,8.192,2.01,8.192s1.823-3.916,2.01-8.192Z"
+                transform="translate(-106.551 -151)" fill="#0f3c66">
+            </path>
+        </g>
+    </g>
+    <g id="Group_227" data-name="Group 227" transform="translate(7.274)">
+        <g id="Group_226" data-name="Group 226">
+            <path id="Path_2018" data-name="Path 2018"
+                d="M108.561,0c-.55,0-1.823,3.984-2.01,8.26h4.021C110.385,3.984,109.112,0,108.561,0Z"
+                transform="translate(-106.551)" fill="#0f3c66">
+            </path>
+        </g>
+    </g>
+    <g id="Group_229" data-name="Group 229" transform="translate(11.796 0.392)">
+        <g id="Group_228" data-name="Group 228">
+            <path id="Path_2019" data-name="Path 2019"
+                d="M172.795,5.74a23.848,23.848,0,0,1,1.56,7.869H179.4A9.264,9.264,0,0,0,172.795,5.74Z"
+                transform="translate(-172.795 -5.74)" fill="#0f3c66"></path>
+        </g>
+    </g>
+    <g id="Group_231" data-name="Group 231" transform="translate(11.796 10.308)">
+        <g id="Group_230" data-name="Group 230">
+            <path id="Path_2020" data-name="Path 2020"
+                d="M174.355,151a23.436,23.436,0,0,1-1.56,7.8,9.177,9.177,0,0,0,6.6-7.8Z"
+                transform="translate(-172.795 -151)" fill="#0f3c66">
+            </path>
+        </g>
+    </g>
+    <g id="Group_233" data-name="Group 233" transform="translate(0 0.392)">
+        <g id="Group_232" data-name="Group 232">
+            <path id="Path_2021" data-name="Path 2021"
+                d="M0,13.609H5.212A23.846,23.846,0,0,1,6.773,5.74,9.447,9.447,0,0,0,0,13.609Z"
+                transform="translate(0 -5.74)" fill="#0f3c66">
+            </path>
+        </g>
+    </g>
+    <g id="Group_235" data-name="Group 235" transform="translate(0 10.308)">
+        <g id="Group_234" data-name="Group 234">
+            <path id="Path_2022" data-name="Path 2022"
+                d="M5.212,151H0a9.361,9.361,0,0,0,6.773,7.8A23.438,23.438,0,0,1,5.212,151Z"
+                transform="translate(0 -151)" fill="#0f3c66">
+            </path>
+        </g>
+    </g>
+    <circle id="Ellipse_77" data-name="Ellipse 77" cx="9" cy="9" r="9" transform="translate(16.699 16.793)"
+        fill="#0f3c66">
+    </circle>
+</svg>

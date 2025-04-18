@@ -71,6 +71,18 @@ $font-weights: (
     }
 }
 
+.img-secondary-color__hover {
+    transition: $transition;
+}
+
+.img-secondary-color__hover:hover {
+    filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(5deg);
+}
+
+*:hover > .img-secondary-color__hover {
+    filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(5deg);
+}
+
 /* ====== ✅ Spacing Utilities ====== */
 
 @each $size in md, lg, xl {
@@ -597,6 +609,7 @@ h6,
     .submenu-title {
         padding: 20px 0;
         margin: 0;
+        display: block;
     }
     .submenu-list {
         border-top: 2px solid var(--light);
@@ -1511,6 +1524,16 @@ footer .iti__arrow {
         transform-origin: top left;
         z-index: -1;
         transition: $transition;
+    }
+}
+
+.page-content {
+    span,
+    p,
+    ul > li,
+    a {
+        line-height: 30px;
+        font-size: var(--fs-lg);
     }
 }
 
