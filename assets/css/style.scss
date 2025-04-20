@@ -1709,6 +1709,11 @@ footer .iti__arrow {
     top: 25%;
 }
 
+.scaleX {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
 /* ====== ✅ Responsive Utilities ====== */
 
 @media (min-width: 992px) {

@@ -109,6 +109,11 @@ footer::before {
     transform: scaleX(1);
 }
 
+.scaleX {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
 @media (max-width: 575.99px) {
     .slick--flex .slick-slide:not(:last-child) {
         margin: 0;
