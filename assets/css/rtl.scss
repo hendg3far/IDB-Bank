@@ -27,6 +27,13 @@ html {
     }
 }
 
+[type="email"],
+[type="number"],
+[type="tel"],
+[type="url"] {
+    direction: rtl;
+}
+
 .search-modal::after {
     left: 0;
     right: auto;
@@ -85,12 +92,12 @@ footer::before {
     }
 }
 
-.SumoSelect>.CaptionCont>label {
+.SumoSelect > .CaptionCont > label {
     right: auto;
     left: 0;
 }
 
-.SumoSelect>.CaptionCont>span {
+.SumoSelect > .CaptionCont > span {
     padding-right: 0;
     padding-left: 30px;
 }
