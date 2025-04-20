@@ -1538,6 +1538,30 @@ footer .iti__arrow {
     }
 }
 
+.angled-container {
+    position: relative;
+    width: 217.9px;
+    height: 592.67px;
+    clip-path: polygon(50px 0%, 100% 0%, 167.9px 100%, 0% 100%);
+    transform: skew(-20deg);
+    overflow: hidden;
+    .image-wrapper {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+.parallelogram--item {
+    position: relative;
+    width: 180px;
+    height: 300px;
+    clip-path: polygon(40px 0%, 100% 0%, 140px 100%, 0% 100%);
+    transform: skew(-20deg);
+    overflow: hidden;
+}
+
 .page-bg {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -1783,6 +1807,10 @@ footer .iti__arrow {
     }
     .sidebar--wrapper {
         max-width: 380px;
+    }
+
+    .faq--img {
+        margin-top: -19%;
     }
 }
 
