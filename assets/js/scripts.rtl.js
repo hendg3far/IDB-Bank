@@ -73,6 +73,23 @@ $(document).ready(function () {
 
     $('.hero--item .hero-item--title').matchHeight();
     $('.hero--item .hero-item--desc').matchHeight();
+
+
+    var $input = $(".flatpickr");
+
+    if ($input.length) {
+        var calendarInstance = $input.flatpickr({
+            static: true,
+            allowInput: true,
+        });
+
+        // Click on calendar icon
+        $(".calendar-icon, .calendar-arrow").on("click", function () {
+            if (calendarInstance && calendarInstance.open) {
+                calendarInstance.open();
+            }
+        });
+    }
 })
 
 document.addEventListener('DOMContentLoaded', function () {

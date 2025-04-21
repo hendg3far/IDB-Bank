@@ -367,7 +367,7 @@ $button-colors: (
     justify-content: center;
     cursor: pointer;
     width: 100%;
-    svg {
+    > svg {
         position: absolute;
         top: 0;
         left: 0;
@@ -634,13 +634,17 @@ h6,
     line-height: $lh-30;
 }
 
+p {
+    line-height: 30px;
+}
+
 .container-fluid {
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .fs-36 {
-    font-size: 36px;
+    font-size: 36px !important;
 }
 
 /* ====== ✅ Borders ====== */
@@ -841,6 +845,23 @@ h6,
     color: #fff9d1;
     &:hover {
         color: #fff9d1;
+    }
+}
+
+/* ====== ✅ Pagination ====== */
+
+.pagination {
+    .page-link {
+        border: 0;
+        border-radius: 0 !important;
+        color: var(--gray);
+        background-color: transparent;
+        font-weight: 700;
+        &.active,
+        &:hover {
+            color: var(--dark);
+            background-color: transparent;
+        }
     }
 }
 
@@ -1132,6 +1153,44 @@ footer .iti__arrow {
 .SumoSelect > .optWrapper > .options li.opt {
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+span.flatpickr-weekday {
+    font-size: 80% !important;
+}
+
+.flatpickr-day {
+    font-size: 12px !important;
+}
+
+.flatpickr-wrapper {
+    display: block;
+}
+
+.flatpickr-months .flatpickr-month {
+    min-height: 45px;
 }
 
 /* ====== ✅ Slick Carousel ====== */
@@ -1621,8 +1680,18 @@ footer .iti__arrow {
     }
 }
 
+.icon-sm {
+    width: 25px;
+    min-width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .icon-lg {
     width: 50px;
+    min-width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -1674,17 +1743,6 @@ footer .iti__arrow {
     }
 }
 
-.page-content {
-    span,
-    p,
-    ul > li,
-    a,
-    strong {
-        line-height: 30px;
-        font-size: var(--fs-lg);
-    }
-}
-
 .page-content ul li:not(.nav-item) {
     margin-bottom: 10px;
 }
@@ -1726,6 +1784,25 @@ footer .iti__arrow {
 .scaleX {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+.page-head {
+    padding-top: 190px;
+    padding-bottom: 300px;
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    z-index: 1;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(-45deg, #000, rgba(15, 60, 102, 0.68), rgba(15, 60, 102, 0));
+        z-index: -1;
+    }
 }
 
 /* ====== ✅ Responsive Utilities ====== */
@@ -1886,7 +1963,7 @@ footer .iti__arrow {
         }
     }
     .fs-36 {
-        font-size: 24px;
+        font-size: 24px !important;
     }
 }
 
@@ -1897,7 +1974,7 @@ footer .iti__arrow {
         }
     }
     .fs-36 {
-        font-size: 22px;
+        font-size: 22px !important;
     }
     // Spacing
     :root {

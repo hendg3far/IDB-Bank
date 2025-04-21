@@ -114,6 +114,20 @@ footer::before {
     transform: scaleX(1);
 }
 
+.numInputWrapper span {
+    right: auto;
+    left: 0;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+    direction: rtl;
+}
+
+.page-link[aria-label="Previous"],
+.page-link[aria-label="Next"] {
+    transform: rotate(180deg);
+}
+
 @media (max-width: 575.99px) {
     .slick--flex .slick-slide:not(:last-child) {
         margin: 0;
