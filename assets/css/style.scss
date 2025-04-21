@@ -348,6 +348,20 @@ $button-colors: (
     }
 }
 
+.form-control-light-2 {
+    background-color: #f2f2f2;
+    border-color: #bfbfbf;
+    color: var(--dark);
+    &::placeholder {
+        color: var(--dark);
+    }
+    &:focus {
+        background-color: #f2f2f2;
+        color: var(--dark);
+        border-color: #bfbfbf;
+    }
+}
+
 .main-form-control {
     position: relative;
     justify-content: center;
