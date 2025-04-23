@@ -71,16 +71,25 @@ $font-weights: (
     }
 }
 
-.img-secondary-color__hover {
+.img-secondary-color-opacity__hover {
+    opacity: 0.3;
+}
+
+.img-secondary-color__hover,
+.img-secondary-color-opacity__hover {
     transition: $transition;
 }
 
-.img-secondary-color__hover:hover {
+.img-secondary-color__hover:hover,
+.img-secondary-color-opacity__hover:hover {
     filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(5deg);
+    opacity: 1;
 }
 
-*:hover > .img-secondary-color__hover {
+*:hover > .img-secondary-color__hover,
+*:hover > .img-secondary-color-opacity__hover {
     filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(5deg);
+    opacity: 1;
 }
 
 /* ====== ✅ Spacing Utilities ====== */
@@ -543,6 +552,18 @@ $button-colors: (
             }
         }
     }
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.nav-pills .nav-link:hover {
+    color: var(--secondary);
+    background-color: transparent;
+}
+
+.nav-pills .nav-link {
+    color: var(--primary);
+    font-size: var(--fs-lg);
 }
 
 /* ====== ✅ Hover Animations ====== */
