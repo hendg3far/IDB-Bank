@@ -1075,108 +1075,177 @@
                 <div class="row row-gap-5">
                     <div class="col-lg-3">
                         <div class="sidebar--wrapper me-lg-4 shadow bg-white">
-                            <div class="sidebar--list d-flex w-100 gap-lg-4  flex-lg-column">
-                                <a class="active" href="#"> حساب توفير ستار للافراد </a>
-                                <a href="#"> حساب جاري ستار للافراد </a>
-                                <a href="#"> شهادة اختيارك الثلاثية للافراد بعائد ثابت </a>
-                                <a href="#"> شهادة التنمية بالدولار الأمريكي للافراد </a>
-                                <a href="#"> الشهادات الثلاثية والخماسية بعائد متغير للافراد </a>
-                                <a href="#"> حساب حصالة بدون شرائح للافراد بالجنيه المصري </a>
-                                <a href="#"> شهادة التنمية بالدولار الأمريكي للشركات </a>
-                                <a href="#"> حساب جاري ستار بلس للشركات </a>
-                                <a href="#"> شهادة مؤسستي الثلاثية بعائد ثابت بالعملة المحلية للشركات </a>
-                                <a href="#">الشمول المالي : شريحة عملاء حسابات الشمول المالي للافراد</a>
-                                <a href="#">الشمول المالي : شريحة عملاء حسابات الشمول المالي للشركات</a>
-                                <a href="#">الشمول المالي :حساب الشباب</a>
+                            <div class="nav nav-pills nav-pills-1" role="tablist">
+                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1"
+                                    type="button" role="tab" aria-selected="true"> حساب توفير
+                                    ستار للافراد </button>
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
+                                    role="tab" aria-selected="true"> حساب جاري ستار للافراد
+                                </button>
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab3" type="button"
+                                    role="tab" aria-selected="true"> شهادة اختيارك الثلاثية
+                                    للافراد بعائد ثابت </button>
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab4" type="button"
+                                    role="tab" aria-selected="true"> شهادة التنمية بالدولار
+                                    الأمريكي للافراد </button>
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab5" type="button"
+                                    role="tab" aria-selected="true"> الشهادات الثلاثية
+                                    والخماسية بعائد متغير للافراد </button>
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab6" type="button"
+                                    role="tab" aria-selected="true"> حساب حصالة بدون شرائح
+                                    للافراد بالجنيه المصري </button>
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab7" type="button"
+                                    role="tab" aria-selected="true"> شهادة التنمية بالدولار
+                                    الأمريكي للشركات </button>
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab8" type="button"
+                                    role="tab" aria-selected="true"> حساب جاري ستار بلس للشركات
+                                </button>
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab9" type="button"
+                                    role="tab" aria-selected="true"> شهادة مؤسستي الثلاثية
+                                    بعائد ثابت بالعملة المحلية للشركات </button>
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab10" type="button"
+                                    role="tab" aria-selected="true">الشمول المالي : شريحة
+                                    عملاء حسابات الشمول المالي للافراد</button>
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab11" type="button"
+                                    role="tab" aria-selected="true">الشمول المالي : شريحة
+                                    عملاء حسابات الشمول المالي للشركات</button>
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab12" type="button"
+                                    role="tab" aria-selected="true">الشمول المالي :حساب
+                                    الشباب</button>
                             </div>
+
+                            <!-- <div class="sidebar--list d-flex w-100 gap-lg-4  flex-lg-column">
+                                <a class="active" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab"
+                                    aria-selected="true"> حساب توفير ستار للافراد </a>
+                                <a data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab"
+                                    aria-selected="true"> حساب جاري ستار للافراد </a>
+                                <a data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab"
+                                    aria-selected="true"> شهادة اختيارك الثلاثية للافراد بعائد ثابت </a>
+                                <a data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab"
+                                    aria-selected="true"> شهادة التنمية بالدولار الأمريكي للافراد </a>
+                                <a data-bs-toggle="tab" data-bs-target="#tab5" type="button" role="tab"
+                                    aria-selected="true"> الشهادات الثلاثية والخماسية بعائد متغير للافراد </a>
+                                <a data-bs-toggle="tab" data-bs-target="#tab6" type="button" role="tab"
+                                    aria-selected="true"> حساب حصالة بدون شرائح للافراد بالجنيه المصري </a>
+                                <a data-bs-toggle="tab" data-bs-target="#tab7" type="button" role="tab"
+                                    aria-selected="true"> شهادة التنمية بالدولار الأمريكي للشركات </a>
+                                <a data-bs-toggle="tab" data-bs-target="#tab8" type="button" role="tab"
+                                    aria-selected="true"> حساب جاري ستار بلس للشركات </a>
+                                <a data-bs-toggle="tab" data-bs-target="#tab9" type="button" role="tab"
+                                    aria-selected="true"> شهادة مؤسستي الثلاثية بعائد ثابت بالعملة المحلية للشركات </a>
+                                <a data-bs-toggle="tab" data-bs-target="#tab10" type="button" role="tab"
+                                    aria-selected="true">الشمول المالي : شريحة عملاء حسابات الشمول المالي للافراد</a>
+                                <a data-bs-toggle="tab" data-bs-target="#tab11" type="button" role="tab"
+                                    aria-selected="true">الشمول المالي : شريحة عملاء حسابات الشمول المالي للشركات</a>
+                                <a data-bs-toggle="tab" data-bs-target="#tab12" type="button" role="tab"
+                                    aria-selected="true">الشمول المالي :حساب الشباب</a>
+                            </div> -->
                         </div>
 
                     </div>
 
                     <div class="col-lg-9">
-                        <h2 class="mb-lg">حساب توفير ستار بعائد تصاعدي للافراد بالجنيه المصري</h2>
-                        <div class="d-flex flex-column text-dark-color fs-lg lh-30 mb-md">
-                            <ul class="list-unstyled">
-                                <li>- الحساب هو حساب توفير بعائد تصاعدي يقدم للعملاء الافراد.</li>
-                                <li>- سعر العائد متدرج طبقا لرصيد حساب العميل الفعلي, يطبق علي الحد الادني لرصيد الحساب
-                                    خلال الشهر.</li>
-                                <li>- يتم البدء في احتساب العائد اعتبارا من الشهر التالي للايداع.</li>
-                                <li>- يصرف العائد المحتسب شهريا طبقا لجدول الاسعار ادناه.</li>
-                            </ul>
-                            <span>يمكن السحب 24/7 باستخدام بطاقة الخصم المباشر عن طريق ماكينات الصراف الالي او عن طريق
-                                تطبيق انستاباي او عن طريق اي فرع من
-                                فروع مصرفنا المنتشرة خلال ساعات العمل الرسمية</span>
-                        </div>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="tab1" role="tabpanel" tabindex="0">
+                                <h2 class="mb-lg">حساب توفير ستار بعائد تصاعدي للافراد بالجنيه المصري</h2>
+                                <div class="d-flex flex-column text-dark-color fs-lg lh-30 mb-md">
+                                    <ul class="list-unstyled">
+                                        <li>- الحساب هو حساب توفير بعائد تصاعدي يقدم للعملاء الافراد.</li>
+                                        <li>- سعر العائد متدرج طبقا لرصيد حساب العميل الفعلي, يطبق علي الحد الادني لرصيد
+                                            الحساب
+                                            خلال الشهر.</li>
+                                        <li>- يتم البدء في احتساب العائد اعتبارا من الشهر التالي للايداع.</li>
+                                        <li>- يصرف العائد المحتسب شهريا طبقا لجدول الاسعار ادناه.</li>
+                                    </ul>
+                                    <span>يمكن السحب 24/7 باستخدام بطاقة الخصم المباشر عن طريق ماكينات الصراف الالي او
+                                        عن طريق
+                                        تطبيق انستاباي او عن طريق اي فرع من
+                                        فروع مصرفنا المنتشرة خلال ساعات العمل الرسمية</span>
+                                </div>
 
-                        <table class="table table-bordered table-bordered-dark fs-lg mb-lg">
-                            <thead>
-                                <tr>
-                                    <th>سعر العائد السنوي</th>
-                                    <th>اجمالي رصيد الحساب (طبقا للحد الادني خلال الشهر)</th>
-                                    <th>دورية صرف العائد</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>7%</td>
-                                    <td>اقل من 5 الاف جم</td>
-                                    <td rowspan="8" class="text-center">شهريا</td>
-                                </tr>
-                                <tr>
-                                    <td>10%</td>
-                                    <td>من 5 الف جم واقل من 100 الف جم</td>
-                                </tr>
-                                <tr>
-                                    <td>11%</td>
-                                    <td>من 100الف جم واقل من 400 الف جمجم</td>
-                                </tr>
-                                <tr>
-                                    <td>12%</td>
-                                    <td>من 400 الف جم واقل من مليون جم</td>
-                                </tr>
-                                <tr>
-                                    <td>13%</td>
-                                    <td>من مليون جم واقل من 5 مليون جم</td>
-                                </tr>
-                                <tr>
-                                    <td>15%</td>
-                                    <td>من 5 مليون جم واقل من 10 مليون جم</td>
-                                </tr>
-                                <tr>
-                                    <td>16%</td>
-                                    <td>من 10 مليون جم واقل من 20 مليون جم</td>
-                                </tr>
-                                <tr>
-                                    <td>18%</td>
-                                    <td>من 20 مليون جم فاكثر</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                <table class="table table-bordered table-bordered-dark fs-lg mb-lg">
+                                    <thead>
+                                        <tr>
+                                            <th>سعر العائد السنوي</th>
+                                            <th>اجمالي رصيد الحساب (طبقا للحد الادني خلال الشهر)</th>
+                                            <th>دورية صرف العائد</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>7%</td>
+                                            <td>اقل من 5 الاف جم</td>
+                                            <td rowspan="8" class="text-center">شهريا</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10%</td>
+                                            <td>من 5 الف جم واقل من 100 الف جم</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11%</td>
+                                            <td>من 100الف جم واقل من 400 الف جمجم</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12%</td>
+                                            <td>من 400 الف جم واقل من مليون جم</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13%</td>
+                                            <td>من مليون جم واقل من 5 مليون جم</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15%</td>
+                                            <td>من 5 مليون جم واقل من 10 مليون جم</td>
+                                        </tr>
+                                        <tr>
+                                            <td>16%</td>
+                                            <td>من 10 مليون جم واقل من 20 مليون جم</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18%</td>
+                                            <td>من 20 مليون جم فاكثر</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-                        <div class="d-flex flex-column gap-4 text-dark-color fs-lg">
-                            <span>يتم اعتبار الحساب راكد قي حالة عدم اجراء ايا من المعاملات التالية عليه: سحب, او ايداع,
-                                او تحويل, او الاستعلام
-                                الالكتروني, او الموثق عن الرصيد, لمدة عام بالنسبة للحسابات الجارية و حسابات الهاتف
-                                المحمول و عامان بالنسبة لحسابات
-                                التوفير.</span>
+                                <div class="d-flex flex-column gap-4 text-dark-color fs-lg">
+                                    <span>يتم اعتبار الحساب راكد قي حالة عدم اجراء ايا من المعاملات التالية عليه: سحب,
+                                        او ايداع,
+                                        او تحويل, او الاستعلام
+                                        الالكتروني, او الموثق عن الرصيد, لمدة عام بالنسبة للحسابات الجارية و حسابات
+                                        الهاتف
+                                        المحمول و عامان بالنسبة لحسابات
+                                        التوفير.</span>
 
-                            <span>في حالة وجود حسابات اخري نشطة للعميل بالبنك, يسمح للعميل بتنشيط حساباته الراكدة
-                                باستخدام ايا من وسائل الاتصال بالبنك عن
-                                طريق الفروع, او مراكز الاتصال</span>
+                                    <span>في حالة وجود حسابات اخري نشطة للعميل بالبنك, يسمح للعميل بتنشيط حساباته
+                                        الراكدة
+                                        باستخدام ايا من وسائل الاتصال بالبنك عن
+                                        طريق الفروع, او مراكز الاتصال</span>
 
-                            <span>يحق للبنك غلق الحساب الراكد في حالة مرور عام علي انخفاض رصيده الي صفر, و عدم قيام
-                                العميل باعادة التنشيط بعد اخطار العميل
-                                بأي طريقة يراها البنك مناسبة</span>
+                                    <span>يحق للبنك غلق الحساب الراكد في حالة مرور عام علي انخفاض رصيده الي صفر, و عدم
+                                        قيام
+                                        العميل باعادة التنشيط بعد اخطار العميل
+                                        بأي طريقة يراها البنك مناسبة</span>
 
-                            <span>يتم صرف اية شيكات مسحوبة و تنفيذ اية تعليمات مستديمة علي الحسابات الراكدة بدون تنشيط
-                                الحساب.</span>
+                                    <span>يتم صرف اية شيكات مسحوبة و تنفيذ اية تعليمات مستديمة علي الحسابات الراكدة بدون
+                                        تنشيط
+                                        الحساب.</span>
 
-                            <strong>تطبق <a href="#" class="text-decoration-underline text-primary-color">الشروط و
-                                    الاحكام</a> </strong>
+                                    <strong>تطبق <a href="#" class="text-decoration-underline text-primary-color">الشروط
+                                            و
+                                            الاحكام</a> </strong>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="tab2" role="tabpanel" tabindex="0">
+                                <h2 class="mb-lg">حساب جاري ستار للافراد</h2>
+                            </div>
+
+                            <div class="tab-pane fade" id="tab3" role="tabpanel" tabindex="0">
+                                <h2 class="mb-lg">....</h2>
+                            </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>

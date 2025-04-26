@@ -161,19 +161,47 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    document.querySelectorAll('.service--link').forEach(link => {
-        link.addEventListener('mouseenter', () => {
-            const bg = link.getAttribute('data-background');
-            document.querySelector('.service--section').style.backgroundImage = bg;
-            document.querySelector('.service--block-img').style.backgroundImage = bg;
-        });
 
-        link.addEventListener('mouseleave', () => {
-            document.querySelector('.service--section').style.backgroundImage = '';
-            document.querySelector('.service--block-img').style.backgroundImage = ''; // or reset to default
+    // document.querySelectorAll('.service--link').forEach(link => {
+    //     link.addEventListener('mouseenter', () => {
+    //         const bg = link.getAttribute('data-background');
+    //         document.querySelector('.service--section').style.backgroundImage = bg;
+    //         document.querySelector('.service--block-img').style.backgroundImage = bg;
+    //     });
+
+    //     link.addEventListener('mouseleave', () => {
+    //         document.querySelector('.service--section').style.backgroundImage = '';
+    //         document.querySelector('.service--block-img').style.backgroundImage = ''; // or reset to default
+    //     });
+    // });
+
+
+    const serviceLinks = document.querySelectorAll('.service--link');
+    const section = document.querySelector('.service--section');
+    const blockImg = document.querySelector('.service--block-img');
+
+    function updateBackground() {
+        const activeLink = document.querySelector('.service--link.active');
+        if (activeLink) {
+            const bg = activeLink.getAttribute('data-background');
+            section.style.backgroundImage = bg;
+            blockImg.style.backgroundImage = bg;
+        }
+    }
+
+    const firstServiceLink = serviceLinks[0];
+    if (firstServiceLink) {
+        firstServiceLink.classList.add('active');
+    }
+    updateBackground();
+
+    serviceLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            serviceLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            updateBackground();
         });
     });
-
 
 });
 
@@ -195,4 +223,21 @@ window.addEventListener('load', function () {
     if (spinner) {
         spinner.style.display = 'none';
     }
+});
+
+
+document.querySelectorAll('.nav-pills-1 .nav-link').forEach(button => {
+    button.addEventListener('click', function () {
+        if (window.innerWidth <= 992) {
+            const targetTabContent = document.querySelector(button.getAttribute('data-bs-target'));
+
+            // Scroll to the target tab content
+            if (targetTabContent) {
+                window.scrollTo({
+                    top: targetTabContent.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
 });

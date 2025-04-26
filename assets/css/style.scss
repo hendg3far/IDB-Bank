@@ -1438,7 +1438,12 @@ span.flatpickr-weekday {
             opacity: 0;
             transition: $transition;
         }
-        &:hover {
+        &:hover,
+        &.active {
+            color: var(--secondary);
+            .img-secondary-color__hover {
+                filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(5deg);
+            }
             .arrow {
                 opacity: 1;
             }
@@ -1661,17 +1666,22 @@ span.flatpickr-weekday {
     transform: scaleX(-1);
 }
 
-.sidebar--list {
+.sidebar--list,
+.nav-pills-1 {
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: var(--white);
-    a {
+    flex-direction: column;
+
+    a,
+    .nav-link {
         position: relative;
         display: flex;
         gap: 5px;
         padding-left: 20px;
         padding-right: 20px;
         font-size: var(--fs-lg);
+        text-align: initial;
         &.active {
             color: var(--secondary);
             font-weight: 700;
@@ -2031,7 +2041,7 @@ span.flatpickr-weekday {
         height: 50px;
         object-fit: contain;
     }
-    .slick--flex .slick-slide:not(:last-child) {
+    .slick--news.slick--flex .slick-slide:not(:last-child) {
         margin: 0;
     }
 }

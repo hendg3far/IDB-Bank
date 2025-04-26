@@ -129,7 +129,7 @@ footer::before {
 }
 
 @media (max-width: 575.99px) {
-    .slick--flex .slick-slide:not(:last-child) {
+    .slick--news.slick--flex .slick-slide:not(:last-child) {
         margin: 0;
     }
 }
