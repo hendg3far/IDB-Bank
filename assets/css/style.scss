@@ -398,6 +398,10 @@ $button-colors: (
     }
 }
 
+.form-control:disabled {
+    background-color: var(--white);
+}
+
 /* ====== ✅ Tables ====== */
 
 .table-light-color > tbody > tr > td {
@@ -1017,6 +1021,7 @@ footer {
             align-items: center;
             justify-content: center;
             background-color: var(--light);
+            color: var(--primary);
         }
     }
     .copyrights {

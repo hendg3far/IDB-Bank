@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDB-Bank</title>
+    <link rel="icon" type="image/x-icon" href="./assets/media/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Cairo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" media="all">
+    <!-- <link rel="stylesheet" href="./assets/vendor/bootstrap-5.3.3/css/bootstrap.min.css" media="all"> -->
+    <link rel="stylesheet" href="./assets/vendor/bootstrap-5.3.3/css/bootstrap.rtl.min.css" media="all">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/all.min.css" media="all">
+    <link rel="stylesheet" href="./assets/vendor/slick/slick.css" media="all">
+    <link rel="stylesheet" href="./assets/vendor/intl-tel-input/css/intlTelInput.min.css" media="all">
+    <link rel="stylesheet" href="./assets/vendor/sumoselect/sumoselect.min.css" media="all">
+    <link rel="stylesheet" href="./assets/vendor/Fomantic-UI-develop/components/slider.min.css" media="all">
+    <link rel="stylesheet" href="./assets/vendor/Fomantic-UI-develop/components/popup.min.css" media="all">
+
+    <link rel="stylesheet" href="./assets/css/style.css" media="all">
+    <link rel="stylesheet" href="./assets/css/rtl.css" media="all">
+</head>
+
+<body>
+
+    <div id="LoadingSpinner" class="LoadingSpinner">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg position-sticky top-0 z-3">
+        <div class="container-fluid">
+            <button class="navbar-toggler text-primary-color" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#menuOffcanvas">
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <a class="navbar-brand" href="./index.html"><img height="94" src="./assets/media/logo.png" alt="IDB Logo"
+                    loading="lazy"></a>
+            <a href="" class="btn btn-lg rounded-0 btn-primary-color px-5">رجوع</a>
+        </div>
+    </nav>
+    <!--End Navbar-->
+
+    <div class="modal fade search-modal" id="searchModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="d-flex w-100 justify-content-between align-items-center mb-xl">
+                        <h1 class="modal-title" id="exampleModalToggleLabel">كيف يمكننا مساعدتك ؟</h1>
+                        <button type="button" class="btn-close flip-x-hover" data-bs-dismiss="modal" aria-label="Close">
+                            <svg class="hover-target" xmlns="http://www.w3.org/2000/svg" width="35.946" height="36.042"
+                                viewBox="0 0 35.946 36.042">
+                                <path
+                                    d="M62.936,60.6l14.9-14.9A1.8,1.8,0,0,0,75.3,43.165l-14.9,14.9L45.5,43.147A1.8,1.8,0,0,0,42.951,45.7L57.868,60.6,42.951,75.5a1.8,1.8,0,1,0,2.534,2.534L60.4,63.132l14.9,14.9A1.8,1.8,0,0,0,77.836,75.5Z"
+                                    transform="translate(-42.322 -42.618)" fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="position-relative w-100 mb-md">
+                        <span
+                            class="position-absolute top-0 start-0 h-100 d-flex align-items-center justify-content-center">
+                            <svg class="hover-target" xmlns="http://www.w3.org/2000/svg" width="31.707" height="31.707"
+                                viewBox="0 0 31.707 31.707">
+                                <path id="Path_1976" data-name="Path 1976"
+                                    d="M49.461,46.764l-7.188-7.188a13.36,13.36,0,1,0-2.7,2.7l7.188,7.188a1.91,1.91,0,0,0,2.7-2.7ZM22.054,31.587a9.534,9.534,0,1,1,9.534,9.534A9.534,9.534,0,0,1,22.054,31.587Z"
+                                    transform="translate(-18.24 -18.24)" fill="#f7941d"></path>
+                            </svg>
+                        </span>
+                        <input type="text"
+                            class="form-control form-control-lg form-control-white border-top-0 border-start-0 border-end-0 rounded-0 ps-5 bg-transparent border-color"
+                            placeholder="بحث في الموقع">
+                    </div>
+                    <div class="text-end">
+                        <button class="btn btn-md btn-secondary-color text-dark-color rounded-0"
+                            type="submit">بحــــث</button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <h2 class="text-primary-color mb-lg">راوبط بحث سريعة</h2>
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="#" class="main-btn main-btn--gray">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>أوعية ادخارية</span>
+                                </a>
+                                <a href="#" class="main-btn main-btn--gray">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>برامج التجزئة المصرفية</span>
+                                </a>
+                                <a href="#" class="main-btn main-btn--gray">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>التمويــل العقـاري</span>
+                                </a>
+                                <a href="#" class="main-btn main-btn--gray">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>المشروعات الصغيرة والمتوسطة</span>
+                                </a>
+                                <a href="#" class="main-btn main-btn--gray">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>فروعنــــــا</span>
+                                </a>
+                                <a href="#" class="main-btn main-btn--gray">
+                                    <svg class="w-100 h-100" viewBox="0 0 212.269 62.038"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <g transform="translate(-1594.403 -842.303)">
+                                            <path d="M1594.9,764.363V752.8h211.269v61.038h-17.109"
+                                                transform="translate(0 90)">
+                                            </path>
+                                            <path d="M1782.074,903.841h-186.3V862.394" transform="translate(-0.872)">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>الانترنت البنكي</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <img src="./assets/media/--modal/path.svg" alt="path layer" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Search Modal-->
+
+    <div class="offcanvas offcanvas-start menu-offcanvas" tabindex="-1" id="menuOffcanvas"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title mx-auto" id="offcanvasExampleLabel">
+                <img src="./assets/media/logo.png" alt="IDB" loading="lazy">
+            </h5>
+            <button type="button" class="btn-close flip-x-hover" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg class="hover-target" xmlns="http://www.w3.org/2000/svg" width="35.946" height="36.042"
+                    viewBox="0 0 35.946 36.042">
+                    <path
+                        d="M62.936,60.6l14.9-14.9A1.8,1.8,0,0,0,75.3,43.165l-14.9,14.9L45.5,43.147A1.8,1.8,0,0,0,42.951,45.7L57.868,60.6,42.951,75.5a1.8,1.8,0,1,0,2.534,2.534L60.4,63.132l14.9,14.9A1.8,1.8,0,0,0,77.836,75.5Z"
+                        transform="translate(-42.322 -42.618)" fill="currentColor" />
+                </svg>
+            </button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <div class="dropdown">
+                <a href="#" class="rotate-y-hover offcanvas-link" type="button" data-bs-toggle="dropdown">
+                    القائمة الرئيسية
+                    <svg class="ms-1 hover-target" xmlns="http://www.w3.org/2000/svg" width="13.225" height="6.966"
+                        viewBox="0 0 13.225 6.966">
+                        <path id="Path_2007" data-name="Path 2007"
+                            d="M39.028,63.254l-5.7,5.552-5.7-5.552a.545.545,0,0,0-.761,0,.518.518,0,0,0,0,.741L32.935,69.9a.57.57,0,0,0,.8,0L39.789,64a.518.518,0,0,0,0-.743.545.545,0,0,0-.761,0Z"
+                            transform="translate(-26.721 -63.098)" fill="CurrentColor"></path>
+                    </svg>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./about.html">عن البنك</a></li>
+                    <li><a class="dropdown-item" href="#">الإستدامة</a></li>
+                    <li><a class="dropdown-item" href="#">المركز الإعلامي</a></li>
+                    <li><a class="dropdown-item" href="#">الفروع والصراف الآلي</a></li>
+                    <li><a class="dropdown-item" href="#">الوظائف المتاحة</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="rotate-y-hover offcanvas-link" type="button" data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside">
+                    قائمة الخدمات
+                    <svg class="ms-1 hover-target" xmlns="http://www.w3.org/2000/svg" width="13.225" height="6.966"
+                        viewBox="0 0 13.225 6.966">
+                        <path id="Path_2007" data-name="Path 2007"
+                            d="M39.028,63.254l-5.7,5.552-5.7-5.552a.545.545,0,0,0-.761,0,.518.518,0,0,0,0,.741L32.935,69.9a.57.57,0,0,0,.8,0L39.789,64a.518.518,0,0,0,0-.743.545.545,0,0,0-.761,0Z"
+                            transform="translate(-26.721 -63.098)" fill="CurrentColor"></path>
+                    </svg>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown">
+                        <a class="dropdown-item" href="#" type="button" data-bs-toggle="dropdown">
+                            <img width="25" src="./assets/media/--icons/service-1.svg" alt="icon 1">
+                            <span class="ms-2">خدمات الأفــــراد</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">حسابات التوفير</a>
+                            <a class="dropdown-item" href="#">القروض الشخصية</a>
+                            <a class="dropdown-item" href="#">القروض العقارية</a>
+                            <a class="dropdown-item" href="#">القروض الشخصية</a>
+                            <a class="dropdown-item" href="#">الودائع / الشهادات</a>
+                            <a class="dropdown-item" href="#">قروض السيارات</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-item" href="#" type="button" data-bs-toggle="dropdown">
+                            <img width="25" src="./assets/media/--icons/service-2.svg" alt="icon 1">
+                            <span class="ms-2">الخدمات المصرفية للشركات</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">الشركات المتوسطة</a>
+                            <a class="dropdown-item" href="#">الشركات الكبرى</a>
+                            <a class="dropdown-item" href="#">إدارة النقد</a>
+                            <a class="dropdown-item" href="#">إدارة التمويل التجاري</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <img width="25" src="./assets/media/--icons/service-3.svg" alt="icon 1">
+                            <span class="ms-2">المشروعات الصغيرة</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Menu Offcanvas-->
+
+    <div class="page-content position-relative overflow-hidden">
+        <div class="position-absolute top-0 start-0 z-n1 page-bg">
+            <img src="./assets/media/--path/page-bg.png" alt="background" loading="lazy">
+        </div>
+
+
+
+        <div class="mb-xl pb-xl">
+            <div class="container-fluid">
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <div class="container-fluid">
+            <button class="backtotop  position-relative z-2" style="transform: translateY(-80px);">
+                <span>الرجوع لأعلى</span>
+                <span class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29.609" height="37.251" viewBox="0 0 29.609 37.251">
+                        <g id="arrow-top" transform="translate(29.609) rotate(90)">
+                            <path
+                                d="M0,1.432A1.433,1.433,0,0,1,1.434,0L35.416.024a1.433,1.433,0,0,1,0,2.865L1.432,2.865A1.433,1.433,0,0,1,0,1.432Z"
+                                transform="translate(0.403 13.372)" fill="currentColor" fill-rule="evenodd" />
+                            <path
+                                d="M15.793.419a1.433,1.433,0,0,1,0,2.026L3.457,14.8l12.338,12.36a1.433,1.433,0,0,1-2.028,2.025L.419,15.817a1.433,1.433,0,0,1,0-2.025L13.767.421A1.433,1.433,0,0,1,15.793.419Z"
+                                transform="translate(0 0)" fill="currentColor" fill-rule="evenodd" />
+                        </g>
+                    </svg>
+                </span>
+            </button>
+        </div>
+        <!--Back to top-->
+        <div class="container-fluid">
+            <div class="row row-gap-5">
+                <div class="col-lg-12 d-lg-none d-block">
+                    <div class="text-lg-end text-center"><img src="./assets/media/logo-2.png" alt="IDB logo"
+                            loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h2 class="footer--title">كيف يمكننا مساعدتك</h2>
+                    <p>املأ النموذج وسيقوم أحد ممثلي خدمة العملاء بالاتصال بك.</p>
+                    <form action="">
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <input class="form-control form-control-white" type="text" placeholder="الاسم">
+                            <input class="form-control form-control-white" type="text" placeholder="100  527 1489"
+                                id="phone">
+                            <textarea class="form-control form-control-white" placeholder="رسالتك" rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-md btn-border-white-color rounded-0">إرســـال</button>
+                    </form>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row row-gap-4 justify-content-between mb-xl">
+                        <div class="col-4 footer--section d-flex justify-content-center">
+                            <div class="d-flex flex-column">
+                                <h2 class="footer--title">خريطة الموقع</h2>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="#">الوظائف</a>
+                                    <a href="#">حاسبة القروض</a>
+                                    <a href="#">الشروط والأحكام</a>
+                                    <a href="#">عن البنك</a>
+                                    <a href="#">المركز الإعلامي</a>
+                                    <a href="#">أمن المعلومات</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 footer--section d-flex justify-content-center">
+                            <div class="d-flex flex-column">
+                                <h2 class="footer--title">المنتجات والخدمات</h2>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="#">خدمات الأفراد</a>
+                                    <a href="#">خدمات الشركات</a>
+                                    <a href="#">المشروعات الصغيرة</a>
+                                    <a href="#">العروض والترويجيات</a>
+                                    <a href="#">البطاقات المصرفية</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-4 footer--section d-flex justify-content-center">
+                            <div class="d-flex flex-column">
+                                <h2 class="footer--title">الروابط السريعة</h2>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="#">الوظائف</a>
+                                    <a href="#">حاسبة القروض</a>
+                                    <a href="#">الشروط والأحكام</a>
+                                    <a href="#">عن البنك</a>
+                                    <a href="#">المركز الإعلامي</a>
+                                    <a href="#">أمن المعلومات</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-gap-5 align-items-end">
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h2 class="footer--title">تحميل التطبيق</h2>
+                                    <div class="d-flex flex-column gap-2">
+                                        <a href="#"><img src="./assets/media/--app/app-store-png-logo-33123.webp" alt=""
+                                                loading="lazy"></a>
+                                        <a href="#"><img src="./assets/media/--app/app-store-png-logo-33124.webp" alt=""
+                                                loading="lazy"></a>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h2 class="footer--title">الخط الساخن</h2>
+                                    <div class="d-flex flex-column gap-2">
+                                        <a class="hotline" href="tel:19320">
+                                            <div class="icon me-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="21.6" height="26.438"
+                                                    viewBox="0 0 21.6 26.438">
+                                                    <g id="headset-mic" transform="translate(0 -2)">
+                                                        <path id="Path_2096" data-name="Path 2096"
+                                                            d="M10.8,2a10.369,10.369,0,0,1,7.65,3.178A10.443,10.443,0,0,1,21.6,12.8V24.838a3.506,3.506,0,0,1-1.041,2.531A3.432,3.432,0,0,1,18,28.438H10.8V26.019h8.381V24.838H14.4V15.219h4.781V12.8a8.081,8.081,0,0,0-2.447-5.934A8.081,8.081,0,0,0,10.8,4.419,8.081,8.081,0,0,0,4.866,6.866,8.081,8.081,0,0,0,2.419,12.8v2.419H7.2v9.619H3.6a3.432,3.432,0,0,1-2.559-1.069A3.506,3.506,0,0,1,0,21.238V12.8A10.443,10.443,0,0,1,3.15,5.178,10.369,10.369,0,0,1,10.8,2Z"
+                                                            fill="currentColor"></path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span>19320</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-lg-block d-none">
+                            <div class="text-lg-end text-center"><img src="./assets/media/logo-2.png" alt="IDB logo"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyrights">
+                <div class="row row-gap-4">
+                    <div class="col-lg-6 order-lg-first order-last">
+                        <span class="text-lg-start text-center d-block">Copyright © idb all rights reserved. Developed
+                            by <a href="#" class="text-light-primary-color">Netwave</a></span>
+                    </div>
+                    <div class="col-lg-6 order-lg-last order-first">
+                        <div class="d-flex align-items-end justify-content-lg-end justify-content-center gap-4">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="20"
+                                    viewBox="0 0 29.128 20.028">
+                                    <path id="Path_42" data-name="Path 42"
+                                        d="M1008.545,1887.237l-.046-9.176,6.376,4.627Zm11.977-14.655h-19.4c-2.481,0-5.25,1.659-5.25,4.078v12.054c0,2.42,2.769,3.9,5.25,3.9h19.4c2.465,0,4.474-1.476,4.474-3.9v-12.054a4.188,4.188,0,0,0-4.474-4.078Z"
+                                        transform="translate(-995.868 -1872.582)" fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26"
+                                    viewBox="0 0 25.521 26.467">
+                                    <path id="Path_43" data-name="Path 43"
+                                        d="M970.327,1883.21v9.436h-5.471v-8.807c0-2.213-.8-3.718-2.774-3.718a3.008,3.008,0,0,0-2.808,2,3.72,3.72,0,0,0-.18,1.337v9.189h-5.47s.078-14.918,0-16.457h5.47v2.325a5.456,5.456,0,0,1,4.931-2.707C967.631,1875.807,970.327,1878.154,970.327,1883.21Z"
+                                        transform="translate(-944.806 -1866.178)" fill="currentColor" />
+                                    <path id="Path_44" data-name="Path 44"
+                                        d="M952.319,1872.264a2.86,2.86,0,0,1-3.1,2.842h-.034a2.858,2.858,0,1,1,3.134-2.842Z"
+                                        transform="translate(-946.163 -1869.411)" fill="currentColor" />
+                                    <rect id="Rectangle_76" data-name="Rectangle 76" width="5.47" height="16.456"
+                                        transform="translate(0.325 10.01)" fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12.53" height="28.804"
+                                    viewBox="0 0 12.53 28.804">
+                                    <path id="Path_41" data-name="Path 41"
+                                        d="M860.774,1866.739v4.628s-3.168-.338-3.96.988c-.438.7-.188,2.807-.209,4.313H860.8c-.355,1.751-.605,2.942-.876,4.47h-3.357v14.4h-5.818v-14.354h-2.481v-4.514h2.46c.125-3.325.167-6.6,1.688-8.266,1.731-1.887,3.358-1.662,8.36-1.662Z"
+                                        transform="translate(-848.265 -1866.73)" fill="currentColor"
+                                        fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25.01" height="27.079"
+                                    viewBox="0 0 25.01 27.079">
+                                    <path id="Path_46" data-name="Path 46"
+                                        d="M25.935,8.958a10.665,10.665,0,0,0-.581-3.287,6.713,6.713,0,0,0-1.444-2.4A6.108,6.108,0,0,0,21.7,1.71a8.564,8.564,0,0,0-3.034-.629C17.326,1.015,16.9,1,13.5,1s-3.821.015-5.155.081a8.564,8.564,0,0,0-3.036.629A6.107,6.107,0,0,0,3.1,3.273a6.713,6.713,0,0,0-1.444,2.4,10.666,10.666,0,0,0-.581,3.286C1.014,10.4,1,10.863,1,14.539s.014,4.137.075,5.581a10.666,10.666,0,0,0,.581,3.287,6.713,6.713,0,0,0,1.444,2.4,6.106,6.106,0,0,0,2.215,1.563A8.564,8.564,0,0,0,8.349,28c1.335.066,1.76.081,5.156.081s3.821-.015,5.155-.081a8.564,8.564,0,0,0,3.036-.629,6.681,6.681,0,0,0,3.658-3.961,10.665,10.665,0,0,0,.581-3.286c.061-1.446.075-1.906.075-5.583S26,10.4,25.935,8.958ZM23.684,20.011a8.04,8.04,0,0,1-.431,2.512,4.327,4.327,0,0,1-2.373,2.571,6.452,6.452,0,0,1-2.322.466c-1.32.065-1.715.078-5.053.078s-3.735-.014-5.053-.078a6.452,6.452,0,0,1-2.32-.466,3.858,3.858,0,0,1-1.439-1.012,4.243,4.243,0,0,1-.935-1.557,8.041,8.041,0,0,1-.431-2.514c-.06-1.429-.072-1.856-.072-5.471s.013-4.044.072-5.471a8.042,8.042,0,0,1,.431-2.512A4.243,4.243,0,0,1,4.692,5,3.859,3.859,0,0,1,6.13,3.985a6.452,6.452,0,0,1,2.322-.466c1.32-.065,1.715-.078,5.053-.078s3.735.014,5.053.078a6.452,6.452,0,0,1,2.32.466A3.858,3.858,0,0,1,22.318,5a4.243,4.243,0,0,1,.935,1.557,8.042,8.042,0,0,1,.431,2.514c.06,1.429.072,1.856.072,5.471S23.743,18.583,23.684,20.011ZM13.5,7.586a6.7,6.7,0,0,0-6.422,6.953A6.7,6.7,0,0,0,13.5,21.492a6.7,6.7,0,0,0,6.422-6.953A6.7,6.7,0,0,0,13.5,7.586Zm0,11.466a4.351,4.351,0,0,1-4.168-4.513A4.351,4.351,0,0,1,13.5,10.026a4.351,4.351,0,0,1,4.168,4.513A4.351,4.351,0,0,1,13.5,19.052ZM21.68,7.312a1.505,1.505,0,1,1-3,0,1.505,1.505,0,1,1,3,0Z"
+                                        transform="translate(-1 -1)" fill="currentColor" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer-->
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./assets/vendor/bootstrap-5.3.3/js/bootstrap.bundle.min.js" defer></script>
+    <script src="./assets/vendor/slick/slick.min.js" defer></script>
+    <script src="./assets/vendor/intl-tel-input/js/intlTelInput.min.js" defer></script>
+    <script src="./assets/vendor/sumoselect/jquery.sumoselect.min.js" defer></script>
+    <script src="./assets/vendor/Fomantic-UI-develop/components/slider.min.js" defer></script>
+    <script src="./assets/vendor/jquery-match-height-master/jquery.matchHeight-min.js" defer></script>
+
+    <!-- <script src="./assets/js/scripts.js" defer></script> -->
+    <script src="./assets/js/scripts.rtl.js" defer></script>
+</body>
+
+</html>
