@@ -1219,6 +1219,60 @@ span.flatpickr-weekday {
     min-height: 45px;
 }
 
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    height: 5px;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    background: linear-gradient(to right, #4daaf5 0%, #4daaf5 var(--progress), #e5e5e5 var(--progress), #e5e5e5 100%);
+    border-radius: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    background: #4daaf5;
+    transform: rotate(45deg);
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 18px;
+    width: 18px;
+    background: #4daaf5;
+    transform: rotate(45deg);
+    border: none;
+    cursor: pointer;
+}
+
+// // /* RTL support */
+.form-range.active::-webkit-slider-runnable-track {
+    background: linear-gradient(
+        to right,
+        #4daaf5 0%,
+        #4daaf5 var(--progress, 50%),
+        #e5e5e5 var(--progress, 50%),
+        #e5e5e5 100%
+    );
+}
+.form-range.active::-moz-slider-runnable-track {
+    background: linear-gradient(
+        to right,
+        #4daaf5 0%,
+        #4daaf5 var(--progress, 50%),
+        #e5e5e5 var(--progress, 50%),
+        #e5e5e5 100%
+    );
+}
+
 /* ====== ✅ Slick Carousel ====== */
 
 .slick--center {
