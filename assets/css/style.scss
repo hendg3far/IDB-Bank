@@ -912,7 +912,6 @@ p {
             transition: $transition;
         }
         &:hover {
-            font-weight: 700;
             &::after {
                 opacity: 1;
                 visibility: visible;
