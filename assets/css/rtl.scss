@@ -147,6 +147,21 @@ footer::before {
     );
 }
 
+.slick-arrows--events {
+    transform: translate(-55px, -55px);
+}
+
+.slick-arrows--events .slick-arrow,
+.hero--section .slick--controls .slick-arrows .slick-arrow {
+    transform: none;
+}
+
+.news--item {
+    .news--label {
+        clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+    }
+}
+
 @media (max-width: 575.99px) {
     .slick--news.slick--flex .slick-slide:not(:last-child) {
         margin: 0;
