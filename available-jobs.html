@@ -1125,36 +1125,43 @@
                         <div class="row row-gap-4">
                             <div class="col-sm-6">
                                 <input class="form-control form-control-lg form-control-light-2 rounded-0" type="text"
-                                    placeholder="الاسم">
+                                    placeholder="الأسم الاول">
                             </div>
                             <div class="col-sm-6">
                                 <input class="form-control form-control-lg form-control-light-2 rounded-0" type="text"
-                                    placeholder="الاسم">
+                                    placeholder="الاسم الأخير">
                             </div>
                             <div class="col-sm-6">
                                 <input class="form-control form-control-lg form-control-light-2 rounded-0" type="text"
-                                    placeholder="الاسم">
+                                    placeholder="البريد الالكترونى">
+                            </div>
+                            <div class="col-sm-6">
+                                <input class="form-control form-control-lg form-control-light-2 rounded-0 phone"
+                                    type="text" placeholder="100  527 1489">
                             </div>
                             <div class="col-sm-6">
                                 <input class="form-control form-control-lg form-control-light-2 rounded-0" type="text"
-                                    placeholder="الاسم">
+                                    placeholder="رابط الملف الشخصي على لينكد إن">
                             </div>
                             <div class="col-sm-6">
-                                <input class="form-control form-control-lg form-control-light-2 rounded-0" type="text"
-                                    placeholder="الاسم">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="cvUpload" hidden>
+                                    <label
+                                        class="form-control form-control-lg form-control-light-2 rounded-0 d-flex align-items-center gap-3"
+                                        for="cvUpload" id="cvLabel">رفع السيرة الذاتية
+                                        <span class="form-text text-truncate fs-rg" id="cvFileName">لم يتم اختيار
+                                            ملف</span>
+                                    </label>
+
+                                </div>
                             </div>
-                            <div class="col-sm-6">
-                                <input class="form-control form-control-lg form-control-light-2 rounded-0" type="text"
-                                    placeholder="الاسم">
-                            </div>
-                            <div class="col-sm-6">
-                                <input class="form-control form-control-lg form-control-light-2 rounded-0" type="text"
-                                    placeholder="الاسم">
-                            </div>
-                            <div class="col-sm-6">
-                                <input class="form-control form-control-lg form-control-light-2 rounded-0" type="text"
-                                    placeholder="الاسم">
-                            </div>
+
+                            <script>
+                                document.getElementById("cvUpload").addEventListener("change", function () {
+                                    const fileName = this.files[0]?.name || "لم يتم اختيار ملف";
+                                    document.getElementById("cvFileName").textContent = fileName;
+                                });
+                            </script>
                         </div>
 
                         <div class="mt-lg d-flex gap-3">
