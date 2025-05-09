@@ -12,7 +12,22 @@ $(document).ready(function () {
         variableWidth: true,
         arrows: false,
         autoplay: true,
-        speed: 1000
+        speed: 1000,
+    });
+
+    var swiper = new Swiper(".mySwiper", {
+        freeMode: true,
+        grabCursor: true,
+        simulateTouch: true,
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        pagination: false,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        speed: 1000,
     });
 
     $('.slick--events').slick({
@@ -69,6 +84,9 @@ $(document).ready(function () {
 
     $('.hero--item .hero-item--title').matchHeight();
     $('.hero--item .hero-item--desc').matchHeight();
+
+    $('.news--content h5').matchHeight();
+    $('.news--content p').matchHeight();
 
 
     var $input = $(".flatpickr");
@@ -217,4 +235,31 @@ window.addEventListener('load', function () {
     if (spinner) {
         spinner.style.display = 'none';
     }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tables = document.querySelectorAll("table.table-dark-color");
+
+    tables.forEach((table) => {
+        const tbody = table.querySelector("tbody");
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+
+        rows.forEach((row, index) => {
+            // Skip the last row
+            if (index < rows.length - 1) {
+                const tdCount = row.querySelectorAll("td").length;
+
+                if (tdCount > 0) {
+                    const spacerRow = document.createElement("tr");
+                    const td = document.createElement("td");
+
+                    td.className = "bg-white"; // or your desired class
+                    td.colSpan = tdCount + 1;
+
+                    spacerRow.appendChild(td);
+                    row.after(spacerRow);
+                }
+            }
+        });
+    });
 });

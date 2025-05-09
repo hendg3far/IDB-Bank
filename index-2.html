@@ -1276,7 +1276,8 @@
                             </div>
                         </div>
 
-                        <div class="px-5 pb-5">
+                        <!--Updated here-->
+                        <div class="px-sm-5 px-3 pb-5">
                             <div class="d-flex flex-column gap-4 mb-lg">
                                 <div class="main-form-control">
                                     <svg class="w-100 h-100" xmlns="http://www.w3.org/2000/svg"
@@ -1328,9 +1329,10 @@
                                 </div>
                             </div>
 
-                            <div class="d-flex flex-column mb-lg">
-                                <div class="d-flex align-items-center gap-4">
-                                    <span class="fw-bd fs-lg col-2"><span class="slider-value"><span
+                            <div class="d-flex flex-column row-gap-4 mb-lg">
+                                <div
+                                    class="d-flex flex-sm-row flex-column align-items-sm-center column-gap-4 row-gap-2">
+                                    <span class="fw-bd fs-lg col-sm-2"><span class="slider-value"><span
                                                 id="amountValue">0</span></span> جنيه مصري </span>
                                     <input type="range" id="loanAmountSlider" class="form-range"
                                         oninput="handleSliderChange('amount', this.value)" />
@@ -1338,25 +1340,29 @@
                                     <input type="hidden" id="loanAmount" />
                                 </div>
 
-                                <div class="d-flex align-items-center gap-4">
-                                    <span class="fw-bd fs-lg col-2 slider-value">
+                                <div
+                                    class="d-flex flex-sm-row flex-column align-items-sm-center column-gap-4 row-gap-2">
+                                    <span class="fw-bd fs-lg col-sm-2 slider-value">
                                         <span id="durationValue">0</span> <span id="durationUnit">شهور</span>
                                     </span>
-                                    <input type="range" id="loanDurationSlider" class="form-range"
-                                        oninput="handleSliderChange('duration', this.value)" />
-                                    <input type="hidden" id="loanDuration" />
-                                    <select id="durationType" class="form-control form-select form-control-lg rounded-0"
-                                        style="width: 150px;">
-                                        <option value="months">شهور</option>
-                                        <option value="years">سنوات</option>
-                                    </select>
+                                    <div class="d-flex align-items-center gap-4 col">
+                                        <input type="range" id="loanDurationSlider" class="form-range"
+                                            oninput="handleSliderChange('duration', this.value)" />
+                                        <input type="hidden" id="loanDuration" />
+                                        <select id="durationType"
+                                            class="form-control form-select form-control-lg rounded-0"
+                                            style="width: 150px;">
+                                            <option value="months">شهور</option>
+                                            <option value="years">سنوات</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="d-flex gap-4">
+                            <div class="d-flex flex-sm-row flex-column column-gap-4 row-gap-2">
                                 <button onclick="calculateLoan()" class="btn btn-secondary-color btn-md rounded-0">احسب
                                     القسط</button>
-                                <div class="bg-light-color px-3 fw-bd d-flex align-items-center justify-content-center col"
+                                <div class="bg-light-color py-4 px-3 fw-bd d-flex align-items-center justify-content-center col"
                                     id="result"></div>
                             </div>
                         </div>
@@ -1403,7 +1409,8 @@
                                 </div>
                             </div>
 
-                            <div class="d-flex align-items-center gap-4">
+                            <div
+                                class="d-flex flex-sm-row flex-column column-gap-4 row-gap-2 align-items-sm-center gap-4">
                                 <h5>رقم الحساب المصرفى (IBAN) الدولى</h5>
                                 <input id="ibanOutput"
                                     class="form-control form-control-md bg-white-color text-primary-color border-0 rounded-0 fw-bd fs-xl"
