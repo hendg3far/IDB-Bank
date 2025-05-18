@@ -2137,6 +2137,12 @@ input[type="range"]::-moz-range-thumb {
     footer .hotline {
         font-size: var(--fs-xxl);
     }
+    footer::before {
+        opacity: 0.1;
+    }
+    footer .text-lg-end > img {
+        max-width: 265px;
+    }
     .section-title img {
         width: 40px;
     }
